@@ -92,3 +92,15 @@ This is a necessary condition for an optimal-length protocol, not a proof of the
 | C23 | The half-forest results prove the fixed-label temporal-clique `2n-3` conjecture | **NOT ESTABLISHED** | Minimum gossip scheduling and extracting a sparse subset from arbitrary fixed chronology are different problems |
 
 **Novelty:** unresolved; compare Labahn 1995 minimum gossip kernels. No paper-readiness claim. Main and POD conjectures remain open.
+
+## v1.3 verified checkpoint — 25 October 2026
+
+| ID | Claim | Evidence state | Scope |
+| --- | --- | --- | --- |
+| C18 | A tree prefix component meeting two suffix components in singleton vertices u,v must finish with contact uv; the dual tree suffix must begin with uv | **PROVED (human proof)** | Any successful schedule and any cut under stated hypotheses; see `research/v1.3/RESEARCH_UPDATE_v1.3.md` |
+| C19 | K4 and K5 exhaustive regressions of two-singleton lemma | **EXHAUSTIVE FINITE** | 360 and 151,200 schedules; 96 and 6,480 obligations; zero violations |
+| C20 | The 13-vertex incidence grid with rows/cols (2,2,1),(2,2,1),(1,1,1), two tree components and one triangle in each half is infeasible | **VERIFIED FINITE FOR ONE LAYOUT** | Two exact scripts: `research/v1.3/v13_bitset.py` and `research/v1.3/search_row3.py --pattern 2 --cc 2` |
+| Q0/C1 | General `2n-3` and POD conjectures | **OPEN** | v1.3 provides no universal spanner bound or counterexample |
+| Priority | New ordered-contact lemma absent from classical gossip papers | **NOT VERIFIED** | Compare Labahn 1995 and Krumme 1996 before originality claims |
+
+The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13` schedules. No formal prover or GitHub CI success is asserted.
