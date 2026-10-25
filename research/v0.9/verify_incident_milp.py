@@ -1,7 +1,17 @@
 """Independent brute-force check of incident-local MILP on complete edge-orderings."""
 import itertools,random,json,sys
 from pathlib import Path
-from incident_milp import solve,check
+from incident_milp import solve
+
+def check(n,seq,selected):
+    """Independent source-by-source propagation; no bitset implementation reused."""
+    for src in range(n):
+        reachable={src}
+        for t,(u,v) in enumerate(seq):
+            if t in selected and (u in reachable or v in reachable):
+                reachable.update((u,v))
+        if len(reachable)!=n:return False
+    return True
 
 def oracle(n,seq):
     m=len(seq)
