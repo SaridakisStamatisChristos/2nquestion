@@ -53,7 +53,9 @@ def full_collector_demands(M, cyc_row, cyc_col):
             if sum(M[k][j] == 1 for k in range(3)) == 2:
                 size = M[i][j]
                 if size == 1:
-                    reasons.append(f'column {j}: third-row cell ({i},{j}) singleton after first bridge')
+                    # This is one of the TWO singleton bridge endpoints,
+                    # not the third prefix source: no exclusion applies.
+                    continue
                 elif size == 2:
                     required += 2
                 elif size == 3:
@@ -70,7 +72,8 @@ def full_collector_demands(M, cyc_row, cyc_col):
             if sum(M[i][k] == 1 for k in range(3)) == 2:
                 size = M[i][j]
                 if size == 1:
-                    reasons.append(f'row {i}: third-column cell ({i},{j}) singleton after first bridge (dual)')
+                    # One of the two forced prefix-bridge endpoints (dual).
+                    continue
                 elif size == 2:
                     required += 2
                 elif size == 3:
@@ -104,6 +107,9 @@ def main():
     assert len(reps) == 16, len(reps)
     assert len(cases) == 44, len(cases)
     assert len(remaining) == 1, remaining
+    # Regression: the singleton bridge endpoints must never be rejected
+    # as third-source singleton cells. Earlier v1.4 emitted such invalid
+    # explanatory reasons. All 43 exclusions survive this repair.
     raw_cases = 0
     raw_remaining = []
     for extras in combinations_with_replacement(CELLS, 4):
