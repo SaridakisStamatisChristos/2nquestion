@@ -63,3 +63,8 @@ Selected independent verifier: `python research/v0.8/independent_verify_v08.py` 
 | C18 | The chronological butterfly hypothesis holds for all `n` | **OPEN** | Heuristic 350,000-proposal walks each on n=6..10 found no counterexample; minimum-gossip kernel priority unresolved, including Labahn (1995). |
 
 **No change to the main question:** `2n-3` and POD remain OPEN. Finite BF(n<=6) does not prove their universal bounds.
+
+### v1.0 universal necessary condition
+
+| C19 | In every `2n-4`-call all-to-all gossip schedule, each vertex participates in a call among the first `n-2` and another among the last `n-2` | **PROVED (human argument); novelty unchecked** | `research/v1.0/INCIDENCE_WINDOW_LEMMA.md`. Source-information carrier count increases at most once per call; reverse time for the last-call bound. |
+This is a necessary condition for an optimal-length protocol, not a proof of the `2n-3` upper bound; likely existing elementary gossip theory.
