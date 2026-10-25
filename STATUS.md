@@ -68,3 +68,14 @@ Selected independent verifier: `python research/v0.8/independent_verify_v08.py` 
 
 | C19 | In every `2n-4`-call all-to-all gossip schedule, each vertex participates in a call among the first `n-2` and another among the last `n-2` | **PROVED (human argument); novelty unchecked** | `research/v1.0/INCIDENCE_WINDOW_LEMMA.md`. Source-information carrier count increases at most once per call; reverse time for the last-call bound. |
 This is a necessary condition for an optimal-length protocol, not a proof of the `2n-3` upper bound; likely existing elementary gossip theory.
+
+## v1.1 — sharp chronological half-forest threshold (25 October 2026)
+
+| ID | Statement | State | Evidence / qualification |
+| --- | --- | --- | --- |
+| C20 | At every temporal cut of a successful gossip protocol, every prefix contact-graph component intersects every suffix component | **PROVED (human proof)** | The component incidence graph is complete; hence c_prefix*c_suffix <= n. See `research/v1.1/RESEARCH_UPDATE_v1.1.md`. Originality unchecked. |
+| C21 | Every shortest 2n-4 call protocol for n=4..7 has each chronological half a two-component forest | **PROVED (human proof)** | Sharp seven-vertex contradiction from three prefix components and a suffix three-vertex tree. |
+| C22 | Every shortest gossip protocol (any n) has forest contact graphs in both halves | **REFUTED** | Explicit 8-vertex 12-contact witness, independently verified using time-respecting path DFS; see `research/v1.1/sharp_half_forest.py` and `audit_threshold.py`. |
+| C23 | Shortest gossip schedules with a cyclic chronological half exist for every n>=8 | **PROVED (constructive induction)** | Prefix one contact from new vertex to old u, run original protocol, suffix contact from new vertex to a distinct old v. |
+
+**No change to the primary targets:** POD and the universal 2n-3 temporal-clique bound remain OPEN. The v1.1 result is a sharp negative boundary for a structural proof strategy, not a solution to either conjecture. Labahn (1995) and Krumme (1996) are important priority risks; publication novelty remains unverified.
