@@ -59,6 +59,10 @@ The first new call gives `u` the new secret. Since `S` was successful, the new s
 - Python `sharp_half_forest.py` independently checks the witness, its reverse, and extensions for `n=8,...,24` using chronological bitset propagation and checks the complete prefix/suffix component intersection property.
 - The independently implemented `audit_threshold.py` exhaustively enumerates and checks all 56 ordered pairs for time-respecting simple paths in the `K8` witness and all `C(21,5)=20,349` five-edge graphs on seven vertices, confirming that the **105** vertex-covering cyclic edge sets have precisely triangle-plus-two-independent-edges structure.
 
+## Corollary: both halves cannot be cyclic for `n<=10`
+
+A separate proof in `BOTH_HALVES_BOUND.md` establishes that **every shortest gossip schedule on at most ten vertices has at least one forest half**. It combines the complete component-intersection lemma with the three-agent gossip lower bound. For `n>=11`, the stronger assertion remains OPEN, with only heuristic negative-search evidence. No scholarly novelty is claimed.
+
 ## Implications for the `2n−3` program
 
 - This **eliminates** any universal optimal-spanner proof that presupposes two chronological forest halves for all `n`.
