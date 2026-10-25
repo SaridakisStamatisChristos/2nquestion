@@ -104,3 +104,11 @@ This is a necessary condition for an optimal-length protocol, not a proof of the
 | Priority | New ordered-contact lemma absent from classical gossip papers | **NOT VERIFIED** | Compare Labahn 1995 and Krumme 1996 before originality claims |
 
 The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13` schedules. No formal prover or GitHub CI success is asserted.
+
+
+## v1.4 (25 October 2026): n=13 finite half-forest exclusion
+
+- **NEW HUMAN PROOF:** first-bridge covering lemma. If a suffix tree's first edge links singleton entries from two prefix components, then every third prefix component's secrets must already have carriers on *both* sides of that edge. For a third-source intersection of size 1, impossible; size 2, both vertices must be complete collectors; size 3, at least one. Time-reversed dual also proved.
+- **FINITE THEOREM (exact enumeration for final case):** every successful shortest 22-contact simple gossip schedule on 13 vertices has at least one forest half. From 495 incidence-grid multisets (16 symmetry orbits), 44 nominal cycle placements remain after the initial collector rule. Structural collector budgets and classical gossip lower bounds exclude 43; one residual square configuration is certified infeasible by complete order enumeration. An independent *unquotiented* reduction passes 1,278 cycle placements with nine remaining copies of that same orbit. The final exhaustive local search returns EXACT_UNSAT.
+- **EXECUTED:** Python 3.13.5, `research/v1.4/half_forest13_reduction.py`, `research/v1.4/verify_square.py`, result in `research/v1.4/VERIFICATION.log`. This is finite executable evidence, not formalized by Lean/Coq/Isabelle, not CI-verifed, not externally peer-reviewed.
+- **OPEN:** all n>=14, universal temporal-clique 2n-3 conjecture, POD and research originality (Labahn/Krumme). **Keep draft; do not merge before independent review.**
