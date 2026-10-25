@@ -1,0 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;using E=pair<int,int>;
+int main(){const int n=6;vector<E> start={{0,1},{0,2},{1,2}}, tail={{3,4},{3,5},{4,5}};vector<E>cross;for(int i=0;i<3;i++)for(int j=3;j<6;j++)cross.emplace_back(i,j);array<int,9> a; iota(a.begin(),a.end(),0); long long tries=0;int maxcross=0;array<long long,10>h={};vector<E>best;
+auto conn=[](const vector<E>&seq,int skip){int info[6]={1,2,4,8,16,32};for(int t=0;t<15;t++)if(t!=skip){auto [u,v]=seq[t];info[u]|=info[v];info[v]=info[u];}return all_of(info,info+6,[](int x){return x==63;});};
+do{vector<E>s=start;for(int i:a)s.push_back(cross[i]);s.insert(s.end(),tail.begin(),tail.end());int forced=0;for(int i=3;i<12;i++)forced+=!conn(s,i);h[forced]++;if(forced>maxcross){maxcross=forced;best=s;}tries++;}while(next_permutation(a.begin(),a.end()));cout<<"tried "<<tries<<" max_cross_forced "<<maxcross<<" hist ";for(int i=0;i<10;i++)if(h[i])cout<<i<<":"<<h[i]<<" ";cout<<"\n";if(maxcross==9)for(auto [u,v]:best)cout<<u<<","<<v<<" ";}

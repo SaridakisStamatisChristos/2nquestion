@@ -1,0 +1,10 @@
+PASS exhaustive K3 schedules
+PASS exhaustive K4 schedules
+PASS unconditional global cut validity K3 schedules=6
+PASS unconditional global cut validity K4 schedules=720
+PASS unconditional global cut validity K5 schedules=50
+PASS complete temporal frontier cut relaxation K4: fractional=3, integral=4, all 26 cuts
+PASS exact solvers, K4: 5 edges
+PASS exact solvers, K5: 7 edges
+PASS exact solvers, K6: 8 edges
+ALL TESTS PASS; disconnected candidate-subgraph cases: 42378

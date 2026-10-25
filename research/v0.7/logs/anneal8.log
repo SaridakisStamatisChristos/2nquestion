@@ -1,0 +1,27 @@
+n=8 candidates=229376
+new_best=59391 restart=0 it=0 eval=2
+new_best=51605 restart=0 it=5 eval=5
+new_best=46517 restart=0 it=13 eval=12
+new_best=40603 restart=0 it=14 eval=13
+new_best=39520 restart=0 it=16 eval=15
+new_best=38338 restart=0 it=17 eval=16
+new_best=23066 restart=0 it=19 eval=17
+new_best=23002 restart=0 it=20 eval=18
+new_best=17575 restart=0 it=27 eval=25
+new_best=13964 restart=0 it=29 eval=27
+new_best=13096 restart=0 it=34 eval=32
+new_best=8474 restart=0 it=36 eval=34
+new_best=6276 restart=0 it=37 eval=35
+new_best=4977 restart=0 it=40 eval=38
+new_best=4931 restart=0 it=49 eval=46
+new_best=3871 restart=0 it=52 eval=49
+new_best=3797 restart=0 it=70 eval=67
+new_best=3637 restart=0 it=76 eval=73
+new_best=3320 restart=0 it=92 eval=89
+new_best=2738 restart=0 it=95 eval=92
+new_best=2223 restart=0 it=111 eval=107
+new_best=1496 restart=0 it=116 eval=112
+new_best=1296 restart=0 it=235 eval=227
+restart=0 best=1296 eval=1152
+RESULT n=8 best=1296 eval=1152 elapsed=18818ms seed=42
+(4,7) (0,7) (3,7) (2,7) (3,4) (6,7) (5,7) (3,5) (1,7) (2,4) (0,6) (4,6) (2,3) (3,6) (0,2) (2,6) (0,3) (5,6) (2,5) (1,6) (0,4) (4,5) (1,3) (0,5) (1,2) (0,1) (1,5) (1,4) 

@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std; using E=pair<int,int>;
+struct Result{int p,q,f,deg;};
+Result evaluate(int n,const vector<E>&s){int m=s.size(),all=(1<<n)-1;int t[16][16]={};for(int i=0;i<m;i++){auto[u,v]=s[i];t[u][v]=t[v][u]=i;}
+ int p=0,q=0;for(int u=0;u<n;u++){bool min_=true,max_=true;for(int v=0;v<n;v++)if(u!=v){bool uv=true,vu=true;for(int w=0;w<n;w++)if(w!=u&&w!=v){if(t[u][w]>=t[v][w])uv=false;if(t[v][w]>=t[u][w])vu=false;}if(vu)min_=false;if(uv)max_=false;}p+=min_;q+=max_;}
+ int f=0;int adj[16]={};for(int skip=0;skip<m;skip++){int inf[16];for(int i=0;i<n;i++)inf[i]=1<<i;for(int i=0;i<m;i++)if(i!=skip){auto[u,v]=s[i];inf[u]|=inf[v];inf[v]=inf[u];}bool forced=false;for(int i=0;i<n;i++)if(inf[i]!=all){forced=true;break;}if(forced){f++;auto[u,v]=s[skip];adj[u]|=1<<v;adj[v]|=1<<u;}}
+ int alive=all,deg=0;while(alive){int minD=99,who=-1;for(int u=0;u<n;u++)if((alive>>u)&1){int d=__builtin_popcount((unsigned)(adj[u]&alive));if(d<minD){minD=d;who=u;}}deg=max(deg,minD);alive^=1<<who;}
+ return {p,q,f,deg};}
+int main(int argc,char**argv){int n=atoi(argv[1]),maxT=argc>2?atoi(argv[2]):1000000;mt19937 rng(20261024+n);vector<E>base;for(int u=0;u<n;u++)for(int v=u+1;v<n;v++)base.emplace_back(u,v);int m=base.size();long long passes=0,viol=0;int maxF=0,maxDeg=0,minSlack=1000,bestp=0,bestq=0;for(int z=0;z<maxT;z++){auto a=base;if(z%3==0){shuffle(a.begin(),a.end(),rng);}else if(z%3==1){int sw=1+rng()%min(m,25);for(int i=0;i<sw;i++)swap(a[rng()%m],a[rng()%m]);}else{int sw=1+rng()%min(m,25);reverse(a.begin(),a.end());for(int i=0;i<sw;i++)swap(a[rng()%m],a[rng()%m]);}auto r=evaluate(n,a);maxF=max(maxF,r.f);maxDeg=max(maxDeg,r.deg);int bound=max(0,2*n-r.p-r.q-1);int slack=bound-r.f;if(slack<minSlack){minSlack=slack;bestp=r.p;bestq=r.q;}if(slack<0||r.deg>2){cout<<"VIOLATION z="<<z<<" n="<<n<<" p="<<r.p<<" q="<<r.q<<" f="<<r.f<<" deg="<<r.deg<<" bound="<<bound<<"\n";for(auto[u,v]:a)cout<<u<<","<<v<<" ";cout<<"\n";return 2;}passes++;}
+ cout<<"PASS n="<<n<<" trials="<<passes<<" max_forced="<<maxF<<" max_degeneracy="<<maxDeg<<" min_slack="<<minSlack<<" tight_p_q="<<bestp<<","<<bestq<<"\n";}

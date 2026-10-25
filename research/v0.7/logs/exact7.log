@@ -1,0 +1,6 @@
+n=7 candidates=5915
+schedule=(3,6) (1,6) (0,6) (5,6) (0,3) (2,6) (4,6) (0,1) (3,5) (0,5) (1,2) (1,5) (0,2) (0,4) (1,3) (2,3) (1,4) (2,5) (4,5) (2,4) (3,4) 
+k=9 checked=293930 tc=0 tw3=0 witness=0 elapsed=17ms
+k=10 checked=352716 tc=0 tw3=0 witness=0 elapsed=23ms
+k=11 checked=352716 tc=1 tw3=1 witness=2020648 elapsed=23ms
+witness_edges=(3,6) (1,6) (0,6) (5,6) (2,6) (4,6) (0,4) (1,4) (4,5) (2,4) (3,4) 
