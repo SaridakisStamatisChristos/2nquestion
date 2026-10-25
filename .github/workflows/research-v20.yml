@@ -1,0 +1,25 @@
+name: Independent original-chronology half-forest n14 certificate
+on:
+  push:
+    paths:
+      - 'research/v2.0/**'
+      - '.github/workflows/research-v20.yml'
+  pull_request:
+    paths:
+      - 'research/v2.0/**'
+      - '.github/workflows/research-v20.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finite-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Exact n14 grid, six-vertex local, and Python residual proof
+        run: python3 research/v2.0/verify_n14.py
+      - name: Independent C++ residual checker
+        run: |
+          g++ -O3 -std=c++17 research/v2.0/independent_cross_check.cpp -o /tmp/independent_cross
+          /tmp/independent_cross
