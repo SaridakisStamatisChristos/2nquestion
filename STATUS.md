@@ -34,3 +34,13 @@ The versioned `research/v0.x/` directories preserve original evidence, including
 2. Audit the v0.4 infinite-family proof for temporal chronology assumptions and priority.
 3. Investigate historical gossip and temporal spanner literature before claiming that any treewidth separation is novel.
 4. For proposed universal results, demand a complete proof or a small independently checkable falsifying instance.
+
+## v0.8 update — 25 October 2026
+
+| ID | Statement | State | Evidence / qualification |
+| --- | --- | --- | --- |
+| C11 | The 14 v0.2 hard, non-pivotable `K9` schedules all admit 14-edge spanners | **VERIFIED FINITE** | `research/v0.8/certificates_pod9.json`; independently checked with 14 source-by-source oracles and time-reversal / relabeling tests |
+| C12 | Fixed-restart greedy hardness indicates absence of a 14-edge spanner | **REFUTED AS AN INFERENCE** | `research/v0.8/adversarial_best9.txt` scored 15 under 24 deletion orders; independent greedy seed 3 found a verified 14-edge witness |
+| C13 | The v0.8 scripts provide an unbounded proof of POD or `2n-3` | **NOT ESTABLISHED** | All evidence is restricted to individual orders; see `research/v0.8/RESEARCH_UPDATE_v0.8.md` |
+
+Selected independent verifier: `python research/v0.8/independent_verify_v08.py` — 14 `K9` certificates plus 46,080 `K4` differential checks passed in the recorded local run. No formal proof assistant or GitHub CI run is claimed. Scholarly novelty remains unresolved.
