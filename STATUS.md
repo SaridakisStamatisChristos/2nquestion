@@ -144,3 +144,20 @@ The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13
 - **FALSIFICATION ATTEMPT EXECUTED**: [bounded 5 million mutation search at n14](research/v1.9/n14_search.cpp) with [log](research/v1.9/N14_EXPERIMENT.log) found no valid both-cyclic full-gossip witness; UNSAT or general n14 theorem **NOT** claimed.
 - **MANUSCRIPT-LEVEL INDEPENDENT CRITIQUE**: [v1.9 reviewer report](research/v1.9/REVIEWER_AUDIT.md) enumerates central objections and fixes, with significance and implicit-priority risk still major. **Draft complete; contribution gate conditional, not submission-ready.**
 - **No repo merge and no universal 2n-3 claim**. Keep this research PR draft until explicit disposition.
+
+
+## v2.0 — independent n14 finite theorem and single-source entry lemma (25 Oct 2026)
+
+**MAJOR RESEARCH ADVANCE.** The previously unresolved \(n=14\) original-chronology half-forest case has been eliminated by a fully enumerated, deterministic finite certificate. The theorem now holds for **all 4<=n<=14** by the *classical* two-contact new-vertex extension, which preserves both original half cycle ranks.
+
+- **New human-proved lemma:** If a suffix tree has a singleton intersection with a prefix component P, then each *other* prefix component supplies a full prefix collector into that suffix tree. Dual under reversal. Also every prefix/suffix intersection cell must collectively cover all original secrets of its prefix component.
+- **n13 proof simplified:** The old residual grid would require 3 full collectors in a tree, impossible. Previous full chronology-order UNSAT scripts remain useful independent verification but are no longer logically needed for the last n13 case.
+- **n14 new exact incidence reduction:** Previous 738 necessary-condition survivors across 11 matrix orbits become 81 survivors in **3 full cyclic-position-aware orbits** (36+9+36) under S3 row/column permutations and time reversal.
+- **Orbit A:** 360,360 six-vertex ordered tree edge sequences; 0 satisfy both all-cell secret coverage and two demanded collectors.
+- **Orbit B:** 3,603,600 six-vertex ordered unicyclic edge sequences; 0 satisfy all-cell coverage and four demanded collectors.
+- **Orbit C:** exactly 48 prefix tree orders and 288 suffix unicyclic orders after necessary reverse collector/coverage filters; all 13,824 pairs fail exact P1-to-Q2 information propagation. **Independent C++ reimplementation** agrees.
+- **GitHub verified at v2.0:** [n14 independent CI success](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40225320382). Previous v1.4–v1.9 research CI checks remain green.
+- **Canonical text:** [v2.0 manuscript](research/v2.0/MANUSCRIPT.md), [adversarial scientific audit](research/v2.0/REVIEWER_AUDIT.md), [reproducibility instructions](research/v2.0/README.md).
+- **Explicit boundaries:** n>=15 general half-forest assertion remains **OPEN**; original fixed-chronology temporal-clique 2n-3 bound remains **OPEN**; no global historical first-ever/novelty guarantee. Earlier v1.9 'n14 unresolved' conclusion is **superseded by this verified v2.0 finite theorem**.
+
+**PR disposition:** Keep DRAFT and UNMERGED pending independent external mathematical/referee review. Do not replace historical source evidence.
