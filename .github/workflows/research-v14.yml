@@ -1,0 +1,27 @@
+name: Verify finite gossip n13 certificate
+
+on:
+  push:
+    paths:
+      - 'research/v1.4/**'
+      - '.github/workflows/research-v14.yml'
+  pull_request:
+    paths:
+      - 'research/v1.4/**'
+      - '.github/workflows/research-v14.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run structural orbit and collector-capacity audit
+        run: python3 research/v1.4/half_forest13_reduction.py
+      - name: Run exact remaining-square verifier
+        run: python3 research/v1.4/verify_square.py
