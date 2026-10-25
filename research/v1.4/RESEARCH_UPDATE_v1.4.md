@@ -52,3 +52,7 @@ Executed locally with Python **3.13.5** on 2026-10-25. Results: 16 orbits, 44 cy
 **Priority barriers:** Göbel–Cerdeira–Veldman (1991), *Label-connected graphs and the gossip problem*; Labahn (1995), *Kernels of minimum size gossip schemes*, https://doi.org/10.1016/0012-365X(94)00031-D ; Krumme (1996), *Reordered gossip schemes*, https://doi.org/10.1016/0012-365X(94)00302-Y ; current temporal-clique open-problem tracker https://arnaudcasteigts.net/blog/open-problems.html .
 
 **Review gate:** Keep the research PR in draft, do not merge before independent reproduction and priority review. No new universal theorem or publication novelty is claimed.
+
+### CI verification addendum — 25 October 2026
+
+**CI-VERIFIED EXECUTION on commit b3f889ff68c719b9754a0673068c133c5975599b:** GitHub Actions push run [40201117451](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40201117451) and pull-request run [40201117477](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40201117477) both completed **success**. Their `finite-certificate` jobs successfully ran both the structural classifier and the exact square checker from committed source. This establishes reproducible execution in a second runtime, **not** a machine-formal proof, independent implementation, originality finding, or universal theorem.
