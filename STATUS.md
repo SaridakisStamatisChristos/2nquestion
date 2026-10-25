@@ -79,3 +79,5 @@ This is a necessary condition for an optimal-length protocol, not a proof of the
 | C23 | Shortest gossip schedules with a cyclic chronological half exist for every n>=8 | **PROVED (constructive induction)** | Prefix one contact from new vertex to old u, run original protocol, suffix contact from new vertex to a distinct old v. |
 
 **No change to the primary targets:** POD and the universal 2n-3 temporal-clique bound remain OPEN. The v1.1 result is a sharp negative boundary for a structural proof strategy, not a solution to either conjecture. Labahn (1995) and Krumme (1996) are important priority risks; publication novelty remains unverified.
+
+| C24 | Every shortest gossip schedule on n<=10 vertices has at least one forest half | **PROVED (human proof); novelty unverified** | `research/v1.1/BOTH_HALVES_BOUND.md`: 3x3 intersection and three-agent gossip lower bound exclude two cyclic halves for n=9,10; n<=8 handled by component product and sharp threshold. |
