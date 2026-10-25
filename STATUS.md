@@ -54,3 +54,12 @@ Selected independent verifier: `python research/v0.8/independent_verify_v08.py` 
 | C16 | Six selected non-pivotable `K10` extensions admit optimal `2n-4=16`-edge spanners | **VERIFIED FINITE** | `research/v0.9/targeted_n10_results.json`, independent `independent_check_v09.py`; one initial timeout resolved by longer run |
 
 **No change to main verdict:** the universal `2n-3` conjecture, POD, and treewidth-3 hypothesis remain open. No priority-verified new universal theorem has been established.
+
+## v1.0 checkpoint — 25 October 2026
+
+| ID | Statement | Evidence state | Proof/data |
+| --- | --- | --- | --- |
+| C17 | Every shortest *distinct-edge* gossip protocol on `4 <= n <= 6` contains a chronological 4-cycle butterfly | **VERIFIED FINITE EXHAUSTIVE** | `research/v1.0/exhaustive_kernel.cpp`; 17,297,280 first-contact-normalized K6 sequences, 83,808 optimal connected cases, zero butterfly-free; see v1.0 note. No universal theorem or novelty priority claimed. |
+| C18 | The chronological butterfly hypothesis holds for all `n` | **OPEN** | Heuristic 350,000-proposal walks each on n=6..10 found no counterexample; minimum-gossip kernel priority unresolved, including Labahn (1995). |
+
+**No change to the main question:** `2n-3` and POD remain OPEN. Finite BF(n<=6) does not prove their universal bounds.
