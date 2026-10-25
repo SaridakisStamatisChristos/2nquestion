@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-25",
+  "definition": "4-cycle with first two and last two contacts on disjoint endpoint pairs",
+  "exhaustive": [
+    {
+      "n": 4,
+      "normalized_schedules": 60,
+      "shortest_connected": 4,
+      "without_butterfly": 0
+    },
+    {
+      "n": 5,
+      "normalized_schedules": 15120,
+      "shortest_connected": 324,
+      "without_butterfly": 0
+    },
+    {
+      "n": 6,
+      "normalized_schedules": 17297280,
+      "shortest_connected": 83808,
+      "without_butterfly": 0
+    }
+  ],
+  "walk": {
+    "seed": "20261025+n",
+    "n_values": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "proposals_per_n": 350000,
+    "minimum_butterfly_count_visited": 1,
+    "counterexamples": 0,
+    "coverage": "nonexhaustive"
+  },
+  "novelty": "UNVERIFIED",
+  "universal_butterfly": "OPEN",
+  "universal_2n_minus_3": "OPEN"
+}
