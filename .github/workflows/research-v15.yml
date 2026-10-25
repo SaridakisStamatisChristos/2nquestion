@@ -23,5 +23,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Enumerate 8-vertex poset and verify 13-vertex extension
         run: python3 research/v1.5/minimal_order_bridge.py
+      - name: Independent explicit n13 all-source temporal verifier
+        run: python3 research/v1.5/independent_verify_v15.py
       - name: Check corrected 13-vertex structural filter
         run: python3 research/v1.4/half_forest13_reduction.py
