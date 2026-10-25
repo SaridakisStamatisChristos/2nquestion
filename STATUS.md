@@ -134,3 +134,13 @@ The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13
 - **Labahn Thm 6.1 independently reconstructed and verified** in [v1.8 program](research/v1.8/verify_labahn61.py), including 341 permutation-pair candidates over p=3..7 and 121 valid p-grid kernels. Existing published p-grid permutation/admissibility framework is **PRIOR ART** and the earlier missing rho/sigma predicate is now known.
 - **PROPER NOVELTY POSITION:** potentially distinct *explicit* fixed-midpoint finite n13 result; **global historical novelty and non-derivability still unresolved**, without implying that the originals are inaccessible. Previously green finite n13 v1.7 verification remains in effect; universal temporal-clique 2n-3 remains OPEN.
 - Publisher PDFs have **not** been copied into this repository. PR stays draft, unmerged.
+
+
+## v1.9 — complete working paper, n<=15 grid reduction, adversarial contribution audit (25 October 2026)
+
+- **Full draft manuscript authored**: [research/v1.9/PAPER_DRAFT.md](research/v1.9/PAPER_DRAFT.md) with abstract, model, proofs, finite n13 computational theorem, original-order-vs-static prior art and limitations; a six-page LaTeX PDF was also compiled and visually checked in the ChatGPT artifact runtime. Citation metadata separately stored in [references.bib](research/v1.9/references.bib). The GitHub Markdown is the canonical versioned manuscript; the PDF and LaTeX editable copy are separately provided to the user.
+- **NEW PROVED NECESSARY STRUCTURAL LEMMA**: if both halves cyclic and the prefix has exactly 3 components while suffix has s>=4, then n>=5s-4. Time-reverse dual; hence any both-cyclic shortest gossip schedule with n<=15 has exactly r=s=3 components. This does not assert such a schedule exists.
+- **N14/15 RESEARCH EXECUTED**: [exact filter](research/v1.9/n14_reduction.py) reproduces unquotiented 3x3 necessary-condition survivors: n13 9 in 1 matrix orbit; n14 738 in 11; n15 4662 in 42. All n<=15 other grid sizes are excluded by the new lemma. Survivors are *not* feasible schedule certificates.
+- **FALSIFICATION ATTEMPT EXECUTED**: [bounded 5 million mutation search at n14](research/v1.9/n14_search.cpp) with [log](research/v1.9/N14_EXPERIMENT.log) found no valid both-cyclic full-gossip witness; UNSAT or general n14 theorem **NOT** claimed.
+- **MANUSCRIPT-LEVEL INDEPENDENT CRITIQUE**: [v1.9 reviewer report](research/v1.9/REVIEWER_AUDIT.md) enumerates central objections and fixes, with significance and implicit-priority risk still major. **Draft complete; contribution gate conditional, not submission-ready.**
+- **No repo merge and no universal 2n-3 claim**. Keep this research PR draft until explicit disposition.
