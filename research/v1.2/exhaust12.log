@@ -1,0 +1,16 @@
+Isomorphism classes 4 [[(0, 0), (0, 0), (1, 1)], [(0, 0), (0, 1), (1, 0)], [(0, 0), (0, 1), (1, 2)], [(0, 0), (1, 1), (2, 2)]]
+CASE ((0, 0), (0, 0), (1, 1)) 2 2 found False elapsed 0.34
+CASE ((0, 0), (0, 1), (1, 0)) 2 2 found False elapsed 1.55
+CASE ((0, 0), (0, 1), (1, 2)) 2 0 found False elapsed 2.64
+CASE ((0, 0), (0, 1), (1, 2)) 2 1 found False elapsed 3.64
+CASE ((0, 0), (0, 1), (1, 2)) 2 2 found False elapsed 4.54
+CASE ((0, 0), (1, 1), (2, 2)) 0 0 found False elapsed 4.97
+CASE ((0, 0), (1, 1), (2, 2)) 0 1 found False elapsed 5.4
+CASE ((0, 0), (1, 1), (2, 2)) 0 2 found False elapsed 5.85
+CASE ((0, 0), (1, 1), (2, 2)) 1 0 found False elapsed 6.31
+CASE ((0, 0), (1, 1), (2, 2)) 1 1 found False elapsed 6.75
+CASE ((0, 0), (1, 1), (2, 2)) 1 2 found False elapsed 7.18
+CASE ((0, 0), (1, 1), (2, 2)) 2 0 found False elapsed 7.62
+CASE ((0, 0), (1, 1), (2, 2)) 2 1 found False elapsed 8.07
+CASE ((0, 0), (1, 1), (2, 2)) 2 2 found False elapsed 8.52
+No both-cyclic shortest schedule for n12 in 14 classes of component patterns
