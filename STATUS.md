@@ -44,3 +44,13 @@ The versioned `research/v0.x/` directories preserve original evidence, including
 | C13 | The v0.8 scripts provide an unbounded proof of POD or `2n-3` | **NOT ESTABLISHED** | All evidence is restricted to individual orders; see `research/v0.8/RESEARCH_UPDATE_v0.8.md` |
 
 Selected independent verifier: `python research/v0.8/independent_verify_v08.py` — 14 `K9` certificates plus 46,080 `K4` differential checks passed in the recorded local run. No formal proof assistant or GitHub CI run is claimed. Scholarly novelty remains unresolved.
+
+## v0.9 checkpoint — 25 October 2026
+
+| ID | Statement | Evidence state | Proof/data |
+| --- | --- | --- | --- |
+| C14 | Incident-local MILP exactly encodes strict chronological temporal reachability with only `m` binary edge variables and `n^3` continuous state variables | **PROVED (human argument); implementation tested** | `research/v0.9/RESEARCH_UPDATE_v0.9.md` and `incident_milp.py`. Novelty **not established** |
+| C15 | Exact solver matches independent brute-force optimum on all `K3`, all `K4`, and 120 seeded `K5` schedules | **VERIFIED FINITE** | `research/v0.9/verify_incident_milp.py`, `validation_results.json` |
+| C16 | Six selected non-pivotable `K10` extensions admit optimal `2n-4=16`-edge spanners | **VERIFIED FINITE** | `research/v0.9/targeted_n10_results.json`, independent `independent_check_v09.py`; one initial timeout resolved by longer run |
+
+**No change to main verdict:** the universal `2n-3` conjecture, POD, and treewidth-3 hypothesis remain open. No priority-verified new universal theorem has been established.
