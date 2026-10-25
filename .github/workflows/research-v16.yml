@@ -1,0 +1,25 @@
+name: Verify 1991 Cd-graph chronology audit
+
+on:
+  push:
+    paths:
+      - 'research/v1.6/**'
+      - '.github/workflows/research-v16.yml'
+  pull_request:
+    paths:
+      - 'research/v1.6/**'
+      - '.github/workflows/research-v16.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cd-chronology-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently verify 1991 Cd partition versus original half ranks
+        run: python3 research/v1.6/verify_1991_cd_gap.py
