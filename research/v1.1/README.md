@@ -6,6 +6,8 @@ This checkpoint proves a structural necessary condition for arbitrary gossip sch
 - Exact constructive witness and infinite extension: `sharp_half_forest.py`
 - Independent reachability DFS and finite graph-structure check: `audit_threshold.py`
 - Original K10 adversarial witness: `half_cycle_witness.json`
+- Additional proved exclusion: `BOTH_HALVES_BOUND.md` (at least one forest half for `n<=10`)
+- Adversarial two-cyclic-halves search: `both_halves_search.cpp`
 
 Run:
 ```
