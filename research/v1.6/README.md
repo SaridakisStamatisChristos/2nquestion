@@ -9,7 +9,6 @@ Files:
   implication gaps, novelty verdict, remaining blockers.
 - verify_1991_cd_gap.py — standalone independent exact eight-vertex certificate.
 - VERIFY_OUTPUT.txt — recorded local execution evidence.
-- MANIFEST.json — SHA-256 hashes to verify exported files.
 
 Run: python verify_1991_cd_gap.py
 
