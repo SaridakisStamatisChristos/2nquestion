@@ -13,3 +13,11 @@
 ## Gating criteria
 
 A **breakthrough** requires either (a) a complete human-checkable universal proof with independent adversarial audit, (b) a minimal counterexample with a certified nonexistence result, or (c) another universal theorem plus verified scholarly-priority search showing genuinely new substance. A small instance or numerical pattern is a research artifact, not a paper-worthy novelty declaration by itself.
+
+## Next target after v0.8: exact non-pivotable n >= 9 obstruction search
+
+1. Do not optimize for failure of a fixed set of greedy permutations: v0.8 demonstrates this metric can declare a readily solvable schedule difficult.
+2. Generate non-pivotable, non-1/2/3-hop-dismountable chronologies and separate instance generation from exact witness/infeasibility validation.
+3. To refute POD, produce an order with **certified infeasibility** under cardinality bound `2n-4`; an exact solver timeout is UNKNOWN.
+4. To refute the primary `2n-3` conjecture, prove no temporal spanner with <=`2n-3` exists for a particular chronology.
+5. For any positive universal result, write and adversarially audit the complete proof; compare exact hypotheses with Bumby (1981), Göbel–Cerdeira–Veldman (1991), SAND 2025, and Baligács (2026).
