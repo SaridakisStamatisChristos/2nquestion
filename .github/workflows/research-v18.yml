@@ -1,0 +1,25 @@
+name: Verify original Labahn Theorem 6.1
+
+on:
+  push:
+    paths:
+      - 'research/v1.8/**'
+      - '.github/workflows/research-v18.yml'
+  pull_request:
+    paths:
+      - 'research/v1.8/**'
+      - '.github/workflows/research-v18.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  primary-kernel-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently check Labahn Theorem 6.1 for p=3..7
+        run: python3 research/v1.8/verify_labahn61.py
