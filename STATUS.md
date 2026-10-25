@@ -81,3 +81,14 @@ This is a necessary condition for an optimal-length protocol, not a proof of the
 **No change to the primary targets:** POD and the universal 2n-3 temporal-clique bound remain OPEN. The v1.1 result is a sharp negative boundary for a structural proof strategy, not a solution to either conjecture. Labahn (1995) and Krumme (1996) are important priority risks; publication novelty remains unverified.
 
 | C24 | Every shortest gossip schedule on n<=10 vertices has at least one forest half | **PROVED (human proof); novelty unverified** | `research/v1.1/BOTH_HALVES_BOUND.md`: 3x3 intersection and three-agent gossip lower bound exclude two cyclic halves for n=9,10; n<=8 handled by component product and sharp threshold. |
+
+## v1.2 research checkpoint — 25 October 2026
+
+| ID | Statement | State | Evidence / qualification |
+| --- | --- | --- | --- |
+| C20 | Every shortest simple-contact gossip schedule on ≤11 vertices has at least one forest half | **PROVED (human proof)** | Two-collector contradiction and prefix/suffix 3×3 component intersections; `research/v1.2/RESEARCH_UPDATE_v1.2.md` |
+| C21 | The same result holds on exactly 12 vertices | **EXHAUSTIVELY VERIFIED FINITE** | Four symmetry classes, fourteen cycle placements, all local time orderings enumerated in `research/v1.2/exhaust12.py`; no Lean/Coq/second full verifier claim |
+| C22 | Every shortest gossip schedule at n≥13 has a forest half | **OPEN** | Exploratory n=13 patterns insufficient to conclude either way |
+| C23 | The half-forest results prove the fixed-label temporal-clique `2n-3` conjecture | **NOT ESTABLISHED** | Minimum gossip scheduling and extracting a sparse subset from arbitrary fixed chronology are different problems |
+
+**Novelty:** unresolved; compare Labahn 1995 minimum gossip kernels. No paper-readiness claim. Main and POD conjectures remain open.
