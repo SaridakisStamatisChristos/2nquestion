@@ -1,0 +1,29 @@
+name: Verify n14/15 extension and finite n13 campaign
+
+on:
+  push:
+    paths:
+      - 'research/v1.9/**'
+      - '.github/workflows/research-v19.yml'
+  pull_request:
+    paths:
+      - 'research/v1.9/**'
+      - '.github/workflows/research-v19.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  n14-necessary-condition-grid:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Enumerate n13/14/15 necessary-condition placements
+        run: python3 research/v1.9/n14_reduction.py
+      - name: Independent n13 grid certificate
+        run: python3 research/v1.7/independent_grid.py
+      - name: Independent n13 residual UNSAT
+        run: python3 research/v1.7/independent_square.py
