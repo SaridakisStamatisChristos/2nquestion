@@ -21,3 +21,10 @@ A **breakthrough** requires either (a) a complete human-checkable universal proo
 3. To refute POD, produce an order with **certified infeasibility** under cardinality bound `2n-4`; an exact solver timeout is UNKNOWN.
 4. To refute the primary `2n-3` conjecture, prove no temporal spanner with <=`2n-3` exists for a particular chronology.
 5. For any positive universal result, write and adversarially audit the complete proof; compare exact hypotheses with Bumby (1981), Göbel–Cerdeira–Veldman (1991), SAND 2025, and Baligács (2026).
+
+## v1.1 research direction: chronology and kernel compatibility
+
+- **PROVED boundary:** for shortest gossip schedules n<=7 both halves are forests; for n>=8 a cyclic half is possible by an explicit infinite construction; n<=10 at least one half is always a forest.
+- **OPEN beyond n=10:** Is at least one chronological half always a forest in a minimum gossip schedule? An adversarial walk n=11..14 produced no counterexample, but may be biased.
+- **NEXT:** Investigate implications for nonpivotable fixed-time cliques and compare all half-component results against Labahn (1995) and Krumme (1996) before novelty claims.
+- **CRITICAL:** The central `2n-3` conjecture and the stronger POD conjecture remain open; this structural boundary neither proves nor refutes them.
