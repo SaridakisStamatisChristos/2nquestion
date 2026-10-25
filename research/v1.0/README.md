@@ -7,5 +7,6 @@ Exact finite computer-assisted result: BF(n) holds for shortest simple-contact g
 - `independent_kernel_verify.py` — independent n=5 enumeration and 8,000 reachability differential checks
 - `kernel_walk.cpp` — explicitly heuristic n=6..10 falsification walks; no negative result can imply truth
 - `results.json` — deterministic enumerations and seeded search summaries
+- `INCIDENCE_WINDOW_LEMMA.md` — universal elementary proved necessary condition on the first/last calls of each vertex
 
 Reproduce via commands in the mathematical note. The `n=6` enumeration has 17,297,280 normalized orders, of which 83,808 are valid and all contain a chronological butterfly.
