@@ -1,0 +1,23 @@
+[
+  {
+    "n": 3,
+    "orders": 6,
+    "full_optimum_checks": 6,
+    "infeasibility_at_opt_minus_one": 6,
+    "feasibility_at_optimum": 6
+  },
+  {
+    "n": 4,
+    "orders": 720,
+    "full_optimum_checks": 720,
+    "infeasibility_at_opt_minus_one": 30,
+    "feasibility_at_optimum": 30
+  },
+  {
+    "n": 5,
+    "orders": 120,
+    "full_optimum_checks": 120,
+    "infeasibility_at_opt_minus_one": 30,
+    "feasibility_at_optimum": 30
+  }
+]
