@@ -34,7 +34,9 @@ def cases():
 
 def main():
     from verify_n15_independent import audit
+    from verify_n15_structural_independent import audit as audit_structural
     from verify_profile_semantics import test_semantics
+    audit_structural()
     source=HERE/'profile_oracle.cpp'
     with tempfile.TemporaryDirectory() as temp:
         executable=Path(temp)/'profile-oracle'
