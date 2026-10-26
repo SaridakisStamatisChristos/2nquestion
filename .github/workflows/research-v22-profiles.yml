@@ -1,0 +1,21 @@
+name: Probe n16 information profiles (exploratory)
+on:
+  push:
+    paths:
+      - 'research/v2.2/probe_n16_profiles.py'
+      - '.github/workflows/research-v22-profiles.yml'
+  pull_request:
+    paths:
+      - 'research/v2.2/probe_n16_profiles.py'
+      - '.github/workflows/research-v22-profiles.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  n16-partial-profile-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Probe eligible n16 local profile compatibility and print machine-readable report
+        run: python3 research/v2.2/probe_n16_profiles.py
