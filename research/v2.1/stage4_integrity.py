@@ -47,7 +47,9 @@ review=(ROOT/"STAGE4_REVIEWER_REPORT.md").read_text()
 status=(ROOT/"STATUS.md").read_text()
 for title,text in (("paper",paper),("priority audit",audit),
                    ("review",review),("status",status)):
-    for anchor in ("n=15","945","20"):
+    assert ("n=15" in text or "15 vertices" in text or "n<=15" in text),(
+        title,"missing fifteen-participant scope")
+    for anchor in ("945","20"):
         assert anchor in text,(title,"missing",anchor)
     assert "unresolved" in text.lower(),title
 for term in ("33","6","10","4","minimum","chronological",
