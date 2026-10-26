@@ -1,0 +1,23 @@
+name: Verify n15 finite profile certificate
+on:
+  push:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21.yml'
+      - 'research/v2.0/half_forest14_grid.py'
+  pull_request:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21.yml'
+      - 'research/v2.0/half_forest14_grid.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-n15-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Compile and independently verify all 20 orbits
+        run: python3 research/v2.1/prove_n15.py
