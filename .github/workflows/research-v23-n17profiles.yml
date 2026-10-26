@@ -1,0 +1,21 @@
+name: Probe n17 profile obstruction (exploratory)
+on:
+  push:
+    paths:
+      - 'research/v2.3/probe_n17_profiles.py'
+      - '.github/workflows/research-v23-n17profiles.yml'
+  pull_request:
+    paths:
+      - 'research/v2.3/probe_n17_profiles.py'
+      - '.github/workflows/research-v23-n17profiles.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  n17-optimistic-profile-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 19
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Scan n17 structurally surviving classes with safe capacity guard
+        run: python3 research/v2.3/probe_n17_profiles.py
