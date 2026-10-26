@@ -43,13 +43,13 @@ def legal(M,cr,cc,include_strong):
             singles=[r for r in range(3) if M[r][c]==1]
             if len(singles)==2:
                 other=next(r for r in range(3) if r not in singles)
-                forward[other][c]=min(M[other][c],2) if M[other][c]<=3 else 0
+                forward[other][c]=2 if M[other][c]==2 else (1 if M[other][c]==3 else 0)
         for r in range(3):
             if r==cr:continue
             singles=[c for c in range(3) if M[r][c]==1]
             if len(singles)==2:
                 other=next(c for c in range(3) if c not in singles)
-                backward[r][other]=min(M[r][other],2) if M[r][other]<=3 else 0
+                backward[r][other]=2 if M[r][other]==2 else (1 if M[r][other]==3 else 0)
     for r in range(3):
         count=sum(forward[r]);size=sum(M[r])
         if r!=cr and count>2:return False
