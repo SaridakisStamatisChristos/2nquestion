@@ -41,11 +41,11 @@ The freshly reconstructed verifier finds 20/20 UNSAT orbits covering all 945 sur
 
 This is a **different classification** from the lost draft's unverified 7/10/3 report. Two of the six locally impossible orbits also use optimistic domains for unrelated components; their actual obstructions are exact empty local domains.
 
-The demanding seven-vertex unicyclic local pattern with group sizes (2,2,3) and collector demands (2,2,0) is exhausted in the C++ implementation: 28,950,444 node visits, 26,384,430 terminal visits and zero locally admissible states. These are C++ exploration counts, not counts from an independent second full seven-vertex oracle.
+The demanding seven-vertex unicyclic local pattern with group sizes (2,2,3) and collector demands (2,2,0) is exhausted in the C++ implementation: 28,950,444 node visits, 26,384,430 terminal visits and zero locally admissible states. These are C++ exploration counts from the original implementation; Stage 3 now provides a second independent seven-vertex implementation with different raw chronology counts and exactly matching complete B/D domains. See STAGE3_ADVERSARIAL_AUDIT.md.
 
 The Python checker separately evaluates **all 20 CSP compatibility questions** from the exported local-domain sets, with a different domain-filtering/selection algorithm. Independent Python local chronology enumeration matches C++ on four small component types. An independent semantic checker passes 3,200 randomized direct-gossip versus backward-token-profile tests and 240 randomized optimistic-tree dominance tests.
 
-**Independence boundary:** Python independently checks the structural enumeration, all twenty *global compatibility decisions*, and four small local domain generators, but consumes the C++-generated large-component profiles. The demanding seven-vertex component has not been exhaustively re-enumerated by a second independently implemented complete oracle, and no proof assistant was used. The certificate is reproducible CI evidence for a bounded finite result, not a claim of independent formal verification.
+**Independence boundary updated by Stage 3:** The second C++ disjoint-set/two-phase oracle, which performs no history-state memoization, has now independently enumerated **all 33 exact component types**, including both seven-vertex cyclic cases. Its complete B/D profile sets agree exactly with the primary implementation. The independent Python global checker then reconfirms **20/20** UNSAT using those independently generated exact domains. Large-tree optimistic domains remain shared with the primary generator, supported by a mathematical dominance proof and separate falsification checks. No proof assistant or external referee is claimed. See [Stage 3 adversarial audit](STAGE3_ADVERSARIAL_AUDIT.md).
 
 ## Reproduction and machine-readable evidence
 
@@ -64,3 +64,8 @@ The earlier failed CI at run 40346095006 detected a Python tuple/list difference
 ## Boundaries
 
 The unbounded half-forest question (n >= 16), the separate fixed-timestamp temporal-clique 2n-3 conjecture, and global historical priority versus Labahn (1995), Krumme (1996) and other classical gossip-kernel results remain unresolved. The PR remains **draft and unmerged**. A complete externally refereed proof or historical originality certification is not claimed.
+
+
+## Stage 3 addendum — independent exact component and adversarial pruning audit (26 Oct 2026)
+
+The former single-C++-oracle independence limitation has been **closed for all exact component domains**. A separately written enumerator uses incremental union-find/cycle-rank and explicit final-two-contact search, does not memoize contact history states, and reproduces all **33** complete B/D domain pairs. A separate exhaustive Python suite tests 360,360 n=6 candidate tree orders and the tree/unicyclic n=3..5 spaces against the last-contact collector and optimistic bound, plus 8,272 K4 forward/reverse reachability equivalences. All passed in [Stage 3 push CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356861884) and [PR CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356872700). The detailed evidence and residual limits are in [STAGE3_ADVERSARIAL_AUDIT.md](STAGE3_ADVERSARIAL_AUDIT.md). **No formal proof assistant, universal n-theorem, or originality claim is implied.**
