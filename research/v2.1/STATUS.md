@@ -42,3 +42,21 @@ See RESEARCH_UPDATE_VERIFIED.md for the profile equivalence proof, pruning and o
 ## Unresolved
 
 Unbounded n>=16 half-forest assertion: **OPEN**. Separate temporal-clique 2n-3 conjecture: **OPEN**. Scholarly historical novelty: **UNRESOLVED**. No Lean/Coq proof or external peer review. PR #1 remains **DRAFT and UNMERGED**.
+
+
+## Stage 3 — second exact local oracle and adversarial falsification: PASS (26 October 2026)
+
+The originally unverified seven-vertex local oracle has now been **fully and independently reimplemented**, not merely rerun. The independent disjoint-set/two-phase C++ enumerator performs no history-state memoization, enumerates all 33 exact component types used by the finite proof, and obtains **identical complete B/D profile sets** to the original oracle. Both n=7 unicyclic types are checked: (2,2,3) with collector needs (2,2,0) has no admissible profile; (2,3,2) with needs (2,1,0) has 9 B and 27 D profiles.
+
+After replacing every exact original profile domain with its independently generated counterpart, all **20 global UNSAT orbits** remain excluded, covering **945 of 945** placements.
+
+A separate exhaustive Python adversarial check covers every selected connected or disconnected tree/unicyclic contact order on n=3..5 and every 5-edge candidate tree order on n=6 (360,360 sequences), with no violation of necessary final-contact collector restrictions or optimistic tree information bounds. An independent forward/reverse temporal test checks all 517 distinct-edge K4 sequences through four contacts, **8,272 source/destination comparisons**, without mismatch.
+
+- [Complete Stage 3 mathematical and implementation audit](STAGE3_ADVERSARIAL_AUDIT.md)
+- [Independent C++ oracle](stage3_independent_oracle.cpp)
+- [Full-domain comparison and 20-orbit audit](stage3_adversarial_check.py)
+- [Exhaustive falsification checks](stage3_exhaustive_stress.py)
+- [Successful extended push run](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356861884)
+- [Successful extended PR run](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356872700)
+
+**Stage 3 disposition: PASS for bounded computer-assisted n<=15 verification.** Formal proof-assistant verification, external peer review and classical-priority determination are still absent. Stage 4 (novelty/publication review) has **not** been completed. PR #1 remains DRAFT and UNMERGED.
