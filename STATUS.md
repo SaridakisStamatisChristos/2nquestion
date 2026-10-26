@@ -173,3 +173,10 @@ The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13
 - Full reproducibility: [reconstruction audit](research/v2.1/RESEARCH_UPDATE_VERIFIED.md), [source and 20-case JSON](research/v2.1/STATUS.md), [push CI PASS](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40346862524), [PR CI PASS](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40346871327).
 - **Independence limit:** full seven-vertex exact local enumeration is implemented in the C++ oracle; the separate Python checker reruns global compatibility from the generated local domains, rather than providing a second full independent enumeration at seven vertices.
 - **Still OPEN:** n>=16, the fixed-timestamp temporal-clique 2n-3 spanner conjecture, and scholarly originality. Keep PR #1 **DRAFT and UNMERGED**.
+
+
+## Stage 3 — independent n=15 certificate audit (26 Oct 2026)
+
+**PASS, bounded verification:** Two independently implemented C++ algorithms now agree on all **33 exact local information-profile domains**, including both seven-vertex unicyclic cases. After substituting the independent exact domains, the twenty originally identified n15 global orbits remain impossible under the sound relaxed profile CSP (945/945 placements). Independent exhaustive smaller-schedule adversarial tests passed on the collector pruning, optimistic tree bounds and reversed chronology. [Audit and evidence](research/v2.1/STAGE3_ADVERSARIAL_AUDIT.md); [Stage 3 CI push](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356861884) / [PR](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356872700).
+
+This **closes Stage 3** for the bounded computer-assisted n<=15 half-forest result but is not formal proof-assistant validation. Stage 4 scholarly originality and publication review remains outstanding; all-n half-forest and fixed-timestamp temporal-clique 2n-3 remain OPEN. PR #1 stays draft and unmerged.
