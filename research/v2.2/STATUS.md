@@ -25,3 +25,8 @@ The [updated n<=16 research working manuscript](PAPER_DRAFT_N16.md) and detailed
 The [Stage 4 source-by-source originality review](../v2.1/STAGE4_PRIORITY_AND_PUBLICATION_AUDIT.md) is **not** superseded in its risk decision: Labahn (1995), Krumme (1996), Göbel et al. (1991), West (1982) and Williams (2026) contain extensive related prior art. The full n<=16 result might be an implicit consequence of earlier classification. The independently verified [same-poset midpoint-rank witness](verify_kernel_scope.py) shows that individual fixed midpoint cycle ranks are **not determined by the minimal event poset alone**, but does **not** prove that the weaker at-least-one-forest theorem cannot be deduced by further classical theory.
 
 **Next proof frontier:** n>=17 structural incidence (especially 3x4), general parameterized proof or true counterexample, and complete historical implication analysis. **PR #1 remains DRAFT and UNMERGED.**
+
+
+### New historical finding
+
+[Labahn–Pietsch, *Characterizing Minimum Gossip Graphs on 16 Vertices*](PRIOR_ART_N16_UPDATE.md) is a close-title predecessor about **minimum communication rounds and minimum supporting links**, **not** the same 28-call original-midpoint question. Its exact model difference and inconsistent public publication dates are documented. Historical novelty remains unresolved rather than claimed.
