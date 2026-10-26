@@ -135,7 +135,7 @@ def audit(output):
         assert f'mult={multiplicity}' in report
         assert ('status=LOCAL_UNSAT' in report)==missing
         assert ('status=PROFILE_UNSAT' in report)==(not missing)
-        result.append({'orbit':index,'matrix':M,'cyclic_row':cr,
+        result.append({'orbit':index,'matrix':[list(row) for row in M],'cyclic_row':cr,
                        'cyclic_col':cc,'multiplicity':multiplicity,
                        'result':'LOCAL_UNSAT' if missing else 'PROFILE_UNSAT',
                        'optimistic':bool(any(k[3] for k in rowkeys+colkeys)),
