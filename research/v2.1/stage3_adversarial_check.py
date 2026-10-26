@@ -30,8 +30,13 @@ def test():
                               text=True,capture_output=True,check=True,timeout=480)
         case_lines,reference=parse(source.stdout)
         exact=sorted(k for k in reference if k[3]==0)
-        assert exact and len(exact)>=30
-        assert any(sum(key[0])==7 and key[2] for key in exact)
+        assert len(exact)==33,("missing/extra exact domain types",len(exact))
+        seven={key for key in exact if sum(key[0])==7}
+        expected_seven={
+            ((2,2,3),(2,2,0),1,0),
+            ((2,3,2),(2,1,0),1,0),
+        }
+        assert seven==expected_seven,("seven-vertex case coverage",seven)
         data="".join(" ".join(map(str,key[0]+key[1]+(key[2],)))+"\n"
                      for key in exact)
         trial=subprocess.run([str(second)],input=data,text=True,
