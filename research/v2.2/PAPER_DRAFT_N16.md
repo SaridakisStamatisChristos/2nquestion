@@ -166,3 +166,8 @@ The defensible result is an **explicit, reproducible and bounded n<=16 computati
 6. A. Casteigts, J. Peters, J. Schoeters, “Temporal cliques admit sparse spanners,” Journal of Computer and System Sciences 121 (2021), 1–17. DOI https://doi.org/10.1016/j.jcss.2021.04.004
 7. J. Baligács, “Temporal Cliques Admit Linear Spanners,” arXiv:2606.05156 (2026). https://arxiv.org/abs/2606.05156
 8. A. Casteigts, “Open questions in temporal graphs,” project page updated September 22, 2026. https://arnaudcasteigts.net/blog/open-problems.html
+
+
+### Additional sixteen-vertex historical title disambiguation
+
+A separate prior-art check found Labahn and Pietsch, *Characterizing Minimum Gossip Graphs on 16 Vertices* (University of Bonn Report 91707; archival manuscript dated 12 October 1993, independently indexed as a 1991 report). Despite the close title and equal vertex count, that work studies **minimum-link graphs achieving the minimum number of synchronous communication rounds**, namely four rounds on sixteen vertices (eight simultaneous calls per round, 32 call occurrences). This differs from our **28-call minimum-total-contacts** problem and its original fourteen/fourteen chronological cut. Accordingly we acknowledge this result but **do not assert direct theorem equivalence or complete historical nonimplication**. See [focused source and model audit](PRIOR_ART_N16_UPDATE.md), [Bonn catalogue](https://www.or.uni-bonn.de/publications.de.html) and [manuscript facsimile](https://www.researchgate.net/publication/2297002_Characterizing_Minimum_Gossip_Graphs_on_16_Vertices).
