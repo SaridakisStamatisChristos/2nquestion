@@ -19,3 +19,5 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Rebuild two independent C++17 oracles and compare full domains
         run: python3 research/v2.1/stage3_adversarial_check.py
+      - name: Exhaustively challenge pruning and temporal duality on K3-K6
+        run: python3 research/v2.1/stage3_exhaustive_stress.py
