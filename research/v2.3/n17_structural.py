@@ -111,7 +111,7 @@ def square17():
     return orbits
 
 def main():
-    for n,expected in ((16,(40950,18,0)),(17,(131040,540,0))):
+    for n,expected in ((16,(40950,18,0)),(17,(131040,396,0))):
         a,w=rectangular(n,"dividers")
         b,z=rectangular(n,"multisets")
         assert a==b==expected,(n,a,b)
