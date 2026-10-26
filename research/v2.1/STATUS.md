@@ -60,3 +60,18 @@ A separate exhaustive Python adversarial check covers every selected connected o
 - [Successful extended PR run](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40356872700)
 
 **Stage 3 disposition: PASS for bounded computer-assisted n<=15 verification.** Formal proof-assistant verification, external peer review and classical-priority determination are still absent. Stage 4 (novelty/publication review) has **not** been completed. PR #1 remains DRAFT and UNMERGED.
+
+
+## Stage 4 — literature priority and publication review executed (26 October 2026)
+
+**Stage 4 workflow: COMPLETE. Submission gate: HOLD / MAJOR BLOCKERS REMAIN.** The source-based novelty investigation, theorem-by-theorem predecessor comparison, revised manuscript, Reviewer #2 simulation and contribution stress test are now committed. This section **supersedes** the older note above saying Stage 4 had not yet been completed.
+
+- [Stage 4 theorem-level priority and publication audit](STAGE4_PRIORITY_AND_PUBLICATION_AUDIT.md): primary comparison against Göbel-Cerdeira-Veldman 1991; Labahn 1995; Krumme 1996; West 1982; and Williams 2026. External source cross-checks dated 26 October 2026.
+- [Revised evidence-calibrated working paper](PAPER_DRAFT_STAGE4.md): theorem is explicitly bounded to 4<=n<=15 and the original chronological halves; accepted case breakdown **6 local / 10 exact-global / 4 optimistic-global**. The interrupted manuscript remains an unverified archival draft.
+- [Adversarial reviewer and contribution stress test](STAGE4_REVIEWER_REPORT.md): significance and implicit-classical-theory originality remain material barriers; no "first ever" assertion.
+- [Editorial and certificate consistency checker](stage4_integrity.py): fail-closed checks for exactly 20 classes, 945 placements, expected 6/10/4 categories, documented references, and manuscript/report provenance.
+- [GitHub Actions editorial check PASS](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40362124041).
+
+**Priority verdict:** classical gossip bounds, forest decompositions, kernel theory, linear extensions and reordering are direct prior art. The bounded fixed-**original**-midpoint n15 result is an **explicit and reproducible finite result whose global historical novelty is unresolved**. It could be implicitly derivable from complete classical kernel theory. No global independence/non-derivability argument was established.
+
+**Publication verdict:** draft suitable for expert feedback; **NOT submission-ready**, not peer-reviewed and not mathematically proven new. Further implication closure and significance improvement are needed before a strong journal submission. Stage 5 (n16+) is not begun by this audit. PR #1 stays **DRAFT / UNMERGED**.
