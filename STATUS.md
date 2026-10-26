@@ -198,3 +198,12 @@ The new rectangular collector argument excludes both-cyclic 3x4, 4x3 and 4x4 com
 Evidence and artifacts: [v2.2 status](research/v2.2/STATUS.md), [new manuscript](research/v2.2/PAPER_DRAFT_N16.md), [complete structural/rigidity proof](research/v2.2/RESEARCH_UPDATE.md), [machine-readable N16 certificate](research/v2.2/N16_CERTIFICATE.json), [full executable verifier](research/v2.2/prove_n16.py), and [successful full CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40378654998).
 
 **Novelty/priority unresolved; no proof assistant or external referee; no journal submission. PR #1 remains draft and unmerged.** This v2.2 result supersedes earlier older statements that the finite verification frontier ends at n15.
+
+
+## v2.3 / Stage 6 — general conjecture and classical priority research (26 October 2026)
+
+**New finite structural result, not the unrestricted theorem.** The [Stage 6 research report](research/v2.3/RESEARCH_UPDATE.md) gives a human proof that a hypothetical both-cyclic original-half scheme with component counts (3,4) or (4,3) requires **n>=18**. Two independent positive-grid generators verify n=17 rectangular impossibility: 131,040 marked configurations and 0 surviving full necessary collector filters. At n=18, 216 candidates pass those filters but **none is known to be an actual gossip schedule**.
+
+At **n=17**, all hypothetical both-cyclic cases must have a **3x3** prefix/suffix component incidence pattern. Two enumerators agree on 75,933 eligible positions, 45,783 basic survivors, 15,777 strong survivors, and **256 marked symmetry orbits**. The n17 theorem itself is still **OPEN**. The [Stage 6 CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40391336167) validates these calculations.
+
+A separate [balanced-order-ideal checker](research/v2.3/balanced_ideal_audit.py) replaces enumeration of chronological linear extensions of a given *realizable* full contact-event poset by balanced order ideals; on W8, 51,200 linear extensions collapse to 6 possible balanced ideals. This is an exact reformulation but **not** an all-kernel classification. The [parallel historical priority track](research/v2.3/CLASSICAL_PRIORITY_TRACK.md) identifies the remaining Labahn/Krumme implication-closure requirements. **Originality and submission readiness remain unresolved/HOLD; PR #1 stays draft/unmerged.**
