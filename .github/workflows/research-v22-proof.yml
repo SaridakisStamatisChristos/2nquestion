@@ -1,0 +1,27 @@
+name: Prove n16 original half-forest (independent finite certificate)
+on:
+  push:
+    paths:
+      - 'research/v2.2/prove_n16.py'
+      - 'research/v2.2/exclude_n16_orbit10.py'
+      - 'research/v2.2/exclude_n16_orbit11.py'
+      - 'research/v2.2/verify_n16_frontier.py'
+      - 'research/v2.2/profile_oracle16_relaxed.cpp'
+      - '.github/workflows/research-v22-proof.yml'
+  pull_request:
+    paths:
+      - 'research/v2.2/prove_n16.py'
+      - 'research/v2.2/exclude_n16_orbit10.py'
+      - 'research/v2.2/exclude_n16_orbit11.py'
+      - '.github/workflows/research-v22-proof.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  complete-n16-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Re-enumerate rectangular and square n16 grids, two local oracles, and all 81 profile CSPs
+        run: python3 research/v2.2/prove_n16.py
