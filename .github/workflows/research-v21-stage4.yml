@@ -1,0 +1,21 @@
+name: Stage 4 manuscript and evidence consistency
+on:
+  push:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21-stage4.yml'
+  pull_request:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21-stage4.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provenance-and-manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Cross-check research claims against bounded certificate and bibliography
+        run: python3 research/v2.1/stage4_integrity.py
