@@ -35,7 +35,9 @@ The proof relies only on the explicitly documented collector and single-source l
 | 16 | 40,950 | 18 | 0 |
 | 17 | 131,040 | 396 | 0 |
 
-**Reproduce:** \`python3 research/v2.3/n17_structural.py\`.
+At n=18 the same independent structural generators examine **371,280** marked 3x4 configurations: **3,474** pass forward collector requirements and **216** pass both necessary collector bounds. These are *not* genuine both-cyclic schedules; they show only that this particular obstruction stops being complete at the 18-vertex boundary.
+
+**Reproduce:** `python3 research/v2.3/n17_structural.py`.
 
 ## 3. Consequence: all n=17 both-cyclic candidates have 3x3 incidence
 
@@ -73,7 +75,7 @@ This is an *exact equivalence*, not a claim to have invented order-ideal theory.
 - no (1,1), hence no counterexample for that poset;
 - two linear extensions with the SAME full poset and the SAME Labahn kernel can have distinct individual midpoint cycle ranks. Their common-poset property and those separate ranks persist under the classical two-call extension through n=17.
 
-**Reproduce:** \`python3 research/v2.3/balanced_ideal_audit.py\`.
+**Reproduce:** `python3 research/v2.3/balanced_ideal_audit.py`.
 
 ### Essential historical scope
 
