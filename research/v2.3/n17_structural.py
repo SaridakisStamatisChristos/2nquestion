@@ -120,6 +120,16 @@ def main():
               f" {a[1]} pass first collector bound,"
               f" {a[2]} pass both necessary collector bounds;"
               " two generators agree",flush=True)
+    # First structurally OPEN 3x4 boundary. These are only NECESSARY
+    # condition survivors, NOT realizable gossip sequences.
+    a,w=rectangular(18,"dividers")
+    b,z=rectangular(18,"multisets")
+    assert a==b==(371280,3474,216),(a,b)
+    assert len(w)==len(z)==5
+    print("PASS n18 3x4 sharp structural search boundary:"
+          " 371280 marked assignments, 3474 pass forward collectors,"
+          " 216 pass the full necessary filters;"
+          " these ARE NOT successful gossip witnesses",flush=True)
     # For 4x4 on 17 vertices, only 1 vertex exceeds the 16 singleton
     # intersections. Any prefix TREE has >=3 singleton cells; at least
     # two tree prefix rows exist (total cycle rank 2), impossible.
