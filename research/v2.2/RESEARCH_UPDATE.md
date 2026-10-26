@@ -6,7 +6,7 @@
 
 For n=16, every successful 28-call pairwise-distinct undirected full-information telephone-gossip schedule has a forest among its **first fourteen or last fourteen original chronological contacts**. This is not a rearrangement theorem or a static forest edge-partition statement.
 
-The result is a finite computer-assisted assertion, conditional on the mathematical structural lemmas and genuine execution of all corresponding certificate programs. A successful full script, not merely the exploratory scans, is required to label it certified.
+**Computer-assisted n16 finite theorem: CI PASS.** The full script has now executed and independently compared every relevant exact local profile domain. The statement depends on the explicitly stated mathematical reduction lemmas and executable finite search; it has not been proof-assistant formalized or externally refereed.
 
 ## 2. New rectangular structural obstruction
 
@@ -100,12 +100,17 @@ The complete driver [prove_n16.py](prove_n16.py):
 5. Re-runs **all 81 global compatibility tests** with the independent Python CSP and verifies the 81 original statuses and exact case/orbit multiplicities.
 6. Fails on SAT, omitted case, local-domain mismatch, unexpected classification, timeout or structural discrepancy. Prints machine-readable full 81-orbit certificate records and SHA256 digests.
 
-Expected combined classification if that full CI passes: **13 empty local domains plus 68 incompatible global profile CSP cases; total 81/81 orbits and 4,635/4,635 placements excluded.**
+**Executed full classification:** **13 empty local domains plus 68 incompatible global profile CSP cases; total 81/81 orbits and 4,635/4,635 placements excluded**. The independent C++ second oracle matches all **77 exact local B/D domain types** needed at n16. Stored [N16_CERTIFICATE.json](N16_CERTIFICATE.json) contains every marked incidence matrix, orbit multiplicity, exact/optimistic exclusions, domain sizes and final status.
 
-No n16 theorem status shall be promoted solely on the expectation. The n16 proof workflow and exact CI run URL must be recorded on successful execution.
+**Full CI evidence:** [n16 complete certificate GitHub Actions run 40378654998](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40378654998) — SUCCESS. Main source `profile_oracle16_relaxed.cpp` SHA-256 `3bf98d2fdd4e877c2442bbd751755af906d37a96b6b16698416e149e5939fc18`, primary component-domain output SHA-256 `0accd52bb8a6fc36e21bf9ca7acb26ee55dd3a8701b2971416046fc4d62fedaa`, independent domain output SHA-256 `2dbe8f93e38177339d6aa90d264d17c2f1a567d56a5da87304c68fc941d06bb1`. The post-run version also compares its freshly recomputed complete case ledger with the checked-in JSON certificate; that stronger storage-integrity gate is separately checked in CI.
 
 ## 7. Historical and mathematical scope
 
 The [same-event-poset checker](verify_kernel_scope.py) extends the previously exhaustive 51,200-linear-extension eight-vertex witness to n16. It confirms that *separate* original midpoint cycle ranks can differ for two valid schedules having the same entire incident-event order and kernel, even up to sixteen vertices; this demonstrates the need to check chronology for a fixed-order proposition. It does **not** show that the bounded half-forest theorem is independent of Labahn's complete kernel characterization.
 
 Original mathematical priority against an implicit classical corollary remains unresolved. Neither a fixed-time-label temporal-clique 2n-3 spanner theorem nor a universal n>=17 half-forest statement is implied by this finite campaign. PR #1 should remain **draft and unmerged**, pending source-level novelty/impact work and external scholarly review.
+
+
+## 8. Bounded theorem decision
+
+**Theorem (computer-assisted, n<=16):** Every shortest successful pairwise-distinct two-way telephone-gossip chronology on (4\le n\le16), split after its original (n-2)th call, has at least one acyclic chronological half. The n=16 instance follows from the rectangular propositions, the complete marked 3x3 enumeration and the independent necessary-profile UNSAT certificate covering all 81 orbits. The older independently checked n<=15 result supplies the smaller orders. **No conclusion for n>=17** and no historical novelty certificate follows. Publication status remains a cautious research draft.
