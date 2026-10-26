@@ -187,3 +187,14 @@ This **closes Stage 3** for the bounded computer-assisted n<=15 half-forest resu
 **EXECUTED, but NOT cleared for journal submission.** [Theorem-by-theorem literature audit](research/v2.1/STAGE4_PRIORITY_AND_PUBLICATION_AUDIT.md), [revised n<=15 working paper](research/v2.1/PAPER_DRAFT_STAGE4.md), [adversarial reviewer report](research/v2.1/STAGE4_REVIEWER_REPORT.md), and [editorial CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40362124041) are committed in PR #1.
 
 After crediting classical 2n-4 gossip, kernel classifications, minimum static forest decompositions, two-contact extension, commutation and reordering, the surviving contribution is a **bounded, independently reproducible original-chronological-midpoint n<=15 computer-assisted classification**. Its historical originality versus *implicit corollaries* of Labahn/Krumme remains **UNRESOLVED**; broad mathematical impact is not yet established. The working paper does **not** resolve the all-n half-forest question, POD or the distinct fixed-label temporal-clique 2n-3 spanner conjecture. **Stage 4 audit completed; submission decision HOLD; PR remains DRAFT and UNMERGED.**
+
+
+## v2.2 — n<=16 bounded half-forest theorem verified (26 October 2026)
+
+**Finite computer-assisted result: PASS.** Every shortest successful, pairwise-distinct two-way telephone-gossip sequence on 4<=n<=16 has an acyclic **original chronological** half. This does not solve the all-n question or the separate fixed-timestamp temporal-clique 2n-3 spanner conjecture.
+
+The new rectangular collector argument excludes both-cyclic 3x4, 4x3 and 4x4 component grids at n16. The remaining 3x3 enumeration yields 4,635 marked placements / 81 symmetry classes, all ruled out by a conservative temporal-information-profile CSP. The two previously relaxed-satisfying eight-vertex cases were ruled out by independently written exact local Python chronology enumerators. **77 exact local profile types** match two separate C++ exhaustive implementations, and the full source-based certificate reproduces **81/81 UNSAT** with 13 local and 68 global exclusions.
+
+Evidence and artifacts: [v2.2 status](research/v2.2/STATUS.md), [new manuscript](research/v2.2/PAPER_DRAFT_N16.md), [complete structural/rigidity proof](research/v2.2/RESEARCH_UPDATE.md), [machine-readable N16 certificate](research/v2.2/N16_CERTIFICATE.json), [full executable verifier](research/v2.2/prove_n16.py), and [successful full CI](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40378654998).
+
+**Novelty/priority unresolved; no proof assistant or external referee; no journal submission. PR #1 remains draft and unmerged.** This v2.2 result supersedes earlier older statements that the finite verification frontier ends at n15.
