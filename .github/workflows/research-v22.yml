@@ -26,3 +26,5 @@ jobs:
         run: python3 research/v2.2/verify_kernel_scope.py
       - name: Exact eight-cycle mutual profile impossibility for n16 orbit 11
         run: python3 research/v2.2/exclude_n16_orbit11.py
+      - name: Exact eight-vertex tree mutual profile impossibility for n16 orbit 10
+        run: python3 research/v2.2/exclude_n16_orbit10.py
