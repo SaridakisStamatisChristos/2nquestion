@@ -24,3 +24,5 @@ jobs:
         run: python3 research/v2.2/verify_n16_frontier.py
       - name: Independently check kernel event-order scope through n16
         run: python3 research/v2.2/verify_kernel_scope.py
+      - name: Exact eight-cycle mutual profile impossibility for n16 orbit 11
+        run: python3 research/v2.2/exclude_n16_orbit11.py
