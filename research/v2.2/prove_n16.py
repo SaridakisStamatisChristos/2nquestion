@@ -173,6 +173,9 @@ def main():
             "before_two_residual_refinements":dict(original_counts),
             "final_results":dict(status_counts),"orbits":certificate,
         }
+        recorded=json.loads((HERE/"N16_CERTIFICATE.json").read_text())
+        assert output==recorded,("stored n16 certificate mismatches freshly executed result")
+        print("PASS immutable n16 JSON certificate matches all freshly verified domains, placements and orbit results",flush=True)
         print("N16_COMPLETE_CERTIFICATE_JSON",
               json.dumps(output,separators=(",",":"),sort_keys=True),flush=True)
         print("BOUNDARY: n>=17 and historical novelty remain UNRESOLVED",
