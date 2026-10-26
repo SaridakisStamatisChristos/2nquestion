@@ -161,3 +161,15 @@ The v1.3 work does **not** establish the at-least-one-forest claim for all `n=13
 - **Explicit boundaries:** n>=15 general half-forest assertion remains **OPEN**; original fixed-chronology temporal-clique 2n-3 bound remains **OPEN**; no global historical first-ever/novelty guarantee. Earlier v1.9 'n14 unresolved' conclusion is **superseded by this verified v2.0 finite theorem**.
 
 **PR disposition:** Keep DRAFT and UNMERGED pending independent external mathematical/referee review. Do not replace historical source evidence.
+
+
+## v2.1 — independently rerun bounded n=15 profile certificate (26 Oct 2026)
+
+**Latest finite result supersedes the earlier n>=15 wording:** for 4 <= n <= 15, every successful shortest pairwise-distinct telephone-gossip schedule has at least one original chronological half inducing a forest. The n=15 case uses a deterministic computer-assisted classification; it is not a formal-proof-assistant theorem nor an all-n result.
+
+- Structural enumeration independently reproduced: 3,003 grids, 13,680 eligible placements, 4,662 basic survivors, 945 stronger survivors, 20 cycle-position-aware orbits.
+- **All 20/20 orbits incompatible** with the necessary relaxed information-profile CSP, by six exact local empty domains, ten globally incompatible exact-profile configurations, and four globally incompatible configurations involving the sound optimistic tree relaxation.
+- Independent Python second compatibility implementation checks every orbit, independent positive-composition enumeration checks n13-n15 structural and orbit multiplicities, four local domain types have Python/C++ differential agreement, 3,200 temporal profile semantics and 240 tree containment tests pass.
+- Full reproducibility: [reconstruction audit](research/v2.1/RESEARCH_UPDATE_VERIFIED.md), [source and 20-case JSON](research/v2.1/STATUS.md), [push CI PASS](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40346862524), [PR CI PASS](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40346871327).
+- **Independence limit:** full seven-vertex exact local enumeration is implemented in the C++ oracle; the separate Python checker reruns global compatibility from the generated local domains, rather than providing a second full independent enumeration at seven vertices.
+- **Still OPEN:** n>=16, the fixed-timestamp temporal-clique 2n-3 spanner conjecture, and scholarly originality. Keep PR #1 **DRAFT and UNMERGED**.
