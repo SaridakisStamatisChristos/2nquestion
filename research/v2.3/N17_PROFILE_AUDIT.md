@@ -1,3 +1,5 @@
+> **27 October 2026 update:** The earlier n=17 OPEN verdict below is a historical checkpoint and has been **superseded for this bounded instance** by the [complete conditional computer-assisted n=17 certificate](N17_CLOSURE_CERTIFICATE.md): 256/256 structural classes excluded with executable CI. The **unbounded n>=18 conjecture**, independent referee/formal verification and historical novelty remain OPEN.
+
 # Stage 6 continuation: full n17 capacity-10 scan and exact 9-vertex residual exclusions
 
 **27 October 2026. Evidence gate: finite n17 obstruction 248/256 classes; full n17 original-half-forest property OPEN. Historical novelty UNRESOLVED. PR #1 DRAFT and UNMERGED.**
