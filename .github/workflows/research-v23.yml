@@ -25,5 +25,7 @@ jobs:
         run: |
           g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v2.3/exclude_n17_residual_eight.cpp -o /tmp/n17_residual_eight
           /tmp/n17_residual_eight
+      - name: Independent brute-force n17 local lemma audit
+        run: python3 research/v2.3/verify_n17_local_independent.py
       - name: Exact balanced ideals and classical-kernel scope
         run: python3 research/v2.3/balanced_ideal_audit.py
