@@ -65,8 +65,8 @@ def construct_and_replay():
         knowledge = [1 << i for i in range(68)]
         for a, b in calls:
             knowledge[a] = knowledge[b] = knowledge[a] | knowledge[b]
-        fullmask = sum(1 << i for i in (
-            list(range(base, base+4))+list(range(8,68)))
+        fullmask = (sum(1 << i for i in range(base, base+4)) |
+                    sum(1 << i for i in range(8,68)))
         assert knowledge[base+2] == knowledge[base+3] == fullmask
         return knowledge, calls
 
