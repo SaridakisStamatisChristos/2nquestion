@@ -1,9 +1,9 @@
 """Exploratory n17 3x3 temporal-profile necessary-condition CSP.
 
 Replicates the same primary C++ local/profile model used for n16, but
-ONLY on 3x3 orbit types with every row/column component size <=9.
-The primary oracle uses fixed 9-vertex C++ arrays, so >9 is NEVER
-silently processed. Cyclic components of size >=8 and trees of size >=7
+on 3x3 orbit types with every row/column component size <=10.
+The v2.3 verifier uses fixed 10-vertex C++ arrays and a fail-closed
+capacity check, so >10 is NEVER silently processed. Cyclic components of size >=8 and trees of size >=7
 are handled by documented *overapproximations*. UNSAT is meaningful
 relative to the mathematical soundness of these relaxations; a SAT
 assignment is NOT a realizable gossip schedule. Not an n17 proof.
@@ -34,13 +34,14 @@ def main():
         rec={"orbit":i,"matrix":[list(row) for row in M],
              "cyclic_row":cr,"cyclic_column":cc,"multiplicity":mult,
              "max_component":max_comp,"max_cell":max_group}
-        if max_comp>9 or max_group>6:
+        if max_comp>10 or max_group>6:
             rec["status"]="DEFERRED_ORACLE_CAPACITY"
             deferred.append(rec)
         else:
             selected.append(rec)
+    assert len(selected)+len(deferred)==256
     assert selected and sum(x["multiplicity"] for x in selected+deferred)==15777
-    print("N17_START eligible=",eligible,"structural=",strong,
+    print("N17_START capacity=10 eligible=",eligible,"structural=",strong,
           "orbits=",len(orbits),"selected=",len(selected),
           "deferred=",len(deferred),flush=True)
     data="\n".join(" ".join(map(str,([z["orbit"],z["multiplicity"],
@@ -50,7 +51,7 @@ def main():
     with tempfile.TemporaryDirectory() as temp:
         exe=Path(temp)/"n17"
         subprocess.run(["g++","-std=c++17","-O3","-Wall","-Wextra",
-                        str(HERE.parent/"v2.2"/"profile_oracle16_relaxed.cpp"),
+                        str(HERE/"profile_oracle17_relaxed.cpp"),
                         "-o",str(exe)],check=True)
         p=subprocess.run([str(exe),"1"],input=data,text=True,
                          stdout=subprocess.PIPE,stderr=subprocess.PIPE,
