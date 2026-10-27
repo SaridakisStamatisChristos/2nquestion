@@ -1,3 +1,5 @@
+> **27 October 2026 Stage 10 continuation:** New conditional all-n [four-arm crossing theorem](../v2.7/FOUR_ARM_CROSSING_THEOREM.md) forces a shared cell to contain at least **60** participants for rigid 4-by-4 rooted-arm interfaces. This eliminates the marked (2,2,t) tree/tree and four-collector cyclic subfamilies with t≤59. The central universal step—showing *every* both-cyclic schedule contains an obstruction or descends to one—is **still missing**. Earlier status below is retained as a historical checkpoint.
+
 # Stage 9 — All-n full-proof campaign, adversarial outcome ledger
 
 **27 October 2026. Status: universal chronological half-forest conjecture OPEN. Do not promote this campaign into a claimed full proof.** PR #1 DRAFT/UNMERGED, publication HOLD, classical originality UNRESOLVED.
