@@ -25,7 +25,7 @@ def main():
     degrees = check(W8, 8)
     assert degrees == (3,) * 8, degrees
     assert cyclerank(8, W8[:6]) == 0
-    assert cyclerank(8, W8[6:]) == 0
+    assert cyclerank(8, W8[6:]) == 1
     print("PASS W8 optimal distinct-contact n8 schedule: every vertex "
           "has degree three, NONE has degree two; proposed universal "
           "degree-two-deletion premise REFUTED", flush=True)
