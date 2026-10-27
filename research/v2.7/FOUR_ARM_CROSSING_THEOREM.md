@@ -1,3 +1,5 @@
+> **27 October 2026 Stage 11 refinement:** The t≥60 conditional necessary inequality here has been **strictly improved** for symmetric four-arm interfaces to **t≥63**, using a new [Steiner-robust exact-cover rigidity theorem](../v2.8/STEINER_COVER_RIGIDITY.md). An additional [two-person crossing lemma](../v2.8/TWO_VERTEX_CROSSING.md) rules out certain small cells and gives a separate k×k bound. The older t≥60 proof remains valid as a historical, weaker result; none of these proves the all-n original-half forest conjecture.
+
 # Stage 10 — Four-arm crossing obstruction (all component sizes)
 
 **27 October 2026. All-n conditional structural theorem, human proof with exact independent small-case regression. Original chronological half-forest conjecture OPEN.** This is a local incompatibility for a specific rigid two-component crossing pattern, not a universal exclusion for every r×s grid. No external proof-assistant or refereed verification is claimed.
