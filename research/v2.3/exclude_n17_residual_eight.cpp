@@ -183,7 +183,9 @@ int main(){
   auto t=chrono::steady_clock::now();
   auto[p,inserted]=cache.emplace(k,Oracle(k).run());
   cerr<<"DOMAIN ";
-  for(auto x:k.g)cerr<<x;cerr<<" req=";for(auto x:k.req)cerr<<x;
+  for(auto x:k.g){cerr<<x;}
+  cerr<<" req=";
+  for(auto x:k.req){cerr<<x;}
   cerr<<" cyc="<<k.cyc<<" B="<<p->second.B.size()
       <<" D="<<p->second.D.size()<<" states="<<p->second.states
       <<" optimistic="<<p->second.optimistic
