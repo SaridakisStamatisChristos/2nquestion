@@ -1,3 +1,5 @@
+> **27 October 2026 update:** The earlier n=17 OPEN verdict below is a historical checkpoint and has been **superseded for this bounded instance** by the [complete conditional computer-assisted n=17 certificate](N17_CLOSURE_CERTIFICATE.md): 256/256 structural classes excluded with executable CI. The **unbounded n>=18 conjecture**, independent referee/formal verification and historical novelty remain OPEN.
+
 # Stage 6 — Unbounded chronological half-forest question: reduction and n=17 frontier
 
 **Research status, 26 October 2026:** finite structural verification **PASS**, novel/general all-n theorem **OPEN**, n=17 complete theorem **OPEN**, historical originality **UNRESOLVED**, submission decision **HOLD**.
