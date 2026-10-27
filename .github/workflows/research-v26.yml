@@ -23,3 +23,5 @@ jobs:
           /tmp/tree_cover_bruteforce
       - name: Check recursive equality constructions for s 1 through 8
         run: python3 -B research/v2.6/construct_tree_cover_equality.py
+      - name: Exhaustive fixed-midpoint straddling and all successful insertion slots
+        run: python3 -B research/v2.6/check_midpoint_straddling.py
