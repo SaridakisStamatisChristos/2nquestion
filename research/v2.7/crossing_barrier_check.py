@@ -70,7 +70,6 @@ def build_crossed_suffix_tree():
     assert knowledge[0] | knowledge[1] == full
 
     # Component cell sizes 2,2,60 in a REAL legal local chronology.
-    assert all((knowledge[4] | knowledge[5]) >= 0 for _ in (0,))
     x_union = 0
     for x in range(4, 64):
         x_union |= knowledge[x]
