@@ -1,3 +1,5 @@
+> **Stage 7 refinement:** The stronger [symmetric two-sided all-n theorem](TWO_SIDED_SURPLUS_THEOREM.md) proves the improved inequality `n >= rs + 2(r+s) - 8`. This file retains the independently checked weaker one-sided version for research provenance; use the two-sided theorem for subsequent deduction.
+
 # Stage 7 — a uniform all-n collector-surplus lower bound
 
 **27 October 2026. New all-n necessary-condition theorem (conditional only on the previously established tree-entry lemma); not the all-n half-forest conjecture.** PR #1 remains DRAFT/UNMERGED and historical originality remains UNRESOLVED.
