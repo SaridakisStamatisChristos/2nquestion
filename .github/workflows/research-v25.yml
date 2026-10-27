@@ -21,3 +21,5 @@ jobs:
         run: python3 -B research/v2.5/check_collector_budget.py
       - name: Exhaustive original-half rank-preserving two-call extension audit
         run: python3 -B research/v2.5/test_fringe_extension.py
+      - name: Exhaustive boundary-deletion iff and explicit n5 obstruction
+        run: python3 -B research/v2.5/test_boundary_deletion.py
