@@ -21,5 +21,9 @@ jobs:
         run: python3 research/v2.3/n17_structural.py
       - name: Exact independent nine-vertex n17 residual orbits 30 and 31
         run: python3 research/v2.3/exclude_n17_orbits30_31.py
+      - name: Compile and verify all eight n17 residual symmetry classes
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v2.3/exclude_n17_residual_eight.cpp -o /tmp/n17_residual_eight
+          /tmp/n17_residual_eight
       - name: Exact balanced ideals and classical-kernel scope
         run: python3 research/v2.3/balanced_ideal_audit.py
