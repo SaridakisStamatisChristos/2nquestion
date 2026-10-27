@@ -126,7 +126,7 @@ def main():
             assert t > 0
     assert 4 * (2 ** 4 - 1) == 60
     assert 4 * (2 ** 4 - 1) - 1 == 59
-    assert 2 ** 5 == 16
+    assert 2 ** 4 == 16
     assert 4 * (16 - 1) == 60
     print("PASS generalized p/q arm capacity and 59-versus-60"
           " threshold arithmetic; construction does not assert"
