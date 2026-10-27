@@ -102,7 +102,7 @@ The local exponential bound needs **neither** the single-source entry lemma nor 
 | 8×8 | 88 | 100 | **304** | **304** |
 | 10×10 | 132 | 164 | **1,104** | **1,104** |
 
-This immediately proves that **no 3×4 or 4×3 both-cyclic original-midpoint chronology exists for n=18 or 19**. Stage 6 had established nonexistence of this rectangular geometry through n=17 with a different proof. The 3×3 geometry may still be structurally possible for n=18 or 19, so these conclusions do **not** settle the full n=18 or n=19 cases.
+This immediately proves that **no 3×4 or 4×3 both-cyclic original-midpoint chronology exists for n=18 or 19**. Consequently, together with the other displayed bounds, any hypothetical both-cyclic chronology on n=18 or 19 **must** have exactly r=s=3 components (this does NOT show that such a 3×3 chronology exists). Furthermore, since r,s>=3, the two exponential inequalities imply **r,s < log_2(n)**. Thus the number of components in each half of a hypothetical counterexample is O(log n), an unbounded but much smaller structural frontier than rs<=n alone. Stage 6 had established nonexistence of this rectangular geometry through n=17 with a different proof. The 3×3 geometry may still be structurally possible for n=18 or 19, so these conclusions do **not** settle the full n=18 or n=19 cases.
 
 ## 3. Independent executed verification
 
