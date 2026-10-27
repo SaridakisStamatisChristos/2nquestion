@@ -25,3 +25,7 @@ jobs:
         run: python3 -B research/v2.6/construct_tree_cover_equality.py
       - name: Exhaustive fixed-midpoint straddling and all successful insertion slots
         run: python3 -B research/v2.6/check_midpoint_straddling.py
+      - name: Falsify uniform two-participant n18 3x3 candidate with exact B/D histories
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v2.6/probe_n18_uniform_two.cpp -o /tmp/n18_uniform_two
+          /tmp/n18_uniform_two
