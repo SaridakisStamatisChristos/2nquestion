@@ -66,6 +66,57 @@ def check_local():
           " 3x3 chronology under the Stage 19 center collector-capacity theorem")
 
 
+def replay_three_person_unicyclic_boundary():
+    # Independently check all n4/n5 labelled chronological trees, append
+    # the fixed fresh last cycle edge (0,3), and ask whether {0,1,2}
+    # can twice cover every secret WITHOUT a complete collector.
+    from itertools import permutations
+
+    def prufer_edges(code, n):
+        degree = [1] * n
+        for x in code:
+            degree[x] += 1
+        edges = []
+        for x in code:
+            leaf = next(j for j in range(n) if degree[j] == 1)
+            edges.append((leaf, x))
+            degree[leaf] -= 1
+            degree[x] -= 1
+        a, b = [j for j in range(n) if degree[j] == 1]
+        return edges + [(a, b)]
+
+    pinned = {4: 48, 5: 936}
+    for n in (4, 5):
+        valid = 0
+        for code in product(range(n), repeat=n - 2):
+            edges = prufer_edges(code, n)
+            if any(set(e) == {0, 3} for e in edges):
+                continue
+            for history in permutations(edges):
+                state, _ = replay(n, history + ((0, 3),))
+                if not all(
+                    sum(bool(state[x] & (1 << secret)) for x in (0, 1, 2)) >= 2
+                    for secret in range(n)
+                ):
+                    continue
+                valid += 1
+                assert any(state[x] == (1 << n) - 1 for x in (0, 1, 2))
+        assert valid == pinned[n], (n, valid, pinned[n])
+        print(f"PASS exhaustive n={n} trees plus final cycle edge: "
+              f"{valid} double-covered triples, zero without full collector")
+
+    k, edges = replay(6, (
+        (0, 5), (3, 4), (2, 1), (4, 2), (1, 5), (0, 3)
+    ))
+    assert connected(6, edges) and len(edges) == 6
+    assert k[:3] == [57, 39, 30]
+    assert all(sum(bool(k[x] & (1 << s)) for x in (0, 1, 2)) >= 2
+               for s in range(6))
+    assert all(k[x] != 63 for x in (0, 1, 2))
+    print("PASS smallest n6 unicyclic local 2-fold triple with "
+          "NO complete member: knowledge 57,39,30")
+
+
 def all_families(width):
     choices = list(range(1, 1 << width))
     for length in (1, 2, 3):
@@ -109,6 +160,7 @@ def verify_boolean():
 
 if __name__ == "__main__":
     check_local()
+    replay_three_person_unicyclic_boundary()
     verify_boolean()
     print("LIMIT: support enumeration corroborates a human all-n implication,"
           " not existence of a complete gossip schedule")
