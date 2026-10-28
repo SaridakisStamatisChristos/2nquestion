@@ -86,18 +86,18 @@ def exhaustive_local_transfer():
                     # A,B,X partition: final edge a-b, X disjoint.
                     a, b = e
                     leftover = set(verts) - set(e)
-                    for is_a in product((False, True), repeat=len(leftover)):
-                        A = {a} | {v for v, yes in zip(sorted(leftover), is_a) if yes}
-                        B = {b}
-                        X = set(verts) - A - B
+                    for alloc in product(("A", "B", "X"), repeat=len(leftover)):
+                        A, B, X = {a}, {b}, set()
+                        for v, label in zip(sorted(leftover), alloc):
+                            {"A": A, "B": B, "X": X}[label].add(v)
                         if len(A) < 2 or not X:
                             continue
                         cases[n] += 1
                         if len(A & full) >= 2 and X & full:
                             triggering[n] += 1
                             assert b in full, (n, order, e, A, B, X, full)
-    assert cases[5] > 0
-    assert triggering[5] > 0
+    assert cases == {4: 576, 5: 216000}, cases
+    assert triggering == {4: 48, 5: 4320}, triggering
     print("PASS all n4/5 original local chronologies, cases", dict(cases),
           "antecedent-triggered", dict(triggering))
 
