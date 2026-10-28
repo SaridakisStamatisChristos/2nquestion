@@ -84,6 +84,44 @@ In a hypothetical both-cyclic original **3×3** prefix/suffix split, an adjacent
 
 Theorem 30.4's full **two-tree** contradiction cannot be automatically applied to the opposite **unicyclic** Q3, and we do **not** infer that all (1,1,6) off-corner configurations are impossible. This is a strict new sound **source-target support filter** to integrate into an exact original-chronology CSP for the current remaining n22 matrices.
 
+## Corollary 30.5 — exact 25-of-63 opposite support domain (all n)
+
+Suppose the sharp six-recipient zero-private tree produces the four exact source supports of the two disjoint paths as in Theorem 30.2. A nonempty opposing reverse target-support set \(H\subseteq C\) satisfies midpoint crossing for **all four mandatory source secrets** if and only if it meets every edge in \(E_T\). Equivalently,
+
+\[
+\boxed{
+  \bigl(w_1\in H\ \lor\ \{z_1,d_1\}\subseteq H\bigr)
+  \quad\land\quad
+  \bigl(w_2\in H\ \lor\ \{z_2,d_2\}\subseteq H\bigr).
+}
+\]
+
+The **four inclusion-minimal** admissible support sets are exactly
+\[
+\begin{aligned}
+&\{w_1,w_2\},\\
+&\{w_1,z_2,d_2\},\\
+&\{z_1,d_1,w_2\},\\
+&\{z_1,d_1,z_2,d_2\}.
+\end{aligned}
+\]
+
+Taking their upward closure inside the six-vertex cell gives **exactly 25 admissible nonempty support masks**, out of all \(2^6-1=63\). The cardinality histogram of admissible masks is
+\[
+ |H|=2:1,\quad 3:6,\quad 4:11,\quad 5:6,\quad 6:1.
+\]
+Thus **38** other nonempty target-support masks are rigorously incompatible with a privacy-free sharp (1,1,6) tree under exact original-order midpoint crossing. This is a universal **local-support-domain restriction**, not elimination of an entire n22 incidence matrix: an opposing unicyclic component might legitimately realize only compatible masks.
+
+For an exact CSP/SAT chronology solver the implementation is particularly simple: add the four *binary* requirements
+\[
+ (w_1\lor z_1),\ (w_1\lor d_1),\
+ (w_2\lor z_2),\ (w_2\lor d_2)
+\]
+for each opposite target's six carrier-indicator Booleans. Their conjunction is equivalent to the displayed domain. These clauses are valid **only after** independently establishing the six-person tree's **zero-private** condition and the associated marked path centers. If any C recipient is private, a different branch must be used and the present clauses cannot be silently imposed.
+
+The Stage 30 independent enumerator now checks all 90 labelled path-pair systems against all 63 possible support masks, confirms the same 25-member upward-closed domain and 2,3,3,4 minimal sizes for each, and preserves the 8,100-pair all-crossing no-go test. **This is a finite combinatorial representation of an all-n conditional information-flow theorem** because the support-domain size is fixed at six independently of the number of helper participants.
+
+
 ## Independent adversarial evidence
 
 [Stage 30 checker](double_path_rigidity.py):
