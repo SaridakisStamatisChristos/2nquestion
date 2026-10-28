@@ -21,3 +21,5 @@ jobs:
         run: python3 -B research/v3.2/equality_helper_probe.py
       - name: Regression of the original chronological two-point compatibility theorem
         run: python3 -B research/v3.0/check_center_saturation.py
+      - name: Independently count every relaxed 3x3 integer incidence n18-n25 and verify inclusion exclusion
+        run: python3 -B research/v3.2/count_3x3_incidence.py
