@@ -1,5 +1,27 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## 28 October 2026 — Evidence-gated SOTA route after Stages 29–30
+
+**Principal target** is still the all-labelings exact \(2n-3\) temporal clique reachability spanner, NOT the different multiplicative-hop-stretch 3-spanner problem. Current best prominently published unconditional reachability upper bound is 7n (Baligács 2026); the author's September 2026 open-problem summary notes a same-algorithm 6n analysis refinement. Neither is 2n-3. Treat new title similarity as an adversarial priority/model-semantics risk.
+
+**Auxiliary conditional route:** original fixed-chronology half-forest human arguments cover n<=21 with finite evidence; n>=22 OPEN. Universal both-cyclic incidence geometry reduces to 3x3 by Bumby Theorem 3, but the n22 necessary-size/profile frontier still has **104** labelled survivors in **28** symmetry orbits. An incidence survivor does not construct a full successful 2n−4-contact chronology.
+
+**New reusable exact all-n results:**
+1. Stage 29 p(c) exact privacy threshold, including **zero privacy already possible for c>=6**. NEVER extrapolate the earlier c<=5 positive privacy oracle to large c.
+2. Stage 30 when (1,1,6) off-corner tree privacy is zero: four exact support pairs form two disjoint 3-vertex paths, forcing each opposing target's six-bit support into a **25-of-63 upward-closed mask domain** (four binary pair-hitting clauses). This is a **conditional exact-information CSP gate**. It does not prove that the opposite unicyclic chronology must also have this special shape.
+3. Stage 30 pairwise incompatibility for **TWO** such privacy-free six-cell chronological TREES; do not invoke for a TREE vs UNICYCLIC pair without additional proof.
+
+**Next evidence-producing actions, ranked:**
+1. **Implement an exact original-order information-profile solver** for Stage30-eligible n22 incidence orbits. Branch explicitly on whether the sharp off-corner tree has ≥1 private recipient (which forces an opposite collector) or zero private recipients (which forces the four-edge 2P3 support system). The zero-private branch must add the four Boolean hitting clauses per target; branch coverage must be exhaustive, not chosen by convenience. Compare to a separate faithful chronology oracle and report UNSAT only after independent confirmation.
+2. **Resolve n22 only if every 104 incidence-necessary survivor is excluded by a sound proof/oracle** or supply a fully replayable 40-contact both-cyclic schedule. Avoid promoting local SAT/UNSAT or matrix rejection to a theorem without complete coverage and verified certificates.
+3. **Generalize support-transfer inequalities beyond center width 6** (arbitrary receiver groups, arbitrary helpers, unicyclic last-edge spine). Seek a global obstruction not dependent on bounded numerical sizes, or a genuine chronology-preserving descent; actively try to falsify any overstrong claim with c>=6 Stage29 witnesses.
+4. **Maintain a distinct direct temporal-clique track:** run exact POD adversarial searches / reachability MILP n>=9 and exploit newly proved constraints only where source-target contact semantics transfer. A proof that every existing shortest gossip schedule has a forest half does NOT logically imply existence of a 2n−4/2n−3 schedule in every time-labelled clique.
+5. **Independent scientific gate:** compare mechanisms/hypotheses against Bumby (1981), Labahn (1995), Krumme (1996), Baligács (2026), Casteigts et al. (2025), and the September 2026 temporal 3-spanner paper while preserving the distinction between exact reachability and stretch. Formal checker execution and outside referee review remain missing.
+
+**Release/claim gate:** Stage29/30 = human-proved conditional/local all-n lemmas with executable boundary checks; not machine-formal proof, external peer review, established historical novelty, global half-forest solution, or SOTA 2n−3 construction. Keep PR #1 DRAFT, UNMERGED and publication HOLD.
+
+
+
 **Primary objective:** prove or refute that every distinct-time temporal clique has a `2n-3`-edge spanner. A known published construction attains only a larger linear bound; consult [REFERENCES](REFERENCES.md) for priority anchors.
 
 ## Highest-information tasks
