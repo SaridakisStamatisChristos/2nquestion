@@ -1,3 +1,5 @@
+> **Stage 18 strengthening (28 October 2026):** Using the [universal Stage 17 off-corner double-carrier invariant](../v3.4/UNIVERSAL_OFFCORNER_DOUBLE_CARRIER.md) and TWO untouched complete-cover groups after deleting the last unicyclic call, [Stage 18](../v3.5/SIX_GROUP_35_PERSON_OBSTRUCTION.md) proves the much stronger **component-total** condition `m13=m23=2 => m31+m32+m33>=35` (and its reversal), so **n>=43** whenever EITHER off-corner pair is (2,2). This does not erase Stage 16's valid sharper **center-specific** mixed `m33>=16` condition, nor the Stage 14 all-four-2 `m33>=64` result. The universal conjecture remains OPEN.
+
 # Stage 16 — A pre-terminal collector forces a 16-person center
 
 **28 October 2026. All-\(n\) conditional theorem for the ORIGINAL fixed chronological midpoint.** The universal chronological half-forest conjecture is OPEN. The result is a strict mixed-off-corner strengthening of [Stage 15](../v3.2/HELPER_EQUALITY_AND_ONE_SIDED.md), does not reorder any calls, and is not a global impossibility theorem.
