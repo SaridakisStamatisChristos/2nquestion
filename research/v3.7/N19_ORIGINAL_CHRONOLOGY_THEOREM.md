@@ -26,6 +26,20 @@ M=\begin{pmatrix}
 
 The numerical table and matrix enumeration are exact finite necessary-condition checks, NOT a global schedule generator. We now reject this sole orbit by an additional all-\(n\) structural contradiction.
 
+### Lemma 20.0 — one-sided causal four-arm crossing permits OTHER outside-center helpers
+
+This independently re-checks the critical Stage 15 application in the \(n=19\) incidence filter. In a successful original chronological split, let \(A\) be a prefix unicyclic component whose final cycle-closing call is outside \(X=A\cap B\), and let \(B\) be a reversed-suffix unicyclic component with **four complete collectors all outside \(X\)**. By Stage 14, these four collectors are roots of four *causally sealed* chronological tree arms \(B_1,\ldots,B_4\). **Other non-root people may also be outside \(X\). We do NOT require exactly one outside-\(X\) participant in each arm.** Then
+
+\[
+\boxed{|X|\ge9.}
+\]
+
+**Proof, independent of a strict all-arm-before-core phase:** All \(X\) members are *non-root participants* of their B arms, because all four roots are outside X. Causal sealing means no X participant receives an original B-arm secret originating in another B arm. For every original A secret \(a\) and every target \(b\in B_j\), original success requires their midpoint crossing to lie in \(X_j=X\cap B_j\), so **each** of four disjoint recipient groups \(X_j\) collectively covers all A secrets at the original midpoint. A's final cycle-closing call has both endpoints outside X, so its preceding spanning chronological tree \(T\) already has the same four complete recipient groups \(X_j\), with all other T participants (including the two final endpoints) acting as potentially unassigned helpers. Stage 11 gives \(|X|\ge2^{4-1}=8\).
+
+If \(|X|=8\), Stage 15's equality-with-helpers rigidity makes **every** \(x\in X_j\) private for some A-secret within \(X_j\). Exact crossing forces \(x\) to be a complete reversed collector of **its B arm**. The chronological tree arm has at most TWO complete collectors; one is its full root, outside X. Thus every \(X_j\) would have size at most one, giving \(|X|\le4\), contradicting 8. Hence \(|X|\ge9\). The proof tolerates arbitrarily many non-root participants of B outside X, provided the four complete B roots are outside X. QED.
+
+The same statement applies with the two original halves reversed. This precise helper-tolerant form is the form used in [Stage 19](../v3.6/SMALL_TREE_PRIVACY_N19_FRONTIER.md) and below: extra B-side outsiders do **not** invalidate the one-sided result, whereas allowing even one *complete arm root inside X* would invalidate its carrier-containment premise.
+
 ## 1. Mandatory three-complete-collector configuration inside \(Q_3\)
 
 Assume hypothetically the above sole \(n=19\) matrix is realized by a successful original both-cyclic 34-call schedule. Work within the **actually reverse-chronological** suffix component \(Q_3\), which has
