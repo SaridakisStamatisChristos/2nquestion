@@ -86,7 +86,13 @@ The explicit local countermodel is an *adversarial example of why size-only and 
 
 ### Adversarial boundary: a size-three doubly covering cell need not contain a full collector
 
-A tempting shortcut for the unrestricted case would assert: *if every local original secret is held by at least two of three cell participants, one of those three is complete.* This holds for a single chronological **tree** (a separate last-edge argument), but **fails** for the relevant unicyclic chronology when the final cycle call touches one member of the three-person cell.
+A tempting shortcut for the unrestricted case would assert: *if every local original secret is held by at least two of three cell participants, one of those three is complete.* It **does** hold for a single chronological **tree**, but **fails** for the relevant unicyclic chronology when the final cycle call touches one member of the three-person cell.
+
+**Auxiliary exact tree lemma (ALL n).** In a connected tree whose \(v-1\) distinct edges have been called once each, if a set \(C\) of **exactly three** recipients doubly covers every original secret, then **at least one of the three is a complete collector**.
+
+**Proof.** Delete the last chronological edge \(xy\), splitting prior communication into \(U\ni x,V\ni y\). If neither endpoint lies in \(C\), at least two designated recipients are required in *each* side to doubly cover its original secrets, contradicting \(|C|=3\). If exactly one endpoint, say \(x\in C\), lies in \(C\), then a \(V\)-secret can reach at most one designated recipient in \(U\), namely \(x\), forcing at least one designated recipient in \(V\). Conversely a \(U\)-secret cannot reach a designated recipient in \(V\), since its only possible carrier there is \(y\notin C\); hence there are at least two recipients in \(U\). The three recipients therefore split \(2+1\). Every \(U\)-secret must be held by **both** \(U\) recipients, including \(x\); every \(V\)-secret must be held by \(x\) and the sole \(V\) recipient. Thus \(x\) is complete. Finally, if both \(x,y\) lie in \(C\), place the third \(z\) in \(U\) without loss of generality. Every \(V\)-secret can be known by at most \(x,y\) among \(C\), forcing \(x\) to know all \(V\)-secrets. For a \(U\)-secret, the only \(V\) recipient is \(y\), who receives it only if \(x\) has it; if \(x\) lacks one, the secret has at most the one carrier \(z\), contradiction. Therefore \(x\) also knows all \(U\)-secrets and is complete. QED.
+
+This tree lemma cannot be naively applied to the actual off-corner cells: the *final unicyclic* contact joins one participant of each off-corner cell, potentially changing the knowledge of that one designated member after the preceding tree has ended. The counterexample below verifies that this one extra edge genuinely breaks the tree implication.
 
 A minimal independent six-person local witness, partitioning \(C=\{0,1,2\}\), is
 
