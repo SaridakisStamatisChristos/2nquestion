@@ -94,6 +94,15 @@ Reverse the original schedule for the symmetric implication:
 \boxed{m_{31}=m_{32}=2\quad\Longrightarrow\quad m_{33}\ge9.}
 \]
 
+**Immediate finite-size consequence:** Every corner cell is positive, and the two other off-corner cells are at least two by Bumby's first/last-contact spine. Therefore either one-sided size-two-pair condition already forces
+
+\[
+n=\sum_{i,j}m_{ij}\ge 4\text{ (corners)}+4\text{ (specified pair)}
+ +4\text{ (opposite pair)}+9\text{ (center)}=21.
+\]
+
+Hence **for \(n=18,19,20\)**, any hypothetical both-cyclic original split must have *at least one entry of size at least three in EACH off-corner pair*, not merely in one. This is an all-n necessary restriction, **not** a certificate that the \(n=18,19,20\) cases are impossible.
+
 Both statements require a **hypothetical successful both-cyclic original half-schedule** and make *no* assumptions on the remaining two off-corner sizes or on the four positive corner cell sizes. They are significantly broader than, but numerically weaker than, Stage 14's simultaneous size-two-pairs consequence \(m_{33}\ge64\).
 
 **Check of cell indexing:** \(m_{13},m_{23}\) belong to suffix unicyclic column \(Q_3\), and \(m_{31},m_{32}\) belong to prefix unicyclic row \(P_3\). The precise outside-root argument is copied only with this orientation, avoiding any swap of original and reversed chronology.
