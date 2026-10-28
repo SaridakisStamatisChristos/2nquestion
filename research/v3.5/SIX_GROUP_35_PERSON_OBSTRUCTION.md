@@ -73,6 +73,18 @@ m_{13}+m_{23}+m_{33}\ge35\quad\Longrightarrow\quad n\ge43.
 
 The stronger Stage 14 \(m_{33}\ge64\) still applies when **all four** off-corner entries equal 2. Stage 16's mixed \(m_{33}\ge16\) remains a valid, sharper *center-specific* inequality; this stage instead gives a stronger **component-total** inequality that does not bound \(m_{33}\) alone independent of the opposite off-corner sizes.
 
+### General \(k\)-arm double-carrier / last-edge principle
+
+The same proof is not specific to four arms. Let \(A\) be an original chronological unicyclic component whose last on-cycle call connects one vertex of each of two **distinct outside-\(X\)** recipient cells \(D_1,D_2\). Suppose **every original \(A\)-secret has at least two terminal carriers in each \(D_i\)**. Let the reversed opposite component \(B\) admit \(k\ge3\) causally sealed rooted tree arms with one complete outside-\(X\) collector per arm, and assume successful original source-target midpoint crossing.
+
+Removing the final \(A\) call leaves \(k+2\) disjoint, nonempty, collectively complete designated recipient groups of its chronological spanning tree \(T\): the two outside groups \(D_1\setminus\{a\}\), \(D_2\setminus\{b\}\), and \(k\) central arm cells. They cover **all but exactly two** \(A\) vertices, namely \(a,b\). Hence the exact tree-cover theorem gives \(|A|-2\ge2^{k+1}\). Equality would make every central group recipient private within their group; crossing forces each to be a full collector of its \(B\) arm. Because each \(B\) arm already has its outside complete root, each central group would be a singleton. Those \(k\ge3\) singleton complete-cover groups would provide **at least three** full collectors in the tree \(T\), contradicting the tree maximum of two. Therefore:
+
+\[
+\boxed{|A|\ge2^{k+1}+3\qquad(k\ge3).}
+\]
+
+This is a general **conditional** all-n structural lemma. At \(k=4\), it yields the 35-person theorem above. The direct six-group equality witness shows why the crossing argument, not group count alone, supplies the final \(+1\).
+
 ### Sharpness boundary of the recipient-count method
 
 The unweighted six-group tree-cover bound \(R\ge32\) is attained abstractly by a 32-person original chronological tree with group sizes \((1,1,2,4,8,16)\). Its 32 designated recipients all have private secrets, exactly two singleton complete groups, and only two complete terminal collectors. This demonstrates that **simply counting six complete recipient groups cannot prove \(R>32\)**; the strengthened \(R\ge33\) uses the *actual opposing causal tree-arm* compatibility to rule out the equality case. The 32-person construction is not a full gossip schedule, and does not realize a counterexample.
