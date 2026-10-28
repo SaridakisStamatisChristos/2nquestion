@@ -6,7 +6,7 @@
 
 Assume a successful, shortest, **pairwise-distinct**, bidirectional gossip chronology on \(n=22\) vertices (40 calls), both **original** 20-call halves cyclic, with **exactly three prefix components and three reversed-suffix components**. As in the [Stage 26 original-order analysis](../v4.3/N21_ORIGINAL_FOREST_THEOREM.md), label the two tree components and one unicyclic component on each side, form the nine positive intersection sizes \(m_{ij}\), and enforce four off-corner cells \(\ge2\).
 
-**The restriction to \(3\times3\) is not exhaustive at \(n=22\)**. The Stage 9 exponential tree-cover bound still permits both-cyclic \(3\times4\) or \(4\times3\) configurations; these must be enumerated and eliminated (or realized) separately before any full \(n=22\) verdict. The same lower bound excludes \(4\times4\) at \(n=22\) (requires at least 24) and excludes \(\min(r,s)=3,\max(r,s)\ge5\).
+**Universal shape closure (already classical):** Bumby's 1981 Theorem 3, as audited with the source-level closed-tree spine in [Stage 12](../v2.9/BUMBY_1981_UNIVERSAL_GEOMETRY.md), excludes FOUR or more components from EITHER chronological half in any successful minimum-call schedule. Since a cyclic half with n−2 contacts must have at least three components, **both cyclic forces r=s=3 for all n**. Thus this Stage 27 census covers every admissible both-cyclic **incidence shape** at n=22, although it does NOT enumerate legal chronologies or prove the conjecture. Earlier Stage 9 numerical r×s thresholds for r>=4 apply to relaxed impossible combinatorial grids, not realizable shortest gossip splits.
 
 The 3×3 baseline is
 \[
@@ -33,7 +33,7 @@ Distributing nine extra occupants among the nine labelled cells produces exactly
 | Stage 26 two-outside-root double-cover | 217 |
 | Stage 22 universal \((2,4,3)\) conditional three-star exclusion | **137** |
 
-The final **137 labelled 3×3 necessary-condition survivors** form **42 tree-row/tree-column swap orbits**, with center \(m_{33}\) distribution \(\{1:28,2:41,3:44,4:20,6:4\}\). These are **not** gossip schedules. A passing test establishes the enumerated arithmetic and faithful application of these predicates, **not** the published/earlier human lemmas independently and not actual satisfiability.
+The final **137 labelled necessary-condition survivors (within the universal 3×3 shape)** form **42 tree-row/tree-column swap orbits**, with center \(m_{33}\) distribution \(\{1:28,2:41,3:44,4:20,6:4\}\). These are **not** gossip schedules. A passing test establishes the enumerated arithmetic and faithful application of these predicates, **not** the published/earlier human lemmas independently and not actual satisfiability.
 
 Differential regression: \(n=21\) baseline 12,870, Stage 25 remaining 77, Stage 26 remaining **zero** under the cited human lemmas. The special \((4,4,1)\) Stage 26 case sums to 21 and is intentionally **not** reused to eliminate an \(n=22\) matrix.
 
@@ -49,7 +49,7 @@ The matching [Stage 27 CI workflow](../../.github/workflows/research-v44.yml) mu
 
 ## Proof frontier and adversarial obligations
 
-1. **Missing component shapes:** enumerate \(3\times4\) and \(4\times3\) using the correct \(3\times4\) geometry and collector/tree-cover constraints, not the \(3\times3\) baseline.
+1. **Historical shape prerequisite:** independently re-audit Bumby's Theorem 3 as applied to the ORIGINAL split, especially its order-ideal and closed-tree hypotheses. The [Stage 12 primary-source analysis](../v2.9/BUMBY_1981_UNIVERSAL_GEOMETRY.md) already establishes r=s=3 universally for both-cyclic shortest schedules. Do NOT resurrect 3×4/4×3 as open genuine shapes merely because older relaxed counting bounds permit them.
 2. **137 open 3×3 matrices:** build *sound original-chronology local information-profile oracles*; do not treat conservative incidence survival as feasible gossip.
 3. **Large tree privacy:** compute certified privacy minima for newly needed 8-person+ corner-group triples; until then use zero (no extrapolation).
 4. **Global proof:** seek a structural descent or an unbounded cell/crossing impossibility. Small-\(n\) success and extension/upward closure alone cannot establish the universal half-forest conjecture.
