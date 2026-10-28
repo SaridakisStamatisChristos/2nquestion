@@ -80,7 +80,7 @@ By Bumby's spine, if the **original** suffix off-corner cell sizes obey
 m_{13}=m_{23}=2,
 \]
 
-then neither participant in these cells is a complete reversed collector of the suffix *tree* \(Q_1\) or \(Q_2\) on the **other side of the 3×3 grid**: the necessary two-point crossing argument instead makes all four of them complete reversed-suffix collectors of unicyclic \(Q_3\). Thus Stage 14's collector decomposition makes \(Q_3\) a **causally sealed four-arm** component, with the four outsiders in \(P_1\cup P_2\).
+then no participant in \(P_1\cap Q_3\) can be a complete prefix collector of tree \(P_1\), and no participant in \(P_2\cap Q_3\) can be a complete prefix collector of tree \(P_2\): Bumby's spine places the last contacts of these prefix trees across \(Q_1\) and \(Q_2\). The exact two-point crossing lemma therefore forces **both participants** of each size-two cell to be complete **reversed-suffix collectors of the unicyclic \(Q_3\)**. Thus Stage 14's collector decomposition makes \(Q_3\) a **causally sealed four-arm** component, with the four outsiders in \(P_1\cup P_2\).
 
 The last chronological call inside original prefix \(P_3\) joins \(Q_1,Q_2\), hence lies outside \(X=P_3\cap Q_3\), and deleting it leaves a spanning tree (Bumby's Theorem 3, Case II). Apply Theorem C with \(A=P_3\), \(B=Q_3\), \(k=4\) to obtain
 
