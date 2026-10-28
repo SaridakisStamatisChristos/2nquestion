@@ -1,3 +1,5 @@
+> **Stage 14 supersession (28 October 2026):** The m33>=12 saturated-off-corner bound below remains correct but is now **strictly superseded** by the stronger conditional **m33>=64** theorem for the SAME four-off-corner-size-two premise, with arbitrary positive corner multiplicities. The stronger proof repairs a strict-chronology assumption in the earlier four-arm reasoning. See [Stage 14 causal four-arm bridge](../v3.1/CAUSAL_FOUR_ARM_BRIDGE.md). The unrestricted original-half conjecture remains OPEN.
+
 # Stage 13 — Center saturation in the original chronological 3×3 split
 
 **28 October 2026. Status: proved, strictly conditional all-n necessary lemma. Stronger saturated-center bound m33>=12 (supersedes preliminary >=3). The original chronological half-forest conjecture remains OPEN. No original both-cyclic gossip schedule or global counterexample has been constructed.**
