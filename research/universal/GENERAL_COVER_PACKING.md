@@ -24,7 +24,19 @@ Consider original secrets originating in A. For ANY designated group G_i NOT con
 
 Symmetrically, at most one group contains x, so B has at least s−1 disjoint complete-cover recipient groups and therefore at least \(2^{s-2}\) designated recipients. Their side recipient sets are disjoint, yielding \(\sum|G_i|\ge2^{s-2}+2^{s-2}=2^{s-1}\). QED.
 
-**Sharp for s=1,2,3:** s1 one singleton; s2 one call between two singleton collectors; s3 chronology (0,2),(1,3),(0,1) on four people, with groups {0},{1},{2,3}. Both 0,1 know all four secrets and {2,3} collectively covers. No sharpness assertion for general s is needed or made.
+### Theorem U.9b — the bound is SHARP for EVERY s, not merely s≤3
+
+For EVERY integer \(s\ge1\), there exists an **original-order edge-once chronological tree on exactly \(2^{s-1}\) people** and s pairwise-disjoint, nonempty recipient groups of sizes
+\[
+\boxed{1,\ 1,\ 2,\ 4,\ 8,\ \ldots,\ 2^{s-2}}
+\]
+(for s=1 the sole group has size1), with each group terminally collectively knowing **every original secret**. Their union comprises ALL the tree's people, and there are **exactly \(2^{s-1}-1\) distinct calls**. Thus the universal extremal number for s disjoint complete recipient groups is EXACTLY \(2^{s-1}\), not just a lower bound.
+
+**Inductive construction.** Let H(1) be the one-person trivial chronological tree, whose one singleton group is also its complete root. Assume H(s−1) has (s−1) disjoint collectively complete recipient groups \(G_0,G_1,\dots,G_{s-2}\), where \(G_0=\{r\}\) is a singleton *terminal complete root*; sizes are 1,1,2,...,2^{s−3}. Take TWO DISJOINT copies L,R, perform all L contacts and all R contacts in their original internal order, and make exactly ONE final contact between their respective full singleton roots \(r_L,r_R\). The new chronological call graph is a tree on \(2^{s-1}\) people.
+
+Form s groups: the two NEW terminal full singletons \(\{r_L\}\), \(\{r_R\}\), and, for every i≥1, the union \(G_i^{L}\cup G_i^{R}\) of the corresponding previous recipient groups. All groups are disjoint and cover the vertex set; their sizes are 1,1,2,4,...,2^{s−2}. Both singleton roots learn ALL secrets on the final call. Every combined old group already collectively knows all L secrets through its L part and all R secrets through its R part, and does not need the final call. Thus it is a global complete cover. The new root \(r_L\) remains complete and in singleton group0, closing the induction. QED.
+
+The exact replay checker [general_group_cover_audit.py](general_group_cover_audit.py) constructs and replays H(s) for s=1..8 (up to 128 people), verifying group disjointness, complete coverage, cardinality, chronology and tree topology. The **human inductive construction**, not these examples, establishes the ALL-s equality statement.
 
 ## Lemma U.10 — chronological rooted complete-collector / disjoint-support dichotomy
 
@@ -95,4 +107,4 @@ By Lemma U.10, if ONE of T's two rooted last-edge sides has no complete C collec
 
 [Independent checker](general_group_cover_audit.py) replays genuine original-order tree histories, checks the q=3 exact construction, exhausts all group assignments on very small trees and tests disjoint hitting sets against original two-root chronological trees. Any finite script only challenges the bounded cases; the induction and support-cover proof carry ALL n and arbitrary k.
 
-**States:** Theorems U.9/U.11 and Lemma U.10 = complete HUMAN_PROOFS, independent mathematical referee needed; FORMAL_CHECKER not run; historical novelty unchecked; universal original-half forest and 2n−3 spanner OPEN. PR #1 DRAFT/UNMERGED and manuscript submission HOLD.
+**States:** Theorems U.9/U.9b/U.11 and Lemma U.10 = complete HUMAN_PROOFS, independent mathematical referee needed; FORMAL_CHECKER not run; historical novelty unchecked; universal original-half forest and 2n−3 spanner OPEN. PR #1 DRAFT/UNMERGED and manuscript submission HOLD.
