@@ -1,5 +1,17 @@
 # Scientific status and evidence ledger
 
+## Universal-only mandate and claim boundary (28 October 2026)
+
+**New unbounded conclusion (PROVED human):** for **every integer n≥23** the matrix \(M_n=((1,1,2),(1,1,4),(2,4,n-16))\) passes ALL existing Stage25–34 necessary *incidence* filters. Hence the strategy of increasing finite n while retaining those predicates **cannot** prove the universal original-half-forest property; see [symbolic proof](research/universal/ALL_N_INCIDENCE_BARRIER.md) and [exact-predicate auditor](research/universal/infinite_incidence_barrier.py). This is NOT a valid successful 2n−4 call gossip chronology.
+
+**New all-n conditional support theorem (HUMAN PROOF, not FORMAL):** for every pair of finite original-order edge-once chronological trees with both complete last-call collectors outside shared X, X doubly covering all local original secrets, and every cross-pair exact support intersecting, \(|X|\ge9\), with arbitrary unused helpers. The corresponding hypothetical both-cyclic original gossip result is conditional on no full center collector and at least two full exterior collectors in the same exterior cell on each side. [Proof](research/universal/ROOTED_SUPPORT_TRANSVERSAL.md); [independent 3/4/5-recipient tree/6..8 support falsifier](research/universal/support_transversal_audit.py). No conclusion for |X|≥9 or large off-corners without forced full collectors.
+
+**UNRESOLVED TWO-LEVEL UNIVERSAL OBLIGATION:** (1) prove/refute that two such edge-once trees can cross with **arbitrary width** X; (2) resolve original both-cyclic configurations lacking the outside root hypotheses, or construct a full counterexample. The independent temporal-clique \(2n-3\) exact spanner conjecture remains OPEN. This work supersedes the previous n23-first execution plan; do not resume it without new evidence.
+
+**Evidence:** [universal CI workflow](.github/workflows/research-universal.yml) executes the exact predicates, rooted trees, transversal checks and existing Stage34 regressions. A CI PASS validates finite executions only. No independent referee, Lean/Coq theorem checker, established priority, full all-n forest proof, or full spanner theorem. Publication HOLD, PR #1 DRAFT/UNMERGED.
+
+
+
 ## Current critical research status — 28 October 2026, Stage34
 
 The **PRIMARY exact-reachability temporal clique** conjecture \( \mathrm{OPT}(K_n,\lambda)\le2n-3 \) for every distinct-labeling is **OPEN**, as is POD. The **separate auxiliary minimum-gossip ORIGINAL-chronology half-forest theorem** has a complete human proof, **conditional on imported older all-n lemmas**, for every fixed \(4\le n\le22\). It remains **OPEN for \(n\ge23\)**. Do not conflate existence of a small spanner for an arbitrary clique with structure of an optimal gossip chronology which already exists.
