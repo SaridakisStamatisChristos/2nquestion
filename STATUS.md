@@ -1,5 +1,11 @@
 # Scientific status and evidence ledger
 
+## All-n minimal-counterexample descent — 28 October 2026
+
+**Human theorem [U.14](research/universal/FOUR_HUB_MINIMAL_DESCENT.md):** if there exists ANY pair of edge-once original-order chronological trees with last-call complete endpoints outside their shared X, double X coverage of every original local secret and every cross-pair exact X source support intersecting, then a **MINIMUM-center-size such pair has exactly four distinct local final-call complete collectors in the four crossing quadrants**, the two T hubs and two U hubs occupying *complementary diagonals*. Proof is a strict well-founded descent via a quadrant whose last-local-call endpoint collectors both lie outside it; such a quadrant inherits exact all-pairs crossing and double coverage.
+
+**Finite independent structural audit:** [81-position checker](research/universal/four_hub_descent_audit.py) finds 79 reducible placements and only the two symmetry-related alternating patterns. The unbounded theorem is the human minimality argument, NOT the 81-case arithmetic. **THE REMAINING ALTERNATING FOUR-HUB CASE IS OPEN**; no existence, nonexistence or full original-half forest proof is asserted. The distinct exact 2n−3 temporal-clique spanner conjecture is likewise open, per [Casteigts' September 22, 2026 tracker](https://arnaudcasteigts.net/blog/open-problems.html). Independent referee and novelty review remain unperformed; PR #1 DRAFT and publication HOLD.
+
 ## Latest universally quantified mathematics and audit — 28 October 2026
 
 **ALL-n HUMAN PROOFS, NOT the final conjecture:**
