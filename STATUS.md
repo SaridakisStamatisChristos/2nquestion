@@ -1,5 +1,15 @@
 # Scientific status and evidence ledger
 
+## Latest universally quantified mathematics and audit — 28 October 2026
+
+**ALL-n HUMAN PROOFS, NOT the final conjecture:**
+- [Exact receiver multiplicity](research/universal/EXPONENTIAL_MULTIPLICITY_AND_PAIR_RIGIDITY.md): for every positive q, an edge-once chronological tree with an individually complete root outside C and every secret reaching ≥q in C requires \(|C|\ge2^q-1\), with matching real original-order histories for every q; root in C bound \(2^{q-1}\), also sharp.
+- [General disjoint group cover](research/universal/GENERAL_COVER_PACKING.md): for arbitrary finite s, s pairwise-disjoint collectively complete groups in a chronological tree require ≥\(2^{s-1}\) designated people, unused helper vertices permitted, a direct all-n induction independent of prior Stage11 assumptions.
+- [Exact crossed-tree cover transfer](research/universal/CROSSED_TREE_COVER_TRANSFER.md): all-pairs exact information crossing between two chronological trees with last complete endpoints outside shared doubly covering X requires \(|X|\ge14\). For any k disjoint source carrier supports, stronger bound \(|X|\ge2^{k+1}-2\), proved [here](research/universal/GENERAL_COVER_PACKING.md).
+- [Unsound universal contraction refuted](research/universal/degree_two_descent_falsifier.py): naïve halfwise temporal suppression of an original degree-two vertex can turn a shortest successful gossip chronology into an unsuccessful one. The chosen witness is not a global both-cyclic counterexample.
+
+**Falsification evidence:** [universal CI](.github/workflows/research-universal.yml), true chronological bitset replay, exact small tree/group assignment enumeration, parametric q=1..7 constructions, and all current original-half regression checks. All finite testing remains distinct from all-n human proofs. **No** independent referee/formal checker, historical novelty sign-off, universal original half-forest proof, or exact 2n−3 spanner theorem. The open routes are all-width crossing impossibility or counterexample, and *root-free* exterior cell information-flow transfer. PR #1 stays DRAFT/UNMERGED; publication HOLD.
+
 ## Universal-only mandate and claim boundary (28 October 2026)
 
 **New unbounded conclusion (PROVED human):** for **every integer n≥23** the matrix \(M_n=((1,1,2),(1,1,4),(2,4,n-16))\) passes ALL existing Stage25–34 necessary *incidence* filters. Hence the strategy of increasing finite n while retaining those predicates **cannot** prove the universal original-half-forest property; see [symbolic proof](research/universal/ALL_N_INCIDENCE_BARRIER.md) and [exact-predicate auditor](research/universal/infinite_incidence_barrier.py). This is NOT a valid successful 2n−4 call gossip chronology.
