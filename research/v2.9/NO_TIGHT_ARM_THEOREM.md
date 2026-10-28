@@ -1,3 +1,5 @@
+> **Stage 14 chronology scope clarification (28 October 2026):** The inequality t>=64 proven below is valid under its stated strictly sealed-arm assumption. Four full outside-X collectors alone do **not** force strict global all-arm-before-all-core ordering in the original chronology. The [Stage 14 causal sealing proof](../v3.1/CAUSAL_FOUR_ARM_BRIDGE.md) derives the same inequality from the weaker per-arm chronological property actually forced by four collectors. It then proves an expanded original 3×3 necessary condition m33>=64 with all four off-corner cells of size two and *unrestricted corner sizes*. Universal half-forest remains OPEN.
+
 # Stage 12 — No-tight-arm theorem and universal private-recipient bottleneck
 
 **28 October 2026 — proved conditional ALL-n LOCAL structural result. Original chronological half-forest conjecture OPEN; no universal contradiction or actual counterexample obtained.**
