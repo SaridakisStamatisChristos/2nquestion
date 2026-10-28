@@ -72,7 +72,7 @@ At \(n=18\), all corners are thus **singletons**, and (after harmless renaming o
 
 ### Lemma 17.3 (two compulsory private recipients)
 
-Let \(T\) be a connected five-person tree with its four edges each called once, in a fixed chronological order. Suppose the **last** call joins two designated singleton outside roots \(u,v\). Suppose the remaining three participants \(W=\{a,b,c\}\) **collectively** know all five original secrets after all calls.
+Let \(T\) be a connected five-person tree with its four edges each called once, in a fixed chronological order. Suppose the **last** call joins two designated singleton outside roots \(u,v\), **each of which is a complete collector of all five secrets after that call**. Suppose the remaining three participants \(W=\{a,b,c\}\) **collectively** know all five original secrets after all calls.
 
 Then **exactly TWO** different members of \(W\) have a *private* original secret relative to \(W\): for each of these two members there exists an original secret known to them and to **no other** member of \(W\).
 
