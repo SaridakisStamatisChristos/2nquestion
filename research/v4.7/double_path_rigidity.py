@@ -104,11 +104,22 @@ def two_paths():
                 shapes.add(edges)
     assert len(shapes) == 90
 
-    # Unique size-two transversal: precisely the two path centers.
+    # Exact minimal and upward-closed opposite target-support domain.
     for E in shapes:
-        hits = [frozenset(p) for p in combinations(range(6), 2)
-                if all(set(p) & set(e) for e in E)]
-        assert len(hits) == 1, (E, hits)
+        allowed = [frozenset(v for v in range(6) if (mask >> v) & 1)
+                   for mask in range(1, 1 << 6)
+                   if all(any((mask >> v) & 1 for v in edge) for edge in E)]
+        assert len(allowed) == 25, (E, len(allowed))
+        minimal = [h for h in allowed if not any(g < h for g in allowed)]
+        assert sorted(map(len, minimal)) == [2, 3, 3, 4]
+        assert Counter(map(len, allowed)) == {2: 1, 3: 6, 4: 11, 5: 6, 6: 1}
+        assert sum(len(h) == 2 for h in allowed) == 1
+        assert all(any(base <= h for base in minimal) for h in allowed)
+        assert all(any(base <= h for base in minimal) ==
+                   all(h & edge for edge in E)
+                   for h in [frozenset(v for v in range(6)
+                                       if (mask >> v) & 1)
+                             for mask in range(1, 1 << 6)])
 
     compatible = sum(
         all(a & b for a in E for b in F)
@@ -146,6 +157,8 @@ def main():
     n, pairs, zero = two_paths()
     print("PASS 2P3 families:", n, "ordered pairs:", pairs,
           "all-cross compatible:", zero)
+    print("PASS exact target support domain: 25/63 nonempty masks; "
+          "4 minimal transversals of sizes 2,3,3,4")
     for helpers in (0, 1, 2, 3, 4, 8, 16):
         assert check_marked_outer(helpers)
         print("PASS marked eight-recipient normal form with helpers", helpers)
