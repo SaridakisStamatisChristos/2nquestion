@@ -84,6 +84,20 @@ Thus **every original secret has a singleton support in \(X\)**, and \(|D_A|=4\)
 
 The explicit local countermodel is an *adversarial example of why size-only and double-carrier-local tests are insufficient*: it is ruled out only when central cross-half temporal information is imposed. It is **not** a counterexample to the original half-forest conjecture.
 
+### Adversarial boundary: a size-three doubly covering cell need not contain a full collector
+
+A tempting shortcut for the unrestricted case would assert: *if every local original secret is held by at least two of three cell participants, one of those three is complete.* This holds for a single chronological **tree** (a separate last-edge argument), but **fails** for the relevant unicyclic chronology when the final cycle call touches one member of the three-person cell.
+
+A minimal independent six-person local witness, partitioning \(C=\{0,1,2\}\), is
+
+\[
+(0,5),(3,4),(2,1),(4,2),(1,5),(0,3).
+\]
+
+Its six edges form a connected unicyclic graph with the last edge outside the preceding spanning tree. The three members of \(C\) finish with exact tenary-free binary knowledge masks \(57,39,30\) (for secrets labelled \(0,\ldots,5\)). Every original secret is known by at least **two** of the three, but **none** of the three individually knows all six. The last call \((0,3)\) joins the chosen cell to its complement and touches only one chosen recipient. This is a **local** counterexample to an attractive but false full-collector inference; it is not a successful global telephone-gossip chronology and is not claimed to meet all the other 3×3 off-corner constraints.
+
+This witness is independently replayed in the updated [checker](central_private_capacity_check.py). The surviving all-n statement remains only the **two-fold support** property of Stage 17, not automatic completeness for any cell of size 3.
+
 ## Reproducible independent verifier and next bottleneck
 
 [central_private_capacity_check.py](central_private_capacity_check.py) independently replays the ten-contact witness, checks distinct edges, connected unicyclic static rank, the actual last-edge side assignment, two-fold secret coverage in both exterior cells, all-secrets collective center coverage, the four private center positions, and verifies the exact Boolean support implication by exhaustive enumeration for center width 2,3 and source/target support families of size up to three.
