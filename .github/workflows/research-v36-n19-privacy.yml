@@ -1,0 +1,34 @@
+name: Stage 19 exact original tree privacy and n19 one-orbit obstruction
+on:
+  push:
+    paths:
+      - 'research/v3.6/SMALL_TREE_PRIVACY_N19_FRONTIER.md'
+      - 'research/v3.6/exact_small_tree_privacy.py'
+      - 'research/v3.6/count_n19_privacy_profiles.py'
+      - '.github/workflows/research-v36-n19-privacy.yml'
+  pull_request:
+    paths:
+      - 'research/v3.6/SMALL_TREE_PRIVACY_N19_FRONTIER.md'
+      - 'research/v3.6/exact_small_tree_privacy.py'
+      - 'research/v3.6/count_n19_privacy_profiles.py'
+      - '.github/workflows/research-v36-n19-privacy.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-small-tree-private:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Exhaustively enumerate all needed four-five-six-person chronological tree privacy triples
+        run: |
+          python3 -B research/v3.6/exact_small_tree_privacy.py
+      - name: Independently enumerate 3003 n19 positive matrices and reject 37 by full-collector forcing
+        run: |
+          python3 -B research/v3.6/count_n19_privacy_profiles.py
+      - name: Regression original chronological two-point crossing and seven-person four-star obstruction
+        run: |
+          python3 -B research/v3.0/check_center_saturation.py
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.5/exact_tree_star_crossing.cpp -o /tmp/exact_tree_star_crossing
+          /tmp/exact_tree_star_crossing
