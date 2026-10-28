@@ -1,0 +1,27 @@
+name: Stage 31 all-n original last-contact collector transfer
+on:
+  push:
+    paths:
+      - 'research/v4.8/**'
+      - '.github/workflows/research-v48.yml'
+  pull_request:
+    paths:
+      - 'research/v4.8/**'
+      - '.github/workflows/research-v48.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-transferred-collectors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independent original last-cycle transfer, boundary countermodel, n22/23 exact incidence census
+        run: python3 -B research/v4.8/last_contact_transfer.py
+      - name: Prior all-n Stage 28 collector obstruction, independent exact profile census
+        run: python3 -B research/v4.5/unbounded_eight_outside_audit.py
+      - name: Sharp all-c tree private-recipient theorem
+        run: python3 -B research/v4.6/private_threshold.py
+      - name: Independent original chronology double-path rigidity
+        run: python3 -B research/v4.7/double_path_rigidity.py
