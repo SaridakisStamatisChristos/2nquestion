@@ -1,0 +1,25 @@
+name: Stage 27 n22 ORIGINAL 3x3 conservative incidence frontier
+on:
+  push:
+    paths:
+      - 'research/v4.4/**'
+      - '.github/workflows/research-v44.yml'
+  pull_request:
+    paths:
+      - 'research/v4.4/**'
+      - '.github/workflows/research-v44.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-n22-3x3-frontier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independent separator-enumerated n21/n22 incidence and differential Stage25+26 audit
+        run: python3 -B research/v4.4/n22_3x3_frontier.py
+      - name: Prior Stage25 original chronology incidence census regression
+        run: python3 -B research/v4.2/n21_staged_frontier.py
+      - name: Prior Stage26 n21 original chronology closure regression
+        run: python3 -B research/v4.3/n21_final.py
