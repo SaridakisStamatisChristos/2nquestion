@@ -1,0 +1,29 @@
+name: Universal all-n theorem and infinite incidence barrier audit
+on:
+  push:
+    paths:
+      - 'research/universal/**'
+      - '.github/workflows/research-universal.yml'
+  pull_request:
+    paths:
+      - 'research/universal/**'
+      - '.github/workflows/research-universal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-universal-proof-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify infinite incidence profile family and existing Stage25-34 rules
+        run: python3 -B research/universal/infinite_incidence_barrier.py
+      - name: Independently enumerate original rooted trees and exact crossing transversals
+        run: python3 -B research/universal/support_transversal_audit.py
+      - name: Earlier six-recipient path-support adversarial regression
+        run: python3 -B research/v4.7/double_path_rigidity.py
+      - name: Stage34 finite incidence classifier (regression only, not all-n proof)
+        run: python3 -B research/v5.1/n22_final_center_support.py
+      - name: Seven-orbit independent frozen proof-premise certification
+        run: python3 -B research/v5.1/seven_orbit_certificate.py
