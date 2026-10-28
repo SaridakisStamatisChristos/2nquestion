@@ -55,6 +55,32 @@ has the two full collectors \(0,2\), and the two remaining designated outsiders 
 
 This correction clarifies both historical Stage 10 Type T and Type C applicability without relying on a new ordering of the original half-schedule.
 
+## Exact all-n Type T ↔ Type C terminal-call bijection
+
+This yields a useful independent structural theorem that unifies the two chronology types. Consider **marked Type T objects**: a labelled connected tree with its ordered \(v-1\) distinct calls, exactly two complete terminal collectors \(u,v'\), and a **distinguished unordered pair** of different other participants \(\{w,z\}\) whose combined final knowledge contains all \(v\) original secrets. Distinguish pairs rather than merely schedules because one tree chronology can have more than one valid pair.
+
+Map such a marked tree to an ordered connected unicyclic chronology by **appending** the fresh call \(wz\). The last tree call was \(uv'\); deleting it divides the tree into two sides. The pair \(\{w,z\}\) must occupy opposite sides, since otherwise both lack every secret originating on the other side. Thus the new \(wz\) edge was not already in the tree (the only tree edge across the cut is \(uv'\), with different endpoints). Appending it creates exactly one cycle. The pair learns all secrets, while the old two complete collectors remain complete, so **four distinct** collectors result.
+
+Conversely, given an ordered connected unicyclic \(v\)-call chronology with **four** complete terminal collectors, the proof of Lemma 1 forces exactly two collectors \(u,v'\) after call \(v-1\), and the last call must join the two *other* collectors \(w,z\). Deleting that last call gives a successful locally complete-collector tree chronology with distinguished pair \(\{w,z\}\) collectively covering all original secrets. The two operations are inverse, **on exact originally ordered local call sequences**.
+
+Therefore, for every \(v\ge4\), there is a bijection
+
+\[
+\boxed{\{\text{marked Type T tree chronologies on }v\text{ vertices}\}
+ \ \cong\
+ \{\text{four-collector unicyclic chronologies on }v\text{ vertices}\}.}
+\]
+
+This bijection is purely **local**: neither side necessarily is a successful full-gossip schedule. It shows the causal Type C decomposition follows alternatively by first deleting the last edge, applying the corrected Type T causal decomposition, then restoring that edge between outside roots. It also explains an independently observed exact count identity.
+
+| \(v\) | All labelled ordered trees | Marked Type T pairs | Four-collector unicyclic orders | Strict-order failures, each class |
+|---|---:|---:|---:|---:|
+| 4 | 96 | 24 | 24 | 0 |
+| 5 | 3,000 | 720 | 720 | 240 |
+| 6 | 155,520 | 25,920 | 25,920 | 11,520 |
+
+Two separate, non-shared C++ enumeration implementations verify the columns for \(v=4,5,6\): [tree verifier](exhaustive_tree_type_t.cpp) and [unicyclic verifier](exhaustive_four_collector.cpp). Equality of these finite counts is *not* the proof of the general bijection; the inverse constructions above are.
+
 ## Lemma 2. Two crossed *causally sealed* four-arm components require \(t\ge64\)
 
 Suppose a prefix connected component \(A\) and fully reversed-suffix component \(B\) have exactly four outside-\(X\) vertices each, and each admits a causally sealed four-arm decomposition \(A_1,\ldots,A_4\), \(B_1,\ldots,B_4\). Assume \(A\cap B=X\) and the entire **fixed original** chronology succeeds.
