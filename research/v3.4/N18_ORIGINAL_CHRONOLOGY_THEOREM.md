@@ -10,50 +10,62 @@ Assume for contradiction both original halves cyclic. By Richard T. Bumby, *A Pr
 
 Bumby's original last-prefix / first-suffix contact spine and exact local crossing yield the Stage 16 **two-fold off-corner secret coverage**, with local \(P_3\) final edge on its cycle between \(Q_1,Q_2\); equivalently for reversed \(Q_3\) between \(P_1,P_2\). Stage 16's exhaustive local theorem previously established \(|P_3|,|Q_3|\ge8\) unconditionally.
 
-## 2. Exact eight-person local case classification (NEW)
+## 2. Exact eight-person local case classification — adversarially corrected
 
-### Theorem 17.1 (finite exact)
+### Theorem 17.1 (finite exact, corrected)
 
-Consider a connected eight-person local *unicyclic* chronology of exactly eight distinct calls, with the **last** call closing the unique cycle and connecting groups \(A,B\) in a partition \(A\sqcup B\sqcup C\) of the eight people. Suppose every original secret has at least **two** terminal recipients in \(A\), at least **two** in \(B\), and at least **one** in \(C\). Then the **only possible group-size pattern**, up to interchanging \(A,B\), is
+Consider a connected eight-person local *unicyclic* chronology of eight distinct calls with the **last** edge closing the cycle between groups \(A,B\) in a partition \(A\sqcup B\sqcup C\). Suppose every original secret has at least two terminal carriers in \(A\), at least two in \(B\), and at least one in \(C\). Then, up to interchanging \(A,B\), the only possible SIZE patterns are
 
 \[
-\boxed{(|A|,|B|,|C|)=(2,2,4).}
+\boxed{(|A|,|B|,|C|)\in\{(2,2,4),(2,5,1)\}.}
 \]
 
-**Exact verification method.** First \(7\) contacts form a spanning labelled tree. Relabel the groups as contiguous intervals of lengths \(a,b,c\), and final endpoints as \((0,a)\). The first-seven tree cannot contain edge \((0,a)\). All \(8^{6}=262144\) labelled Prüfer strings yield every labelled tree once, and we enumerate every one of the \(7!=5040\) chronological orderings of its edges.
+**Important adversarial correction:** An initial enumeration incorrectly omitted the two possible triples \((2,5,1)\) and \((3,4,1)\). The omitted \((2,5,1)\) class has **real local witnesses**. Consequently the earlier provisional claim that only \((2,2,4)\) survives, and the inferred **unconditional** \(|P_3|,|Q_3|\ge9\), were **false and must not be used**. This defect was caught before final certification, and every six-triple result below is now explicitly pinned in the executable.
 
-For efficiency, keep only one canonical *static tree* in each orbit under permutations of the labels **within groups and fixing the final endpoints**. For any such permutation, chronological call-order sequences and carrier counts are carried bijectively to those of the relabelled tree. Thus quotienting static tree topology only loses NO possible chronology. The canonical representative is the minimum 28-bit undirected-edge adjacency mask of the tree under this finite permutation group. Every chronological order of each surviving representative is still explicitly replayed. Endpoints update information via bitwise union, and all eight secrets' carrier multiplicities are checked independently.
+**Complete exact verification.** Since \(a,b\ge2,c\ge1\), there are precisely SIX group-size triples up to swapping \(A,B\). Relabel each group into contiguous intervals, and the final endpoints as \((0,a)\). The first seven contacts are a labelled spanning tree not containing the final edge. Enumerate all \(8^6=262144\) labelled Prüfer codes; quotient only static *trees* by group-preserving vertex relabellings fixing \(0,a\), using the minimum encoded undirected adjacency mask. That quotient is exact: each tree's chronological orderings correspond bijectively, under label permutations, to those of its representative. Exhaust ALL \(7!\) chronological orders for each canonical tree and replay each bitset secret under the original union-call rule; test the \((2,2,1)\) minimum carrier counts for all eight original secrets.
 
-Only four group-size triples are possible for \(8=a+b+c\) with \(a,b\ge2,c\ge1\), up to \(A,B\) interchange. Exact counts from [the standalone C++17 verifier](exact_eight_group_orbits.cpp):
-
-| \(a,b,c\) | Trees avoiding the final edge | Canonical static-tree orbits | Exactly replayed chronological orderings | Valid local chronological orderings |
+| \((a,b,c)\) | Static trees without fixed final edge | Canonical tree orbits | Enumerated distinct chronological orders | Locally compatible |
 |---|---:|---:|---:|---:|
+| (2,2,4) | 196,608 | 9,653 | 48,651,120 | **160** |
 | (2,3,3) | 196,608 | 18,240 | 91,929,600 | **0** |
 | (2,4,2) | 196,608 | 18,240 | 91,929,600 | **0** |
 | (3,3,2) | 196,608 | 26,616 | 134,144,640 | **0** |
-| (2,2,4) | 196,608 | 9,653 | 48,651,120 | **160** |
+| (2,5,1) | 196,608 | 9,653 | 48,651,120 | **160** |
+| (3,4,1) | 196,608 | 18,240 | 91,929,600 | **0** |
 
-The three zero results and one nonempty result together are **a complete finite classification of possible size triples**, not a classification of all chronological graphs or global schedules. Total: **366,654,960** enumerated representative tree-order pairs. The previously replayed [eight-person witness](../v3.3/DUAL_DOUBLE_COVER_AND_LOCAL_MINIMUM.md) independently establishes feasibility of the local \((2,2,4)\) class.
+**Total: 507,235,680 exact representative tree-call orderings**. The check is implemented independently in [exact_eight_group_orbits.cpp](exact_eight_group_orbits.cpp). The size-8 \((2,2,4)\) case has a separate explicit Stage 16 local witness, and the program obtains local \((2,5,1)\) witnesses too. Neither is a full two-half gossip scheme.
 
-### Corollary 17.2 — unconditional \(9\)-person lower bounds for BOTH cyclic components
+### Corollary 17.2 — universal DISJUNCTIVE size-eight constraint (corrected)
 
-If a hypothetical successful *original* both-cyclic midpoint had \(|P_3|=8\), Stage 16's two-fold cover would force
-\[
-(m_{31},m_{32},m_{33})=(2,2,4).
-\]
-But the one-sided Stage 15 theorem applied to the pair \(m_{31}=m_{32}=2\) forces \(m_{33}\ge9\), contradicting \(m_{33}=4\). Thus \(|P_3|\ne8\), and earlier Stage 16 proved \(|P_3|\ge8\). Apply the argument to the reversed original suffix for \(Q_3\):
+Stage 16 already proved \(|P_3|,|Q_3|\ge8\). If \(|P_3|=8\), the above local classification allows only \((m_{31},m_{32},m_{33})=(2,2,4)\) or \((2,5,1)\) up to swapping the first two columns. But the former is globally excluded by Stage 15: \(m_{31}=m_{32}=2\Rightarrow m_{33}\ge9\). Therefore any **hypothetical original both-cyclic** split satisfies the sharp necessary dichotomy
 
 \[
 \boxed{
-m_{31}+m_{32}+m_{33}\ge9,\qquad
-m_{13}+m_{23}+m_{33}\ge9,
+|P_3|\ge9\ \ \text{OR}\ \
+(m_{33}=1,\ \{m_{31},m_{32}\}=\{2,5\}).
 }
 \]
-**for all \(n\)**, under the hypothetical both-cyclic original schedule. This does NOT imply the center \(m_{33}\) alone is at least nine unless a Stage 15 size-two-pair condition holds.
+
+By exact time reversal,
+
+\[
+\boxed{
+|Q_3|\ge9\ \ \text{OR}\ \
+(m_{33}=1,\ \{m_{13},m_{23}\}=\{2,5\}).
+}
+\]
+
+In particular **if the center has at least two participants**, \(|P_3|,|Q_3|\ge9\). There is **no global all-\(n\) claim** that both components always have size at least nine.
+
+### Why the \(n=18\) size reduction still holds
+
+Let \(p=(m_{13}-2)+(m_{23}-2)\), \(q=(m_{31}-2)+(m_{32}-2)\), \(d=m_{33}-1\), and \(r\ge0\) denote extra occupants in the four positive corner cells. Then \(p+q+d+r=n-13\). Stage 16's size-eight lower bounds give \(p+d\ge3\), \(q+d\ge3\).
+
+When \(n=18\), \(p+q+d+r=5\). **If \(d=0\)**, those two inequalities force \(p,q\ge3\), contradicting \(p+q\le5\). Thus \(m_{33}=d+1\ge2\) at \(n=18\). By the corrected universal disjunction, both unicyclic components must then have size \(\ge9\), giving **\(p+d\ge4,\ q+d\ge4\) for \(n=18\) only**. These and the prior Stage 14–15 restrictions leave precisely four labelled matrices, as established in Section 3.
 
 ## 3. Only one positive \(3\times3\) incidence orbit remains at \(n=18\)
 
-The Stage 15–16 necessary conditions already require that all corners are \(\ge1\), all four off-corners are \(\ge2\), and neither pair of off-corners may be \((2,2)\) while the center is small. The new two size-\(\ge9\) conditions reduce the \(n=18\) labelled size matrices to **exactly four**: they differ only by permuting the two prefix tree rows and/or two suffix tree columns. This is independently checked by [the standalone Python verifier](check_five_person_and_n18.py).
+The Stage 15–16 necessary conditions already require that all corners are \(\ge1\), all four off-corners are \(\ge2\), and neither pair of off-corners may be \((2,2)\) while the center is small. The two size-\(\ge9\) conditions **now justified specifically at \(n=18\)** reduce the \(n=18\) labelled size matrices to **exactly four**: they differ only by permuting the two prefix tree rows and/or two suffix tree columns. This is independently checked by [the standalone Python verifier](check_five_person_and_n18.py).
 
 One canonical matrix is
 \[
@@ -108,31 +120,26 @@ But the unique remaining incidence matrix has \(m_{33}=4\). Contradiction. There
 
 **Independence boundaries:** The n=18 theorem logically relies on (a) Bumby's published Theorem 3 and its closed-tree spine, (b) Stage 11 tree-cover rigidity, (c) the Stage 14 all-\(n\) causal four-arm bound, and (d) the Stage 16 and 17 complete finite local exclusion certificates. The Stage 17 Python five-person checker and exact matrix enumeration are separate from the n=8 C++ checker. These are human-checkable proofs plus reproducible exhaustive computation, **not** a formal proof-assistant theorem. At no point is the original chronology reordered.
 
-## 6. Enlarged unconditional component-size frontier and exact counts
+## 6. Correct all-n disjunctive size frontier and count
 
-Define baseline \(\sum m_{ij}=13\), extras \(k=n-13\), and pair-extras \(p,q\) and center extra \(d\) as in Stage 16. Replace the old two thresholds \(p+d,q+d\ge3\) with **\(p+d,q+d\ge4\)**. Preserve the Stage 15 one-sided \((p=0\lor q=0)\Rightarrow d\ge8\), and Stage 14 simultaneous \((p=q=0)\Rightarrow d\ge63\).
+It would be **wrong** to require \(|P_3|,|Q_3|\ge9\) for arbitrary \(n\): the genuine local \((2,5,1)\) size-eight case survives the currently proved conditions. The valid universal necessary filter is Stage 15 plus:
 
-The same compressed triple-sum incidence count becomes
-\[
-\boxed{
-N_{17}(n)=\sum_{\substack{p,q,d\ge0,\ p+q+d\le k\\
-p+d\ge4,\ q+d\ge4\\
-(p=0\lor q=0)\Rightarrow d\ge8\\
-(p=q=0)\Rightarrow d\ge63}}
-(p+1)(q+1)\binom{k-p-q-d+3}{3}.
-}
-\]
+- always \(p+d\ge3\) and \(q+d\ge3\) (Stage 16);
+- if \(q+d=3\) (equivalently \(|P_3|=8\)), then necessarily \(d=0,\ q=3\), with \((m_{31}-2,m_{32}-2)=(0,3)\) or \((3,0)\);
+- if \(p+d=3\) (equivalently \(|Q_3|=8\)), then necessarily \(d=0,\ p=3\), with analogous \(P_1/P_2\) off-corner distribution.
 
-| \(n\) | Stage 15 labelled incidence survivors | Stage 16B survivors | Stage 17 survivors **before final local privacy contradiction** |
+Retain Stage 15's \((p=0\lor q=0)\Rightarrow d\ge8\) and Stage 14's \((p=q=0)\Rightarrow d\ge63\). The extra free corner-cell occupants contribute \(\binom{r+3}{3}\), where \(r=n-13-p-q-d\). Enumerate the \(p+1\) and \(q+1\) pair splits *separately*, retaining only the two extreme splits when the corresponding component size equals eight.
+
+| \(n\) | Stage 15 relaxed profiles | Stage 16 local ≥8 survivors | Stage 17 exact eight-person disjunctive survivors **before further chronology** |
 |---|---:|---:|---:|
-| 18 | 489 | 41 | **4** (one tree-row/column orbit, subsequently contradicted) |
-| 19 | 1,365 | 221 | **41** |
-| 20 | 3,333 | 825 | **221** |
-| 21 | 7,359 | 2,438 | **850** |
-| 24 | 52,293 | 28,205 | **15,517** |
+| 18 | 489 | 41 | **4** (then all four contradicted in Section 5) |
+| 19 | 1,365 | 221 | **45** |
+| 20 | 3,333 | 825 | **257** |
+| 21 | 7,359 | 2,438 | **994** |
+| 24 | 52,293 | 28,205 | **17,365** |
 
-These are *necessary-condition incidence counts*, not successful schedules. The final privacy argument eliminates the four Stage 17 \(n=18\) incidences completely, so at \(n=18\) **there is NO successful both-cyclic original-half schedule**. For \(n\ge19\) the unrestricted conjecture is **OPEN**; the finite component threshold is not an existence theorem.
+[check_five_person_and_n18.py](check_five_person_and_n18.py) independently cross-checks these disjunctive size-filter counts against every labelled positive nine-cell integer composition, and checks that the four \(n=18\) profiles form a single row/column-swap orbit. **Do not reuse the previously proposed unsound all-\(n\) \(\ge9\) incidence count of 41 at \(n=19\); the correct count is 45.** None of these size-only survivors is automatically a completed successful schedule.
 
 ## 7. Next research frontier
 
-At \(n=19\), only **41** positive labelled incidence matrices satisfy the combined size filters. The next high-value task is the analogue of the four- and five-person tree privacy obstruction for slightly larger corner or off-corner groups, then an exact original chronology-compatible bidirectional check. Preserve literature and quantifier cautions, keep PR #1 DRAFT, and never call a relaxed incidence matrix a global witness.
+At \(n=19\), **45** positive labelled incidence matrices satisfy the combined size filters. The next high-value task is the analogue of the four- and five-person tree privacy obstruction for slightly larger corner or off-corner groups, then an exact original chronology-compatible bidirectional check. Preserve literature and quantifier cautions, keep PR #1 DRAFT, and never call a relaxed incidence matrix a global witness.
