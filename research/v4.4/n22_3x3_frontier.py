@@ -3,7 +3,7 @@
 Uses only size/collector predicates whose hypotheses are valid at arbitrary n.
 Independently enumerates 9-cell compositions using stars-and-bars dividers,
 then differentially checks the prior Stage25 and Stage26 implementations when
-run inside the repository. Does NOT examine 3x4/4x3 or chronological schedules.
+run inside the repository. Does NOT enumerate chronological schedules; r>=4/s>=4 are excluded by Bumby's 1981 Theorem 3.
 """
 from collections import Counter
 from itertools import combinations
@@ -161,7 +161,7 @@ def main():
     assert Counter(m[8] for m in surviving) == {1: 28, 2: 41, 3: 44, 4: 20, 6: 4}
     print('PASS n22 3x3 raw=24310 Stage25=761 Stage26=137 orbits=42')
     print('PASS center histogram', dict(sorted(Counter(m[8] for m in surviving).items())))
-    print('SCOPE: 3x3 ONLY; 3x4/4x3 unexamined; NO n22 proof')
+    print('SCOPE: all both-cyclic n22 shapes reduce to 3x3 by Bumby; NO n22 proof')
     print('SCOPE: necessary incidence filters, not chronologies; novelty OPEN')
 
 
