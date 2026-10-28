@@ -95,7 +95,35 @@ Counts check(int a,int b){
     if(carriers[0]<2||carriers[1]<2||carriers[2]<1)
     {ok=false;break;}
    }
-   if(ok)C.passing++;
+   if(ok){
+    C.passing++;
+    if(a==2&&b==5){
+     // Additional Stage 18 independent certificate: EXACTLY one of the
+     // five group-B receivers is full, and for each of the four others
+     // a reversed target has support {full_B, that receiver} inside B.
+     int full_count=0,full_B=-1;
+     for(int i=0;i<n;i++)if(know[i]==255){
+      full_count++;
+      if(i>=a&&i<a+b)full_B=i;
+     }
+     if(full_count!=4||full_B<0){
+      cerr<<"FAIL center-singleton cycle four-root assertion\n";exit(9);
+     }
+     for(int z=a;z<a+b;z++)if(z!=full_B){
+      bool pair_secret=false;
+      for(int secret=0;secret<n;secret++){
+       int holders=0;
+       for(int i=a;i<a+b;i++)
+        if(know[i]&(1<<secret))holders|=(1<<i);
+       if(holders==((1<<full_B)|(1<<z)))pair_secret=true;
+      }
+      if(!pair_secret){
+       cerr<<"FAIL missing target support pair at receiver "<<z<<"\n";
+       exit(10);
+      }
+     }
+    }
+   }
   }while(next_permutation(order,order+7));
  }
  return C;
