@@ -1,3 +1,5 @@
+> **Stage 18 application (28 October 2026):** The at-least-two-carriers property **survives deleting the touched final cycle endpoint**: the remaining members of each off-corner cell are separate full-cover recipient groups of the earlier chronological spanning tree. Together with four center arm groups this gives six complete recipient groups and, via equality rigidity, **`|P3|>=35`** whenever the opposite off-corner pair is (2,2). See [Stage 18](../v3.5/SIX_GROUP_35_PERSON_OBSTRUCTION.md). The global conjecture remains OPEN.
+
 # Stage 17 — Universal off-corner double-carrier principle
 
 **28 October 2026. All-\(n\), original chronological, NECESSARY information-flow invariant for the FULL unrestricted 3×3 both-cyclic hypothetical family.** This is a conceptual strengthening of the simple off-corner size lower bounds. The full original half-forest conjecture remains **OPEN**.
