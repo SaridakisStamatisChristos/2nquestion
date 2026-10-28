@@ -42,6 +42,32 @@ Reverse the entire schedule. In its split after n−2 calls, Q_1,Q_2 are the two
 
 These are consequences of the specific **actual original chronology** and the 1981 case-II proof, not a license to reorder events. Together (C1),(C2) give four critical edge incidences in the 2×2 corner P_{1,2} × Q_{1,2}: the last calls in P_1,P_2 lie horizontally across the two suffix-tree columns, and the first suffix calls in Q_1,Q_2 lie vertically across the two prefix-tree rows. Endpoints of horizontal and vertical contacts within a common cell need NOT coincide, so this alone does not construct a literal four-cycle with four participants.
 
+## Universal dual cycle-edge exchange normal form (NOT the original-chronology theorem)
+
+**Bumby case-II extra conclusion (1981, page 17).** The same Theorem 3 states that deleting a maximal call from the single non-tree component yields a connected tree. For the original prefix with r=3, this means its **last** call e_3 inside its unicyclic P_3 is an edge on its unique cycle. Apply the assertion to the reversed original suffix with s=3: the **first** original suffix call f_3 inside unicyclic Q_3 is on Q_3's unique cycle. This holds independently of any number of extra participants in the positive incidence cells.
+
+The corner-spine C2 puts e_3's endpoints in suffix TREE columns Q_1,Q_2; C1 puts f_3's endpoints in prefix TREE rows P_1,P_2. Thus e_3 and f_3 have **no shared endpoint**, hence are incomparable in the minimal contact-event poset.
+
+From the original balanced prefix ideal I and suffix complement F, form
+
+\[
+  I'=(I\setminus\{e_3\})\cup\{f_3\},
+  \qquad
+  F'=(F\setminus\{f_3\})\cup\{e_3\}.
+\]
+
+The last original contact in a prefix connected component is maximal in I, and the first original contact in a suffix connected component is minimal in F. Since e_3 and f_3 are incomparable, this exchange preserves the ideal property of I' and gives a **successful** reordering with the same pairwise-distinct event set (independent disjoint events commute; see [Stage 6 balanced-ideal equivalence](../v2.3/RESEARCH_UPDATE.md)). Both new halves have n−2 calls.
+
+The new prefix loses a CYCLE edge in P_3, turning it into a tree, and gains an edge joining P_1 and P_2, turning those two trees into one tree. It therefore has **exactly two tree components and no cycles**. The new suffix similarly loses a CYCLE edge in Q_3 and gains an edge joining Q_1 and Q_2, yielding exactly two tree components and no cycles.
+
+\[
+\boxed{\text{If a both-cyclic original split existed, a balanced one-event exchange would produce a forest/forest split.}}
+\]
+
+This is a **reordering result**, consistent with Bumby's 1981 analysis and Krumme's 1996 reordering theorem. It does **NOT** contradict the existence of the original both-cyclic split; demonstrating a better ordering is fundamentally weaker than the original fixed-chronology conjecture. It is also NOT asserted as novel without a full historical implication check.
+
+An independent regression enumerates all 51,200 linear extensions of the W8 contact-poset and checks the case-II *critical cycle-edge deletion property* whenever either chronological half is cyclic, in addition to the original-component spine. The actual W8 witness classes have cycle-rank pairs (1,0), (0,1) or (0,0), so this test checks one-sided specializations, not a nonexistent W8 both-cyclic schedule.
+
 ## Immediate necessary singleton exclusions
 
 In a prefix TREE P_i (i=1,2), the endpoints of its last internal contact are its **only possible** complete midpoint collectors. By (C2), those endpoints lie in Q_1 and Q_2. If P_i∩Q_3 were singleton, its unique vertex would have to be a complete prefix collector to export every P_i secret to suffix component Q_3, contradiction. Therefore
