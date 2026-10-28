@@ -27,6 +27,8 @@ jobs:
         run: python3 -B research/universal/crossed_cover_transfer_audit.py
       - name: Independent all-n disjoint group cover, rooted Helly dichotomy and exponential packing bound
         run: python3 -B research/universal/general_group_cover_audit.py
+      - name: Falsify unsafe universal n-to-n-minus-one temporal degree-two contraction
+        run: python3 -B research/universal/degree_two_descent_falsifier.py
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
