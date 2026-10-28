@@ -14,6 +14,16 @@ struct DSU {
  void join(int x,int y){p[root(x)]=root(y);}
 };
 int main(){
+ // Minimal local countermodel to strict global four-arm chronology:
+ // distinct five-call unicyclic pattern, final roots 0,1,2,3.
+ {
+   const pair<int,int> witness[]={{0,1},{2,4},{2,3},{0,2},{1,3}};
+   int k[5];for(int i=0;i<5;i++)k[i]=1<<i;
+   for(const auto& e:witness){int a=e.first,b=e.second;k[a]=k[b]=k[a]|k[b];}
+   for(int i=0;i<4;i++)if(k[i]!=31){cerr<<"FAIL n5 witness collector"<<i<<"\n";return 10;}
+   if(k[4]!=(1<<2|1<<4)){cerr<<"FAIL n5 witness noncollector\n";return 11;}
+   cout<<"PASS explicit minimal 5-call non-strict causal-sealed chronology\n";
+ }
  for(int n=4;n<=6;n++){
   vector<pair<int,int>> all;
   for(int u=0;u<n;u++)for(int v=u+1;v<n;v++)all.emplace_back(u,v);
