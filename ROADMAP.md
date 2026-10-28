@@ -1,5 +1,23 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## Universal-only research mandate — effective 28 October 2026
+
+**STOP the prior n-by-n progression.** Finite certificates through n22 are archived as tests and falsifiers, not the central research program. The user's scientific deliverable is a **proof or disproof for every n**, either of the auxiliary fixed-original-half-forest statement (shortest successful distinct-call gossip) or, ultimately, the *different* primary exact temporal-clique 2n−3 spanner statement. Do not call a conditional bound the final answer.
+
+**PROVED infinite barrier:** [research/universal/ALL_N_INCIDENCE_BARRIER.md](research/universal/ALL_N_INCIDENCE_BARRIER.md) gives M_n=((1,1,2),(1,1,4),(2,4,n−16)) for **ALL n≥23**, passing the entire Stage25–34 necessary-incidence machinery. Thus no amount of extending those same size filters to n=24,25,... can yield a universal conclusion. These matrices are not necessarily chronological schedules.
+
+**NEW ALL-n local theorem:** [research/universal/ROOTED_SUPPORT_TRANSVERSAL.md](research/universal/ROOTED_SUPPORT_TRANSVERSAL.md) proves that two crossed original-order edge-once trees with two full last-edge collectors OUTSIDE a shared doubly covering cell X must have **|X|≥9** (arbitrary total n and helper vertices). As an original both-cyclic gossip corollary, if no center collector exists and both cyclic sides have ≥2 full collectors in the same exterior cell, then |X|≥9. This is a CONDITIONAL restriction, **not** the unrestricted forest theorem.
+
+**Single next mathematical bottleneck, not numerical n+1 tasks:**
+- Investigate the **all-width crossed-tree obstruction**: for arbitrary finite X, can two original-order edge-once trees with both full roots outside X and X doubly covering original secrets have every pair of exact X supports intersect? Either give a true **all-|X| impossibility proof**, or construct a fully replayable compatible example and repair the conjecture.
+- Prove a **scale-free exterior-collector forcing/transfer lemma** that covers the unbounded offcorner cells where Stage29 demonstrates privacy may be zero, or find a valid full both-cyclic minimum-gossip counterexample. An all-width crossed-tree proof alone would remain conditional without this.
+- Keep the primary temporal-clique 2n−3 exact spanner problem a separate **existence/constructive** theorem target; the auxiliary forest structure of an existing 2n−4 schedule does not imply that such a schedule is present in every edge-ordering.
+- Audit historical priority against Bumby 1981 (original splitting), Labahn 1995 (minimal poset kernels), Krumme 1996 (*reordering* theorem) and contemporary exact temporal clique spanner results. NO publication/SOTA claim without a universal proof or an independently certified global counterexample.
+
+**Verification:** independently test each claimed universal lemma with a sound exact original-chronology oracle, but do **not** promote finite tests to unbounded proofs. Reject any proposed theorem after a valid counterexample. Preserve draft PR and publication HOLD.
+
+
+
 ## 28 October 2026 — Updated SOTA route after Stage 34
 
 **Primary scientific goal still OPEN:** universal \(2n-3\) exact-reachability temporal clique spanners. The published unconditional \(7n\) bound (Baligács 2026), with an author-described same-method \(6n\) analysis, does not solve this. A multiplicative-hop 3-spanner is a DIFFERENT problem.
