@@ -78,8 +78,14 @@ def profile(m, stage):
         return False
     if stage>=16 and (m[2]+m[5]+m[8]<8 or m[6]+m[7]+m[8]<8):
         return False
-    if stage>=17 and (m[2]+m[5]+m[8]<9 or m[6]+m[7]+m[8]<9):
-        return False
+    if stage>=17:
+        # Adversarially repaired all-n disjunction: (2,5,1) IS feasible locally.
+        if m[6]+m[7]+m[8]==8:
+            if not(m[8]==1 and sorted((m[6],m[7]))==[2,5]):
+                return False
+        if m[2]+m[5]+m[8]==8:
+            if not(m[8]==1 and sorted((m[2],m[5]))==[2,5]):
+                return False
     return True
 
 
@@ -100,8 +106,8 @@ def orbit(m):
 
 
 def exact_counts():
-    fixed={18:(489,41,4),19:(1365,221,41),20:(3333,825,221),
-           21:(7359,2438,850),24:(52293,28205,15517)}
+    fixed={18:(489,41,4),19:(1365,221,45),20:(3333,825,257),
+           21:(7359,2438,994),24:(52293,28205,17365)}
     for n in range(18,25):
         counts=Counter()
         survivor=[]
