@@ -1,5 +1,13 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## Universal four-hub reduction — latest all-n focus
+
+The [new minimal-center descent theorem](research/universal/FOUR_HUB_MINIMAL_DESCENT.md) applies for **EVERY finite n**. Any admissibly crossed two-root original-order TREE pair with double center coverage descends through a strictly smaller QUADRANT unless four actual last-local-call collectors occupy the four crossing quadrants in the alternating diagonal arrangement. **If any such crossed pair exists, a smallest one necessarily exhibits this four-hub cycle**. This is an existence-EQUIVALENCE reduction, not an existence result or a universal impossibility proof. Its [independent 81-placement test](research/universal/four_hub_descent_audit.py) validates the finite symbolic hub coverage arithmetic.
+
+**Single immediate mathematical bottleneck**: eliminate the alternating four-hub chronology with a scale-free causality/privacy contradiction, OR construct a fully replayable crossed-tree example satisfying it; do not relabel a four-corner incidence shape as a realizable chronology. The separate global original-half forest proof ALSO requires forcing/removing exterior collector hypotheses for arbitrarily large private-free cells. The separate main \(2n−3\) temporal clique spanner question requires an existence theorem and remains OPEN.
+
+**Independent refutation gate**: [degree-two-suppression counterexample](research/universal/degree_two_descent_falsifier.py) shows naïve temporal contraction is not an all-n descent. Any proposed descent must preserve the exact causal source supports and two-way chronological calls. No n=23→24 census is a substitute.
+
 ## All-n breakthrough frontier — 28 October 2026 (post-exponential-transfer)
 
 **Objective remains a single universal proof or certified counterexample, NOT increasing a finite n bound.** The previous center-width-nine theorem is superseded by the stronger [unrestricted cover-transfer bound \(|X|\ge14\)](research/universal/CROSSED_TREE_COVER_TRANSFER.md) under its unchanged crossing/root hypotheses. The real advance is parameterized for ALL q and k:
