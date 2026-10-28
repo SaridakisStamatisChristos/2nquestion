@@ -21,6 +21,8 @@ jobs:
         run: python3 -B research/universal/infinite_incidence_barrier.py
       - name: Independently enumerate original rooted trees and exact crossing transversals
         run: python3 -B research/universal/support_transversal_audit.py
+      - name: Exact all-q recipient multiplicity and crossed-tree two-support rigidity
+        run: python3 -B research/universal/exponential_multiplicity_audit.py
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
