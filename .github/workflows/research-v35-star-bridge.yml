@@ -1,0 +1,37 @@
+name: Stage 18 global four-leaf star excludes eight-person cyclic cells
+on:
+  push:
+    paths:
+      - 'research/v3.5/FOUR_LEAF_STAR_GLOBAL_EIGHT_EXCLUSION.md'
+      - 'research/v3.5/exact_tree_star_crossing.cpp'
+      - 'research/v3.5/count_star_exclusion.py'
+      - '.github/workflows/research-v35-star-bridge.yml'
+  pull_request:
+    paths:
+      - 'research/v3.5/FOUR_LEAF_STAR_GLOBAL_EIGHT_EXCLUSION.md'
+      - 'research/v3.5/exact_tree_star_crossing.cpp'
+      - 'research/v3.5/count_star_exclusion.py'
+      - '.github/workflows/research-v35-star-bridge.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  star-crossing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Exactly enumerate all rooted seven-person original tree histories vs four two-carrier targets
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.5/exact_tree_star_crossing.cpp -o /tmp/exact_tree_star_crossing
+          /tmp/exact_tree_star_crossing
+      - name: Independently count all positive labelled 3x3 cell matrices n13-n25 and match compressed formula
+        run: |
+          python3 -B research/v3.5/count_star_exclusion.py
+      - name: Independently regress corrected six-pattern local eight-person classification and star support structure
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.4/exact_eight_group_orbits.cpp -o /tmp/exact_eight_group_orbits
+          /tmp/exact_eight_group_orbits
+      - name: Independently recheck privacy and n18 unique orbit
+        run: |
+          python3 -B research/v3.4/check_five_person_and_n18.py
