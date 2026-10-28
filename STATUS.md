@@ -1,5 +1,24 @@
 # Scientific status and evidence ledger
 
+## Current critical research status — 28 October 2026, Stage34
+
+The **PRIMARY exact-reachability temporal clique** conjecture \( \mathrm{OPT}(K_n,\lambda)\le2n-3 \) for every distinct-labeling is **OPEN**, as is POD. The **separate auxiliary minimum-gossip ORIGINAL-chronology half-forest theorem** has a complete human proof, **conditional on imported older all-n lemmas**, for every fixed \(4\le n\le22\). It remains **OPEN for \(n\ge23\)**. Do not conflate existence of a small spanner for an arbitrary clique with structure of an optimal gossip chronology which already exists.
+
+| Claim ID | Exact claim | Epistemic state | Evidence / blocking obligations |
+|---|---|---|---|
+| C34.1 | For n22, both original 20-call halves of a successful 40-distinct-call gossip chronology cannot BOTH be cyclic | **HUMAN PROOF / DEPENDENCY-CONDITIONAL; NOT FORMAL** | [Full proof and explicit dependency DAG](research/v5.1/N22_ORIGINAL_FOREST_THEOREM.md); [CI PASS 40764166711](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40764166711) audits 24310→0 necessary matrices; independent referee/Bumby lemma hypotheses unverified |
+| C34.2 | If neither cyclic side has a center full collector and one cyclic side has an untouched exterior full collector, shared center must contain ≥6 people | **HUMAN PROOF, ALL n, CONDITIONAL** | Exact original source-target midpoint crossing + preceding spanning chronological TREE with two full exterior endpoints + [Stage29](research/v4.6/PRIVATE_THRESHOLD_THEOREM.md) p(c) threshold |
+| C34.3 | If both cyclic sides also have untouched outside full collectors, their shared center must contain ≥7 people | **HUMAN PROOF, ALL n, CONDITIONAL** | Stage30 double-path 2P3 exact supports and unique 2-hit transversal, transferred through actual final cycle calls outside center |
+| C33 | For a chronological tree with three collectively complete recipient groups (a,b,2), the size-2 group can have zero private recipients iff a,b≥2 and a+b≥6 | **HUMAN ALL-n PROOF + PARAMETERIZED CONSTRUCTIONS** | [Stage33](research/v5.0/EXACT_TWO_RECIPIENT_PRIVACY.md); latest verified Stage33 CI |
+| C32 | Two complete collectors in the SAME exterior cell plus complete center collector force a complete opposite exterior collector at original last cycle call | **HUMAN ALL-n PROOF + SMALL EXHAUSTIVE FALSIFICATION** | [Stage32](research/v4.9/CENTER_ROOT_BOOTSTRAP.md) original chronology n4/n5 216576 partition cases |
+| C30 | Two sharp six-recipient double-cover tree center supports cannot be fully cross-compatible | **HUMAN ALL-n SUPPORT PROOF + FINITE COMBINATORIAL AUDIT** | [Stage30](research/v4.7/DOUBLE_PATH_RIGIDITY.md) 90 exact 2P3 shapes, 8100 ordered pairs, zero compatible |
+| C35 | Exact n23 both-cyclic minimum-gossip forest conjecture | **OPEN** | Stage34 necessary-incidence frontier **396** labelled matrices in **104** S2×S2 orbits, none certified realizable |
+| Q0 | Every properly-labelled temporal clique admits exact 2n−3 edge spanner | **OPEN** | Published 7n bound (Baligács 2026), author-described 6n same-method refinement; no general proof/counterexample here |
+
+The finite Stage34 result is **not** a proof assistant run, not an exhaustive enumeration of all original 40-contact global gossip chronologies, and does not certify historical originality. It establishes a fully reproducible arithmetic implication **if** every imported universal necessary lemma is sound. Any independent counterexample to an imported lemma invalidates the n22 theorem until repaired. PR #1 remains DRAFT / OPEN / UNMERGED, publication HOLD. External-source novelty audit is incomplete.
+
+
+
 **Snapshot:** 25 October 2026. All claims below use the model of undirected temporal cliques with pairwise distinct contact times and strictly increasing journeys. The original clique is temporally strongly connected through its direct contacts.
 
 | ID | Statement | State | Evidence / qualification |
