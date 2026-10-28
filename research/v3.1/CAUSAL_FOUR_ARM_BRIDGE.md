@@ -43,6 +43,18 @@ In a tree contacted once per edge, there can be at most two terminal complete co
 
 Commuting unrelated disjoint calls within the same original half could create a strict representative, but **this argument never replaces the actual original midpoint**.
 
+### Companion correction for Stage 10 Type T (two complete tree collectors)
+
+The same *strict-order* problem affects the earlier Type T tree bridge. A minimal five-person local chronological tree
+\[
+(0,1),\ (2,4),\ (2,3),\ (0,2)
+\]
+has the two full collectors \(0,2\), and the two remaining designated outsiders \(1,3\) **collectively** know all five secrets (their final masks are \(3\) and \(28\), whose union is \(31\)). Let \(X=\{4\}\). The root graph forms the three-link tree \(01,23,02\), while arm-internal call \(24\) at position 2 occurs after root call \(01\) at position 1. Thus the strict global-arm-before-core inference in the original Stage 10 Type T paragraph is likewise **false**, even though the earlier conditional strict-armed theorem is unaffected.
+
+**Corrected Type T bridge (proved):** In a chronological tree, two complete final collectors \(u,v\) must be endpoints of the last call \(uv\). Remove that edge; the earlier calls form two trees \(U,V\), and \(u,v\) have separately collected all their respective side secrets. Suppose two other distinct outside-\(X\) participants \(w,z\) collectively cover the entire tree's original secrets, as Type T requires. They cannot both be in one side, for they never participated in \(uv\) and hence would lack secrets from the other side. Thus \(w\in U,z\in V\), and each must be a complete collector of their own side to cover every side secret. In each side's chronological tree the complete collectors \(u,w\) and \(v,z\) are endpoints of its last internal call. Delete those two root-root links and the global final \(uv\); what remains is **four causally sealed rooted tree arms**, each with exactly one outsider. As in Lemma 1, unrelated arm-internal calls can interleave with an earlier other-side root-root link. The causal (not strict) conclusion is sufficient for Lemma 2 when crossing another causally sealed component.
+
+This correction clarifies both historical Stage 10 Type T and Type C applicability without relying on a new ordering of the original half-schedule.
+
 ## Lemma 2. Two crossed *causally sealed* four-arm components require \(t\ge64\)
 
 Suppose a prefix connected component \(A\) and fully reversed-suffix component \(B\) have exactly four outside-\(X\) vertices each, and each admits a causally sealed four-arm decomposition \(A_1,\ldots,A_4\), \(B_1,\ldots,B_4\). Assume \(A\cap B=X\) and the entire **fixed original** chronology succeeds.
