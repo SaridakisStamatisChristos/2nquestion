@@ -14,6 +14,18 @@ This repository records a sequence of independent algorithmic and mathematical i
 - [Primary references](REFERENCES.md) — source links and conceptual boundaries.
 - [Complete checkpoint history](research/) — versioned source code, notes, logs, surveys and counterexamples.
 
+## NEW: Universal theorem track — no more n-by-n expansion
+
+**Mathematical priority is now a theorem (or valid counterexample) with an unrestricted \(\forall n\) quantifier.** See [the all-n incidence barrier proof](research/universal/ALL_N_INCIDENCE_BARRIER.md), [the all-n chronological support theorem](research/universal/ROOTED_SUPPORT_TRANSVERSAL.md), [its independent falsification source](research/universal/support_transversal_audit.py), and the [universal-only roadmap](ROADMAP.md).
+
+A precise **infinite family for EVERY n≥23**,
+\[
+((1,1,2),(1,1,4),(2,4,n-16)),
+\]
+passes ALL previous Stage25–34 incidence filters. **It is not a realizable gossip schedule or a counterexample**; it proves the old matrix-filter approach cannot establish the unrestricted conjecture. Therefore **STOP making finite n=23,24,25,... incidence closure the main task**.
+
+New all-n conditional information-flow theorem: for arbitrary finite original-order edge-once chronological trees on overlapping sets, if BOTH have their two complete last-edge collectors outside the common cell X, if X doubly covers every source/target secret, and if exact all-pairs X crossing holds, then **|X|≥9**. The result uses original chronology and allows arbitrary unassigned helpers. It does **not** prove the statement for centers of width≥9, and it does **not** imply the independent main temporal-clique 2n−3 spanner bound. The all-width crossed-tree conjecture is **OPEN** and now the highest-information universal target.
+
 ## Latest research and proof boundary (28 October 2026)
 
 **Two separate objectives must not be confused.** The principal **fixed-label temporal clique spanner** statement asks whether every edge-ordering of \(K_n\) has a reachability-preserving subset of at most \(2n-3\) contacts. This is **OPEN**. The *auxiliary* original chronological half-forest property concerns the structure of a minimum \(2n-4\)-contact gossip chronology **if that chronology already exists**. Proving a structural property of an existing optimum does **NOT** prove existence of an optimum or the \(2n-3\) bound for every clique.
