@@ -87,12 +87,51 @@ def test_two_root_cover_transfer():
               " two-root tree q=",qa,qb)
 
 
+def sharp_all_s_groups(s):
+    """Construct a genuine edge-once chronological equality tree for EVERY s."""
+    if s==1:
+        return 1, (), 0, (frozenset((0,)),)
+    n1,e1,r1,G1=sharp_all_s_groups(s-1)
+    n2,e2,r2,G2=sharp_all_s_groups(s-1)
+    assert n1==n2
+    # Singletons containing the two new terminal complete collectors,
+    # then pair every remaining previous complete group across both sides.
+    groups=[frozenset((r1,)),frozenset((r2+n1,))]
+    groups.extend(G1[i]|frozenset(v+n1 for v in G2[i])
+                  for i in range(1,s-1))
+    return (n1+n2, tuple(e1)+tuple((a+n1,b+n1) for a,b in e2)
+            +((r1,r2+n1),),r1,tuple(groups))
+
+
+def verify_exact_all_s_equality():
+    for s in range(1,9):
+        n,edges,root,groups=sharp_all_s_groups(s)
+        assert n==2**(s-1)
+        assert len(groups)==s
+        assert sum(map(len,groups))==n
+        assert set().union(*(set(G) for G in groups))==set(range(n))
+        assert all(not set(a)&set(b)
+                   for a,b in combinations(groups,2))
+        if s==1:
+            assert list(map(len,groups))==[1]
+        else:
+            assert list(map(len,groups))==[1,1]+[2**j for j in range(1,s-1)]
+        know=replay(n,edges)
+        assert know[root]==(1<<n)-1
+        for G in groups:
+            assert all(any(know[v]>>sec&1 for v in G)
+                       for sec in range(n)), (s,G)
+        print("PASS SHARP recipient-group cover s=",s,"vertices=",n,
+              "group sizes=",list(map(len,groups)))
+
+
 def main():
     for n in (2,3,4):
         test_tree_cover_groups(n)
     witness_s3()
+    verify_exact_all_s_equality()
     test_two_root_cover_transfer()
-    print("UNBOUNDED HUMAN PROOF: s disjoint cover groups require >=2^(s-1)")
+    print("UNBOUNDED HUMAN PROOF: s disjoint cover groups require EXACT minimum 2^(s-1)")
     print("UNBOUNDED HUMAN PROOF: k disjoint source supports require center >=2^(k+1)-2")
     print("SCOPE: no all-width crossing impossibility or all-n half forest proof")
 
