@@ -1,0 +1,33 @@
+name: Stage 16B dual double-cover exhaustive local chronology
+on:
+  push:
+    paths:
+      - 'research/v3.3/exact_local_double_cover.cpp'
+      - 'research/v3.3/count_stage16_incidence.py'
+      - 'research/v3.3/DUAL_DOUBLE_COVER_AND_LOCAL_MINIMUM.md'
+      - '.github/workflows/research-v33-dual-cover.yml'
+  pull_request:
+    paths:
+      - 'research/v3.3/exact_local_double_cover.cpp'
+      - 'research/v3.3/count_stage16_incidence.py'
+      - 'research/v3.3/DUAL_DOUBLE_COVER_AND_LOCAL_MINIMUM.md'
+      - '.github/workflows/research-v33-dual-cover.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-local-double-cover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Exhaustively replay 52 million local chronological cases v5-v7 and sharp v8 local witness
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.3/exact_local_double_cover.cpp -o /tmp/exact_local_double_cover
+          /tmp/exact_local_double_cover
+      - name: Compare nine-dimensional incidence enumerator against independent compressed triple sum
+        run: |
+          python3 -B research/v3.3/count_stage16_incidence.py
+      - name: Regress exhaustive binary crossing logic from Stage 13
+        run: |
+          python3 -B research/v3.0/check_center_saturation.py
