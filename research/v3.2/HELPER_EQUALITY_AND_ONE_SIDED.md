@@ -1,3 +1,5 @@
+> **Stage 16 strengthening (28 October 2026):** When one off-corner pair is (2,2) and the other pair contains at least one size-two entry, [Stage 16](../v3.3/ROOT_ASSISTED_FOUR_ARM_BRIDGE.md) improves this stage's **m33>=9** to **m33>=16**, by using the additional complete pre-terminal outside collector as a fifth recipient group. The simultaneous all-four-2 case still has Stage 14's stronger **m33>=64**. The one-sided m33>=9 bound remains correct when the opposite pair is both >=3; these claims are necessary incidence conditions, not an all-n proof of half-forest.
+
 # Stage 15 — Steiner helper equality rigidity and the one-sided 3×3 obstruction
 
 **28 October 2026. New ALL-n human proof, small exhaustive falsification and explicit local boundary construction.** The *unrestricted* original chronological half-forest conjecture is **OPEN**. PR #1 remains DRAFT/UNMERGED; historical originality is unverified.
