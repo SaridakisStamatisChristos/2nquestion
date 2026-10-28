@@ -14,6 +14,12 @@ This repository records a sequence of independent algorithmic and mathematical i
 - [Primary references](REFERENCES.md) — source links and conceptual boundaries.
 - [Complete checkpoint history](research/) — versioned source code, notes, logs, surveys and counterexamples.
 
+## All-width minimal-counterexample reduction — new mathematical frontier
+
+[The all-n four-hub minimal descent theorem](research/universal/FOUR_HUB_MINIMAL_DESCENT.md) reduces the existence of ANY admissibly crossed original-order TREE pair to the existence of a **smallest pair with an alternating four-corner final-collector arrangement**. A corner lacking both of its side trees' local full last-contact endpoints would itself produce a strictly smaller admissibly crossed-tree pair, so only the alternating arrangement survives minimality. [Independent exact symbolic checker](research/universal/four_hub_descent_audit.py) verifies 79 of 81 placements have a reducible corner; the other two are the symmetric alternating four-hub patterns.
+
+This is a genuinely universal **structural reduction, NOT a proof the remaining case is impossible**. Coupled with the sharp all-q receiver multiplicity bound, exact all-s disjoint-group cover theorem, and all-k exponential crossed-source packing lower bound, it makes one causal configuration the research focus. The unrestricted fixed-original-half forest and the independently open \(2n-3\) temporal clique spanner conjecture remain UNSOLVED, and historical novelty has not been refereed.
+
 ## NEW: Universal theorem track — no more n-by-n expansion
 
 **Mathematical priority is now a theorem (or valid counterexample) with an unrestricted \(\forall n\) quantifier.** See [the all-n incidence barrier proof](research/universal/ALL_N_INCIDENCE_BARRIER.md), [the all-n chronological support theorem](research/universal/ROOTED_SUPPORT_TRANSVERSAL.md), [its independent falsification source](research/universal/support_transversal_audit.py), and the [universal-only roadmap](ROADMAP.md).
