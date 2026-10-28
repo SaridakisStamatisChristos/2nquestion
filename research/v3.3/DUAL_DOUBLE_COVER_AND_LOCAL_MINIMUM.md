@@ -56,7 +56,7 @@ with \(a,b\ge2,c=v-a-b\ge1\). The final call may be relabelled to \((0,a)\). Bec
 | 6 | 3 | 864 | 103,680 | 0 |
 | 7 | 6 | 12,005 | 8,643,600 | 0 |
 
-There are **52,172,040** chronological local replay cases across these ten size profiles (1,800 + 3·103,680 + 6·8,643,600). The finite test's logical coverage is fully specified; an executable result corroborates this proof of exhaustion, **not** universal foresthood.
+There are **52,174,440** chronological local replay cases across these ten size profiles (1,800 + 3·103,680 + 6·8,643,600). The finite test's logical coverage is fully specified; an executable result corroborates this proof of exhaustion, **not** universal foresthood.
 
 **Sharp local example at \(v=8\).** Let the original chronological contacts be
 
