@@ -57,6 +57,18 @@ def check_original_chronology(schedule):
     if r == 3:
         tree_rows = {index for index, cyc in enumerate(pr) if cyc == 0}
         assert len(tree_rows) == 2 and sum(pr) == 1
+        component_id = next(i for i, v in enumerate(pr) if v == 1)
+        final_edge = next(e for e in reversed(prefix) if p[e[0]] == component_id)
+        vertices = {v for v in range(N) if p[v] == component_id}
+        remaining = [e for e in prefix if p[e[0]] == component_id and e != final_edge]
+        visited = {min(vertices)}
+        for _ in range(N):
+            for a, b in remaining:
+                if a in visited:
+                    visited.add(b)
+                if b in visited:
+                    visited.add(a)
+        assert visited == vertices
         earliest_suffix_edge = {}
         for a, b in suffix:
             earliest_suffix_edge.setdefault(q[a], (a, b))
