@@ -1,5 +1,17 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## All-n breakthrough frontier — 28 October 2026 (post-exponential-transfer)
+
+**Objective remains a single universal proof or certified counterexample, NOT increasing a finite n bound.** The previous center-width-nine theorem is superseded by the stronger [unrestricted cover-transfer bound \(|X|\ge14\)](research/universal/CROSSED_TREE_COVER_TRANSFER.md) under its unchanged crossing/root hypotheses. The real advance is parameterized for ALL q and k:
+- [Exact rooted q-fold carrier theorem](research/universal/EXPONENTIAL_MULTIPLICITY_AND_PAIR_RIGIDITY.md): \(|C|\ge2^q-1\) for a complete root OUTSIDE C, with an explicit chronological equality family for EVERY q. If the full root lies IN C, \(|C|\ge2^{q-1}\), also sharp.
+- [General tree-cover and exponential crossing/packing theorem](research/universal/GENERAL_COVER_PACKING.md): s pairwise-disjoint collectively complete recipient groups require at least \(2^{s-1}\) people, helpers allowed. k pairwise-disjoint source supports of one crossed tree imply \(|X|\ge2^{k+1}-2\), for every k. A rooted side with no complete inside recipient generates disjoint exact supports via the actual last edge.
+- [Independent all-n tests](.github/workflows/research-universal.yml) replay parameterized equality trees through q=7 and separately enumerate small original chronological cases; these tests corroborate but do NOT prove universal quantifiers.
+- [Falsified naive n→n−1 reduction](research/universal/degree_two_descent_falsifier.py): a genuine shortest gossip chronology with a participant of degree two in EACH original half becomes unsuccessful when halfwise degree-two paths are replaced by single later calls. Do NOT build an unrestricted induction on that invalid contraction rule. This local falsifier does not settle the BOTH-CYCLIC-specific variant.
+
+**Principal missing mathematical lemma:** complete an **ALL-WIDTH** crossing impossibility theorem (or find an actual counterexample) for original-order trees with outside complete roots and double center coverage. The exponential lower bound is not itself a no-go because center cardinality can grow without bound. A second independent missing lemma must handle exterior cells with ZERO forced full collector, where positive privacy forcing provably fails. Even together these are auxiliary to the distinct \(2n-3\) temporal-clique spanner existence conjecture, which remains OPEN.
+
+**Engineering priority:** stop stage-number and n-number progression. Concentrate only on scale-free group-cover duality, strong support-hypergraph obstructions, chronology-preserving descent *after falsifying its hypotheses*, or a mathematically valid full schedule counterexample. Proof/referee/formal checker and historical originality remain independent gates. Maintain PR DRAFT and submission HOLD.
+
 ## Universal-only research mandate — effective 28 October 2026
 
 **STOP the prior n-by-n progression.** Finite certificates through n22 are archived as tests and falsifiers, not the central research program. The user's scientific deliverable is a **proof or disproof for every n**, either of the auxiliary fixed-original-half-forest statement (shortest successful distinct-call gossip) or, ultimately, the *different* primary exact temporal-clique 2n−3 spanner statement. Do not call a conditional bound the final answer.
