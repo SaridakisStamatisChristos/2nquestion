@@ -115,6 +115,46 @@ The weaker \(|X|\ge 2^{4-1}=8\) **without cross-arm private-secret compatibility
 
 The same checker exhaustively enumerates **all** labelled chronological trees on \(n=2,3,4,5\), all tight 2/3-group assignments (including unassigned helpers), and independently tests private-secret, singleton-group and full-collector equality claims. It also constructs sharp helper-ending tree splits with \(2^s\) designated recipients for \(s=2,\ldots,6\), confirming an auxiliary exact last-edge count. These finite tests are falsifiers; the induction above supplies the all-n proof.
 
-## 5. Open frontier and truth gate
+## 5. Exact size-only incidence frontier (independent of temporal feasibility)
+
+A useful operational consequence of Stages 14–15 is an *exact* necessary-incidence profile filter for arbitrary positive \(3\times3\) matrices, with **no** implication that surviving profiles admit any chronological gossip schedule.
+
+By Bumby's first/last spine, all four off-corner entries are at least 2, and all other five entries are at least 1. Set the baseline matrix
+
+\[
+M_0=\begin{pmatrix}1&1&2\\1&1&2\\2&2&1\end{pmatrix},
+\qquad \sum m_{ij}=13+k=n.
+\]
+
+Distribute \(k\ge0\) **indistinguishable extra occupants** among the nine *labelled* cells. There are \(\binom{k+8}{8}\) raw matrices. The new one-sided Stage 15 necessary conditions say that if either off-corner pair is still \((2,2)\), then the center is at least 9. Stage 14 additionally says that if **both** pairs are \((2,2)\), the center is at least 64.
+
+For \(\binom ab:=0\) whenever \(a<b\) or \(a<0\), exact inclusion-exclusion gives the number of necessary-incidence survivors:
+
+\[
+\boxed{
+N_{\mathrm{relaxed}}(n)=
+\binom{k+8}{8}
+-2\binom{k+6}{6}
++2\binom{k-2}{6}
++\binom{k+4}{4}
+-2\binom{k-4}{4}
++\binom{k-59}{4},
+\quad k=n-13.
+}
+\]
+
+**Derivation.** Let \(A,B\) indicate that a given off-corner pair is still \((2,2)\), and let \(d=m_{33}-1\). For either event \(A\) or \(B\), the forbidden \(d\in[0,7]\) count is \(\sum_{d=0}^7\binom{k-d+5}{5}=\binom{k+6}{6}-\binom{k-2}{6}\). Subtract it twice and add back the intersection at \(d\in[0,7]\): \(\binom{k+4}{4}-\binom{k-4}{4}\). Finally remove the simultaneous \(A\cap B\) at \(d\in[8,62]\): \(\binom{k-4}{4}-\binom{k-59}{4}\). This yields the displayed formula, including the \(n\ge76\) transition when both pairs may again survive at large center size.
+
+| n | Raw labelled positive matrices with off-corners ≥2 | Survive Stage 14+15 necessary conditions | Excluded by these conditions |
+|---|---:|---:|---:|
+| 18 | 1,287 | 489 | 798 |
+| 19 | 3,003 | 1,365 | 1,638 |
+| 20 | 6,435 | 3,333 | 3,102 |
+| 21 | 12,870 | 7,359 | 5,511 |
+| 24 | 75,582 | 52,293 | 23,289 |
+
+[Independent composition enumerator](count_3x3_incidence.py) verifies exact agreement with inclusion-exclusion for **every \(n=18,\ldots,25\)**, and evaluates the formula at larger \(n\) without costly enumeration. The counts refer to **labelled component-cell matrices**, not graph placements, symmetry orbits, or actual completed chronological schedules. They do not supersede independent finite n≤17 certificates; they offer a sound, substantially cheaper prefilter for a future n18–20 exact chronological search.
+
+## 6. Open frontier and truth gate
 
 The universal both-cyclic original-half conjecture remains **OPEN**. At least one off-corner pair may have entries larger than two, and Theorem C by itself cannot exclude it. The one-sided bound \(m_{33}\ge9\) does **not** supersede the stronger \(m_{33}\ge64\) when *both* pairs equal two. No theorem for arbitrary positive 3×3 entries, no global counterexample and no priority or formal proof-assistant certificate are claimed. PR #1 DRAFT/UNMERGED; publication HOLD.
