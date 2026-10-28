@@ -82,6 +82,16 @@ def check_original_chronology(schedule):
     if s == 3:
         tree_columns = {index for index, cyc in enumerate(qr) if cyc == 0}
         assert len(tree_columns) == 2 and sum(qr) == 1
+        idx = qr.index(1)
+        first = next(e for e in suffix if q[e[0]] == idx)
+        rest = [e for e in suffix if q[e[0]] == idx and e != first]
+        seen = {v for v in range(N) if q[v] == idx}
+        reached = {min(seen)}
+        for _ in range(N):
+            for a, b in rest:
+                if a in reached: reached.add(b)
+                if b in reached: reached.add(a)
+        assert reached == seen
         latest_prefix_edge = {}
         for a, b in prefix:
             latest_prefix_edge[p[a]] = (a, b)
