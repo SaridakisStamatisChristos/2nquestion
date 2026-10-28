@@ -23,6 +23,8 @@ jobs:
         run: python3 -B research/universal/support_transversal_audit.py
       - name: Exact all-q recipient multiplicity and crossed-tree two-support rigidity
         run: python3 -B research/universal/exponential_multiplicity_audit.py
+      - name: Independent all-n crossed-tree disjoint cover transfer and bound fourteen
+        run: python3 -B research/universal/crossed_cover_transfer_audit.py
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
