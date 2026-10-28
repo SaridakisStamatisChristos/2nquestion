@@ -103,7 +103,8 @@ Counts check(int a,int b){
 int main(){
  struct Fixture{int a,b;long long orbits,passing;};
  const Fixture fixtures[]={{2,3,18240,0},{2,4,18240,0},
-                           {3,3,26616,0},{2,2,9653,160}};
+                           {3,3,26616,0},{2,5,9653,160},
+                           {3,4,18240,0},{2,2,9653,160}};
  long long total=0;
  for(auto f:fixtures){
   Counts q=check(f.a,f.b);
@@ -119,7 +120,7 @@ int main(){
       <<" exact chronological orders="<<q.orders
       <<" compatible="<<q.passing<<"\n";
  }
- if(total!=366654960){cerr<<"FAIL total enumerated\n";return 3;}
- cout<<"PASS local size-8 survivors ONLY (2,2,4); 366654960 exact reduced orders\n";
+ if(total!=507235680){cerr<<"FAIL total enumerated\n";return 3;}
+ cout<<"PASS local size-8 patterns (2,2,4) OR (2,5,1); 507235680 exact reduced orders\n";
  cout<<"LIMIT: original full two-half gossip conjecture not solved by this local enumeration alone\n";
 }
