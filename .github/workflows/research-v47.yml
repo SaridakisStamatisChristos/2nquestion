@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Exact n4-n6 rooted chronological trees with helper vertices plus full 90x90 crossing audit
         run: python3 -B research/v4.7/double_path_rigidity.py
+      - name: Target original n22/n23 exact six-cell source-target support cases without claiming UNSAT
+        run: python3 -B research/v4.7/n22_double_path_targets.py
       - name: Independent sharp (1,1,c) group privacy theorem and chronological constructions
         run: python3 -B research/v4.6/private_threshold.py
       - name: Original tree private recipient and helper-equality independent C++ source
