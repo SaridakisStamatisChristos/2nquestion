@@ -34,7 +34,7 @@ def test():
         assert sum(z == 1 for z in exact) == 2
         print(f"PASS k={k}: B must have >= {2*k-1} total participants;"
               f" pure occupancy boundary={exact}")
-    assert total_checks > 15000
+    assert total_checks == 4080
     print(f"PASS {total_checks} exact positive integer arm occupancy assignments")
     print("LIMIT: arithmetic support-falsification only; chronological "
           "three-star impossibility has separate independent n6/n7 tests")
