@@ -25,6 +25,12 @@ The other four corner sizes are arbitrary positive integers; the center is \(X=P
 
 Execute the *first two* arms, call \((0,1)\), execute the *last two* arms, then call \((8,9),(0,8),(1,9)\). Exactly roots 0,1,8,9 become complete collectors; the other twelve participants never receive a secret from another arm. But inter-arm \((0,1)\) precedes internal calls on vertices 8–15. The core root-to-root graph is a four-cycle, so no different four-arm partition with exactly these four outside participants can reclassify \((0,1)\) as internal. This refutes *only the automatic strict-order bridge*, not the Stage 10 result **conditional on its stated strict assumptions**.
 
+**Minimal local countermodel (five vertices, five distinct calls).** A smaller example suffices:
+\[
+(0,1),\ (2,4),\ (2,3),\ (0,2),\ (1,3).
+\]
+The connected static graph has five edges and one cycle, and after the last call precisely vertices \(0,1,2,3\) know all five secrets; vertex \(4\) knows only secrets \(2,4\). The rooted arms are \(\{0\},\{1\},\{2,4\},\{3\}\), with root-core calls forming a four-cycle \(01,23,02,13\). The inter-arm call \(01\) at position 1 precedes internal arm call \(24\) at position 2, but internal \(24\) precedes both incident root-2 core contacts \(23,02\). Thus causal sealing holds while strict global sealing fails. The independent all-graph enumeration finds **zero** strict failures with four collectors at \(v=4\) and **240** non-strict histories at \(v=5\); this demonstrates that five vertices is minimal for this local strict-order falsification.
+
 The relevant weaker property is *causal sealing*: four rooted tree arms partition a local component; all other calls join roots; **every internal call of an arm precedes every root-to-root call incident to that arm's own root**. Unrelated other-root calls may interleave. Every non-root participant then retains information originating **only in their own arm**, because there are no further calls to them after their root participates in inter-arm communication.
 
 ## Lemma 1. Four full collectors in a unicyclic chronology force causal sealing
