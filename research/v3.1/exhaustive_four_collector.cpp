@@ -24,6 +24,16 @@ int main(){
    if(k[4]!=(1<<2|1<<4)){cerr<<"FAIL n5 witness noncollector\n";return 11;}
    cout<<"PASS explicit minimal 5-call non-strict causal-sealed chronology\n";
  }
+ // Companion minimal tree Type T strict-order falsifier.
+ {
+   const pair<int,int> tree[]={{0,1},{2,4},{2,3},{0,2}};
+   int k[5];for(int i=0;i<5;i++)k[i]=1<<i;
+   for(const auto& e:tree){int a=e.first,b=e.second;k[a]=k[b]=k[a]|k[b];}
+   if(k[0]!=31||k[2]!=31||(k[1]|k[3])!=31||k[4]!=20){
+     cerr<<"FAIL n5 Type T chronological strict-order witness\n";return 12;
+   }
+   cout<<"PASS explicit n5 Type T causal-sealed tree, not strict global order\n";
+ }
  for(int n=4;n<=6;n++){
   vector<pair<int,int>> all;
   for(int u=0;u<n;u++)for(int v=u+1;v<n;v++)all.emplace_back(u,v);
