@@ -31,6 +31,12 @@ jobs:
         run: python3 -B research/universal/degree_two_descent_falsifier.py
       - name: Independent unbounded minimal crossed-tree four-hub descent placement audit
         run: python3 -B research/universal/four_hub_descent_audit.py
+      - name: Exhaustive small-cell hub forcing (finite falsifier only)
+        run: python3 -B research/universal/hub_forcing_audit.py
+      - name: Check original-chronology exact support locality in universal two-type descent
+        run: python3 -B research/universal/rooted_crossing_descent_audit.py
+      - name: Regression test exact crossed-tree chronological witness validator
+        run: python3 -B -m unittest discover -s research/universal -p 'test_crossed_tree_witness_validator.py'
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
