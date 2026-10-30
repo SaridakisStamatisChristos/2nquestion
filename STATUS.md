@@ -1,5 +1,14 @@
 # Scientific status and evidence ledger
 
+## Three-way exterior-and-center doubled coverage does NOT force an exterior collector (U.21; 30 October 2026)
+
+[Theorem U.21](research/universal/ROOT_FREE_THREE_CELL_COVER_FAMILY.md) constructs for **EVERY k>=0** one exact edge-once chronological unicyclic component on 64+k participants, split into exterior cells A,B of size 6 and 10 and center X of size 48+k, where **EVERY original secret has at least TWO recipients in each A,B,X** and the last cycle-closing call joins A to B while leaving X unchanged — nevertheless **ZERO participant is fully informed**. This satisfies the strong Stage17 all-n local offcorner double-coverage necessity without an exterior full root. [Exact execution](research/universal/root_free_three_cell_unicyclic_family.py) covers eight k values, to X=112 and 128 participants; CI wired, result must be checked independently.
+
+This is a **single component construction**, not a full P3/Q3 crossed pair and NOT global original half-forest disproof. Combined with U.20 (two mutually crossed root-free cyclic components, whose offcorner double coverage is NOT guaranteed), it isolates the **joint original/reversed 3x3 compatibility** as the remaining genuine barrier. Prior U.17 crossed-tree proof and U.19 transfer are unchanged under their full-root premises. Both global half-forest and primary 2n-3 temporal-clique questions remain OPEN; publication HOLD.
+
+---
+
+
 ## Root-free crossed unicyclic obstruction is REAL at all widths (30 October 2026)
 
 **Theorem U.20:** [explicit root-free crossed unicyclic family](research/universal/ROOT_FREE_UNICYCLIC_CROSSING_FAMILY.md) provides, for every finite center size **|X| >= 4**, TWO ACTUAL original-order edge-once unicyclic local component histories P and reversed-Q, each ending with an exterior-only distinct cycle-closing call, with **all unordered calls pairwise distinct even across P/Q**, each original secret held by at least two X people, exact all-pairs P/Q X-support intersection, and **no full collector anywhere on either side**. This is a complete explicit parametric construction, verified by [exact chronology replay code](research/universal/root_free_crossed_unicyclic_family.py) at nine widths up to |X|=68 (7,354 source-pair crosses, locally executed). It refutes any overbroad extension of U.17 which removes exterior-root requirements and shows larger centers alone cannot exclude root-free LOCAL crossed cores.
