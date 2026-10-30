@@ -1,5 +1,14 @@
 # Scientific status and evidence ledger
 
+## Root-free crossed unicyclic obstruction is REAL at all widths (30 October 2026)
+
+**Theorem U.20:** [explicit root-free crossed unicyclic family](research/universal/ROOT_FREE_UNICYCLIC_CROSSING_FAMILY.md) provides, for every finite center size **|X| >= 4**, TWO ACTUAL original-order edge-once unicyclic local component histories P and reversed-Q, each ending with an exterior-only distinct cycle-closing call, with **all unordered calls pairwise distinct even across P/Q**, each original secret held by at least two X people, exact all-pairs P/Q X-support intersection, and **no full collector anywhere on either side**. This is a complete explicit parametric construction, verified by [exact chronology replay code](research/universal/root_free_crossed_unicyclic_family.py) at nine widths up to |X|=68 (7,354 source-pair crosses, locally executed). It refutes any overbroad extension of U.17 which removes exterior-root requirements and shows larger centers alone cannot exclude root-free LOCAL crossed cores.
+
+**CRITICAL:** U.20 is **NOT** a full successful 2n-4-call global gossip schedule: the four additional tree components, nine positive original/reversed incidence cells, offcorner constraints, and full original-to-reversed gossip coverage have NOT been furnished. It does **NOT** refute the main all-n half-forest conjecture or exact temporal-clique 2n-3 spanner question. It does identify a genuine structural barrier to a purported immediate full proof from rooted-tree crossing alone. Universal U.17 and its transfer U.19 remain unchanged and human-proved within their stated hypotheses, independent referee pending. Publication HOLD; PR DRAFT.
+
+---
+
+
 ## New universal crossed-tree no-go (30 October 2026; HUMAN PROOF, referee pending)
 
 **Theorem U.17 / Corollary U.18:** [strict two-type rooted-crossing descent](research/universal/ROOTED_CROSSING_NO_GO.md) gives an **unrestricted all-finite-n nonexistence theorem** for crossed pairs of original-order edge-once chronological trees where both have a complete collector outside their shared center E and **at least one tree has both complete actual last-call endpoints outside E**. The exact all-pairs E-source support crossing assumption alone yields a contradiction, without separately assuming double coverage. This includes and **rules out every admissibly crossed pair P** defined in FOUR_HUB_MINIMAL_DESCENT.md, at **every center width**. This supersedes older dated statements below describing P as OPEN. The alternating four-hub arrangement is now eliminated by the new **semi-crossed** descent case.
