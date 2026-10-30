@@ -1,5 +1,18 @@
 # Scientific status and evidence ledger
 
+## New universal crossed-tree no-go (30 October 2026; HUMAN PROOF, referee pending)
+
+**Theorem U.17 / Corollary U.18:** [strict two-type rooted-crossing descent](research/universal/ROOTED_CROSSING_NO_GO.md) gives an **unrestricted all-finite-n nonexistence theorem** for crossed pairs of original-order edge-once chronological trees where both have a complete collector outside their shared center E and **at least one tree has both complete actual last-call endpoints outside E**. The exact all-pairs E-source support crossing assumption alone yields a contradiction, without separately assuming double coverage. This includes and **rules out every admissibly crossed pair P** defined in FOUR_HUB_MINIMAL_DESCENT.md, at **every center width**. This supersedes older dated statements below describing P as OPEN. The alternating four-hub arrangement is now eliminated by the new **semi-crossed** descent case.
+
+**Proof mechanism:** if both pairs of full endpoints are outside E, the four exact-crossing quadrants are nonempty and one contains no second local full collector for at least one side, producing a smaller rooted-crossed pair. If one complete endpoint y is inside E, split both actual final calls; choose the other tree's prior-final component NOT containing y. Both intersections with the first tree's preceding sides are exact-crossed, disjoint and nonempty. The chosen side's second local collector cannot belong to both, so one is a strictly smaller rooted-crossed pair. Well-founded minimality contradicts both cases.
+
+**Claim boundary independently falsified:** two rooted trees with one outside full root each CAN cross when both other complete endpoints are inside E; an exact four-person-per-tree positive example is preserved in the proof and audit. Do **not** relax U.17 to only outside roots. The [replay auditor](research/universal/rooted_crossing_descent_audit.py) checked 518,400 type-0 and 34,560 type-1 exact source-pair restriction identities, plus 81 hub placements, in an independent local Python run; this is **finite supporting evidence**, not the infinite proof. New CI checks were added, but GitHub Actions PASS is **not asserted without a confirmed run**. No independent mathematical referee, historical priority review, or proof-assistant verification yet: **HUMAN PROOF / EXTERNAL VERIFICATION PENDING**.
+
+**What remains OPEN:** the original minimum-gossip fixed-original-half forest conjecture in configurations NOT reducible to this crossed-tree model (notably exterior-root-free cases), and the separate PRIMARY general temporal-clique `2n-3` exact spanner existence conjecture. The latter is still listed open in [Casteigts' 22 September 2026 tracker](https://arnaudcasteigts.net/blog/open-problems.html). Keep PR #1 DRAFT/UNMERGED; publication HOLD.
+
+---
+
+
 ## All-n minimal-counterexample descent — 28 October 2026
 
 **Human theorem [U.14](research/universal/FOUR_HUB_MINIMAL_DESCENT.md):** if there exists ANY pair of edge-once original-order chronological trees with last-call complete endpoints outside their shared X, double X coverage of every original local secret and every cross-pair exact X source support intersecting, then a **MINIMUM-center-size such pair has exactly four distinct local final-call complete collectors in the four crossing quadrants**, the two T hubs and two U hubs occupying *complementary diagonals*. Proof is a strict well-founded descent via a quadrant whose last-local-call endpoint collectors both lie outside it; such a quadrant inherits exact all-pairs crossing and double coverage.
