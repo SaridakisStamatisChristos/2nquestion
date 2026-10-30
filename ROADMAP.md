@@ -1,5 +1,14 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## 30 October 2026 — crossed-tree P obstruction resolved by two-type strict descent (human proof)
+
+The [unrestricted rooted-crossing no-go theorem](research/universal/ROOTED_CROSSING_NO_GO.md) now rules out EVERY exact all-pairs crossed original-order edge-once tree pair whose shared cell has at least one outside complete root on each side and BOTH complete final-call endpoints outside it on at least one side. In particular, the old **P** crossed-tree subproblem is solved **at every finite width** in the human mathematical model. The previous four-hub cycle and numerical lower-bound campaigns are retained as historical proof checkpoints, but are NOT the current bottleneck. The new step permits a second tree with one complete collector inside the cell, then selects the opposite component of the first tree's ACTUAL final call to preserve exact crossing under strict descent. [Independent exact-support replay](research/universal/rooted_crossing_descent_audit.py) and the boundary example challenge the reasoning; a qualified external referee and independent proof assistant remain outstanding.
+
+**Now prioritize** the actual fixed-original-half-forest proof's remaining **exterior-root-free / missing-complete-collector** cases, using the latest [Bumby midpoint 3×3 reduction](research/v5.1/N22_ORIGINAL_FOREST_THEOREM.md) and precise transfer assumptions. Do not assert that U.17 alone solves the whole forest conjecture. Also retain a **separate direct constructive track** on the main `2n-3` temporal-clique spanner conjecture; no result here supplies its universal existence witness. Do not resume n-by-n enumeration. PR draft, publication hold, novelty review pending.
+
+---
+
+
 ## Universal four-hub reduction — latest all-n focus
 
 The [new minimal-center descent theorem](research/universal/FOUR_HUB_MINIMAL_DESCENT.md) applies for **EVERY finite n**. Any admissibly crossed two-root original-order TREE pair with double center coverage descends through a strictly smaller QUADRANT unless four actual last-local-call collectors occupy the four crossing quadrants in the alternating diagonal arrangement. **If any such crossed pair exists, a smallest one necessarily exhibits this four-hub cycle**. This is an existence-EQUIVALENCE reduction, not an existence result or a universal impossibility proof. Its [independent 81-placement test](research/universal/four_hub_descent_audit.py) validates the finite symbolic hub coverage arithmetic.
