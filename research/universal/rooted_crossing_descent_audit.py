@@ -124,6 +124,17 @@ def run():
         assert any(sum(q == h for h in a_hubs + b_hubs) <= 1
                    for q in itertools.product((0, 1), repeat=2))
         placements += 1
+    # Boundary falsifier: when BOTH trees have their second full endpoint
+    # inside the shared cell, exact all-pairs crossing CAN hold.
+    A = replay((0, 1, 2, 3), ((1, 0), (2, 3), (0, 3)))
+    B = replay((0, 1, 2, 4), ((0, 1), (2, 4), (1, 4)))
+    center = {0, 1, 2}
+    assert A[0] == set(A) and A[3] == set(A)
+    assert B[1] == set(B) and B[4] == set(B)
+    for a in A:
+        for b in B:
+            assert any(a in A[x] and b in B[x] for x in center)
+
     # A single vertex cannot belong to two disjoint cells.
     assert all(w not in ({0} & {1}) for w in (-1, 0, 1))
     print(f"PASS: OO histories={len(outside)}, IO histories={len(inside)}, "
