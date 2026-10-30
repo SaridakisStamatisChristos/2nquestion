@@ -78,6 +78,26 @@ In fact even dropping the double-coverage hypothesis cannot produce a pair: exac
 
 The prior U.14 descended only when BOTH local trees had their two final collectors OUTSIDE their smaller quadrant. This left a four-hub alternating pattern. The extra step above broadens the forbidden class to include a tree with one collector inside, and then chooses the other tree's prefinal component NOT CONTAINING that inside collector. The two resulting common cells are genuinely crossed in their original call orders. The other component has only one possible additional complete collector and cannot place it into both disjoint cells. This completes the infinite descent without any enumeration over n or |X|.
 
+## Exact boundary counterexample: both trees with their second full collector INSIDE E
+
+The requirement that at least one tree have BOTH terminal complete endpoints outside E is ESSENTIAL. It cannot be relaxed merely to one outside full root per tree.
+
+Take E={0,1,2} and disjoint outside roots r and s. Let A have vertices {0,1,2,r}, with ACTUAL chronological contacts
+
+ `(1,0), (2,r), (0,r)`.
+
+Let B have vertices {0,1,2,s}, with ACTUAL chronological contacts
+
+ `(0,1), (2,s), (1,s)`.
+
+The two terminal complete collectors in A are r (outside E) and 0 (inside E), whereas in B they are s (outside E) and 1 (inside E). Exact replay gives the families of source E supports
+
+ A: {0,1}, {0,1}, {0,2}, {0,2};
+
+ B: {0,1}, {0,1}, {1,2}, {1,2}.
+
+Every A support intersects every B support (including the cross pairs {0,2}∩{1,2}={2}), so the stronger **root-only** assertion would be FALSE. This positive chronological witness prevents claiming that U.17 establishes a prohibition when BOTH trees' opposite last-edge endpoints lie inside the shared center. It is excluded from type R as designed.
+
 ## Adversarial/falsification obligations and limits
 
 1. **Inspect the carrier restriction in Case 1**: the potentially new A final-call recipient y is deliberately excluded by choosing C not containing y. No commutation of calls, root replacement or secret-source deletion occurs beyond legitimately restricting to original pre-last components.
