@@ -41,6 +41,8 @@ jobs:
         run: python3 -B research/universal/root_free_crossed_unicyclic_family.py
       - name: Validate all-width root-free three-cell doubly covering original unicyclic trees
         run: python3 -B research/universal/root_free_three_cell_unicyclic_family.py
+      - name: Crossed root-free two-cyclic three-cell q2 all-width local family (not global gossip)
+        run: python3 -B research/universal/root_free_full_local_crossed_unicyclic_family.py
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
