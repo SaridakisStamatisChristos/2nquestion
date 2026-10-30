@@ -1,5 +1,14 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## Stronger all-width root-free no-root counterfamily, including offcorner q=2 groups (30 October)
+
+[Theorem U.21](research/universal/ROOT_FREE_THREE_CELL_COVER_FAMILY.md) proves a single original chronological cyclic component can for every center width |X|>=48 doubly cover EVERY original secret in BOTH exterior recipient cells A,B and the center X, have last cycle-closing contact A-B outside X, and have **NO full collector**. This is stronger locally than U.20's X-doubly-covered two-component crossing family, but U.21 does NOT itself supply the second crossed component or the other four original/reversed tree components.
+
+**Next ALL-n goal:** characterize the **joint intersection** of (a) root-free crossed P3/Q3 center supports, (b) all four exterior cells doubly covering their original local source/target secrets, (c) four additional closed original/reversed tree components, and (d) original distinct-call global 3x3 compatibility. A proof that only (a) or only (b) is impossible is **REFUTED by constructive families**. Avoid n-by-n frontier. Main 2n-3 exact temporal clique spanner remains separate and OPEN.
+
+---
+
+
 ## 30 October 2026 — sharp root-free local counterfamily and global completion obligation
 
 The [unrestricted-width root-free crossed unicyclic family](research/universal/ROOT_FREE_UNICYCLIC_CROSSING_FAMILY.md) exists for every |X|>=4 **with exact original chronology and globally pairwise-distinct unordered calls**. Both local cyclic components have exterior final calls, double center coverage, crossing exact supports, and **zero full collectors**, so the new rooted-crossing no-go cannot be generalized to them. The [parametric exact replay](research/universal/root_free_crossed_unicyclic_family.py) tests nine sizes and is incorporated into universal CI.
