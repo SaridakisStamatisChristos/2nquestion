@@ -1,5 +1,14 @@
 # Research roadmap: pursue universal novelty, not incremental tuning
 
+## 30 October 2026 — sharp root-free local counterfamily and global completion obligation
+
+The [unrestricted-width root-free crossed unicyclic family](research/universal/ROOT_FREE_UNICYCLIC_CROSSING_FAMILY.md) exists for every |X|>=4 **with exact original chronology and globally pairwise-distinct unordered calls**. Both local cyclic components have exterior final calls, double center coverage, crossing exact supports, and **zero full collectors**, so the new rooted-crossing no-go cannot be generalized to them. The [parametric exact replay](research/universal/root_free_crossed_unicyclic_family.py) tests nine sizes and is incorporated into universal CI.
+
+**Next universal mathematical target:** Either prove the **GLOBAL 3x3 nine-positive-cell** and offcorner original/reversed tree constraints force a forbidden collector arrangement even when both cyclic components are root-free, OR construct fully compatible four extra tree components and original/reversed midpoint chronology to disprove the original half-forest conjecture. **Do NOT** represent the local counterfamily as a full successful gossip schedule. This auxiliary global theorem remains OPEN. Independently, pursue constructive exact 2n-3 temporal clique spanner proof; still OPEN. Prior numerical center lower bounds are no longer the driving bottleneck.
+
+---
+
+
 ## 30 October 2026 — crossed-tree P obstruction resolved by two-type strict descent (human proof)
 
 The [unrestricted rooted-crossing no-go theorem](research/universal/ROOTED_CROSSING_NO_GO.md) now rules out EVERY exact all-pairs crossed original-order edge-once tree pair whose shared cell has at least one outside complete root on each side and BOTH complete final-call endpoints outside it on at least one side. In particular, the old **P** crossed-tree subproblem is solved **at every finite width** in the human mathematical model. The previous four-hub cycle and numerical lower-bound campaigns are retained as historical proof checkpoints, but are NOT the current bottleneck. The new step permits a second tree with one complete collector inside the cell, then selects the opposite component of the first tree's ACTUAL final call to preserve exact crossing under strict descent. [Independent exact-support replay](research/universal/rooted_crossing_descent_audit.py) and the boundary example challenge the reasoning; a qualified external referee and independent proof assistant remain outstanding.
