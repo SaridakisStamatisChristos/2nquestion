@@ -1,0 +1,33 @@
+name: Stage 6 general conjecture structural and priority audit
+on:
+  push:
+    paths:
+      - 'research/v2.3/**'
+      - '.github/workflows/research-v23.yml'
+  pull_request:
+    paths:
+      - 'research/v2.3/**'
+      - '.github/workflows/research-v23.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frontier-and-ideals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independent n17 rectangular and 3x3 frontier
+        run: python3 research/v2.3/n17_structural.py
+      - name: Exact independent nine-vertex n17 residual orbits 30 and 31
+        run: python3 research/v2.3/exclude_n17_orbits30_31.py
+      - name: Fail-closed n17 orbit identity and multiplicity check
+        run: python3 research/v2.3/verify_n17_closure_index.py
+      - name: Compile and verify all eight n17 residual symmetry classes
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v2.3/exclude_n17_residual_eight.cpp -o /tmp/n17_residual_eight
+          /tmp/n17_residual_eight
+      - name: Independent brute-force n17 local lemma audit
+        run: python3 research/v2.3/verify_n17_local_independent.py
+      - name: Exact balanced ideals and classical-kernel scope
+        run: python3 research/v2.3/balanced_ideal_audit.py

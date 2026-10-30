@@ -1,0 +1,22 @@
+Exact finite verification — 2026-10-25
+python research/v1.3/two_singleton_rule.py
+K4: 360 tested, 24 successful, 96 constraints checked, 0 violations
+K5: 151200 tested, 3240 successful, 6480 constraints checked, 0 violations
+K6: seeded sample 30000, 121 successful, 155 constraints checked, 0 violations
+
+python research/v1.3/search_row3.py --pattern 2 --cc 2
+n=13; prefix component schedule counts 576,576,6
+suffix component schedule counts 3000,3000,6
+column 2: all 6 triangle orders allowed for source P2
+column 0: 576 suffix tree orders propagate P2; 288 row0 options, 288 row1 options with some compatible suffix orders
+column 1: 576 suffix tree orders propagate P2; 288 row0 options, 288 row1 options with some compatible suffix orders
+All prefix choices exhausted; NONE realized global gossip.
+
+python research/v1.3/v13_bitset.py
+n=13; prefix options [576,576,6]; suffix [3000,3000,6]
+row0-col0 288 nonzero, row1-col0 288 nonzero
+row0-col1 288 nonzero, row1-col1 288 nonzero
+No pair of prefix orders yields compatible suffix orders on both columns.
+search_done False.
+
+Interpretation: excludes the stated single K13 component matrix and cycle placement only. Neither proof of the 2n-3 conjecture nor complete K13 classification.

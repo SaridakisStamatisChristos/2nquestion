@@ -1,0 +1,19 @@
+name: Independent n13 certificate v1.7
+on:
+  push:
+    paths: ['research/v1.7/**', '.github/workflows/research-v17.yml']
+  pull_request:
+    paths: ['research/v1.7/**', '.github/workflows/research-v17.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-enumeration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independent unquotiented n13 reduction
+        run: python3 research/v1.7/independent_grid.py
+      - name: Independently certify residual square UNSAT
+        run: python3 research/v1.7/independent_square.py

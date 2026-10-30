@@ -1,0 +1,30 @@
+name: Verify n16 incidence frontier (not full theorem)
+on:
+  push:
+    paths:
+      - 'research/v2.2/**'
+      - '.github/workflows/research-v22.yml'
+      - 'research/v2.0/half_forest14_grid.py'
+      - 'research/v2.1/verify_n15_structural_independent.py'
+      - 'research/v2.1/verify_n15_independent.py'
+  pull_request:
+    paths:
+      - 'research/v2.2/**'
+      - '.github/workflows/research-v22.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  n16-structural-frontier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently verify rectangular obstruction and 3x3 n16 orbit map
+        run: python3 research/v2.2/verify_n16_frontier.py
+      - name: Independently check kernel event-order scope through n16
+        run: python3 research/v2.2/verify_kernel_scope.py
+      - name: Exact eight-cycle mutual profile impossibility for n16 orbit 11
+        run: python3 research/v2.2/exclude_n16_orbit11.py
+      - name: Exact eight-vertex tree mutual profile impossibility for n16 orbit 10
+        run: python3 research/v2.2/exclude_n16_orbit10.py

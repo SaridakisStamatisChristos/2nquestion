@@ -1,0 +1,12 @@
+Reproducible exploratory null search, 2026-10-25
+Command: g++ -O3 -std=c++17 n14_search.cpp -o n14_search && ./n14_search 5000000
+Source seed = 20261025; initial successful 24-call n14 sequence built from n8 witness by six classical vertex extensions.
+start 0 0 1
+epoch=0 best=11 missing=0 ranks=0,1
+epoch=1 best=10 missing=4 ranks=1,1
+epoch=2 best=10 missing=4 ranks=1,1
+epoch=3 best=10 missing=4 ranks=1,1
+epoch=4 best=10 missing=4 ranks=1,1
+NO_WITNESS_IN_BOUNDED_SEARCH 5000000 steps best=10 missing=4 first=1 last=1
+
+Scientific interpretation: NO proof, NO exhaustive search, NO SAT/UNSAT claim for n=14.

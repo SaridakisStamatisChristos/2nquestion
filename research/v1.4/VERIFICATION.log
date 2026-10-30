@@ -1,0 +1,35 @@
+Python 3.13.5 — local run — 2026-10-25
+$ python research/v1.4/half_forest13_reduction.py
+{
+  "n": 13,
+  "extras_orbits": 16,
+  "nominal_cycle_placements": 44,
+  "collector_excluded": 43,
+  "raw_eligible_placements": 1278,
+  "raw_remaining_placements": 9,
+  "survivors": [
+    {
+      "extras": [[0, 0], [0, 1], [1, 0], [1, 1]],
+      "grid": [[2, 2, 1], [2, 2, 1], [1, 1, 1]],
+      "cycle_row": 2,
+      "cycle_column": 2,
+      "collector_excluded": false,
+      "reasons": []
+    }
+  ]
+}
+$ python research/v1.4/verify_square.py
+row options [576, 576, 6] col options [3000, 3000, 6]
+source 0 target 0 feasible rows 288
+source 1 target 0 feasible rows 288
+source 0 target 1 feasible rows 288
+source 1 target 1 feasible rows 288
+EXACT_UNSAT square K13 given component and half assumptions
+
+Local runtime execution only. GitHub CI and formal checker not claimed.
+
+GitHub Actions confirmation on commit b3f889ff68c719b9754a0673068c133c5975599b
+push 40201117451: success, both proof scripts passed
+pull_request 40201117477: success, both proof scripts passed
+https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40201117451
+https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40201117477

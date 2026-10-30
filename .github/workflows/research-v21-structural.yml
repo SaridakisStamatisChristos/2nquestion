@@ -1,0 +1,21 @@
+name: Verify n15 structural frontier
+on:
+  push:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21-structural.yml'
+  pull_request:
+    paths:
+      - 'research/v2.1/**'
+      - '.github/workflows/research-v21-structural.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  necessary-cases:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify structural n13-n15 enumeration
+        run: python3 research/v2.1/verify_n15_structural.py

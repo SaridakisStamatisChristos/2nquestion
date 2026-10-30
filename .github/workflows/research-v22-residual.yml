@@ -1,0 +1,23 @@
+name: Probe five residual n16 orbits (optimistic)
+on:
+  push:
+    paths:
+      - 'research/v2.2/probe_n16_residual.py'
+      - 'research/v2.2/profile_oracle16_relaxed.cpp'
+      - '.github/workflows/research-v22-residual.yml'
+  pull_request:
+    paths:
+      - 'research/v2.2/probe_n16_residual.py'
+      - 'research/v2.2/profile_oracle16_relaxed.cpp'
+      - '.github/workflows/research-v22-residual.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  residual-n16-orbits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Scan only the five residual n16 cases with conservative eight-cycle profiles
+        run: python3 research/v2.2/probe_n16_residual.py

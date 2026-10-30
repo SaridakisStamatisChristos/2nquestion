@@ -1,0 +1,25 @@
+{
+  "full": [
+    {
+      "n": 4,
+      "all_distinct_edge_schedules": 360,
+      "successful_schedules": 24,
+      "two_singleton_constraints_checked": 96
+    },
+    {
+      "n": 5,
+      "all_distinct_edge_schedules": 151200,
+      "successful_schedules": 3240,
+      "two_singleton_constraints_checked": 6480
+    }
+  ],
+  "sample": [
+    {
+      "n": 6,
+      "sampled": 30000,
+      "successes": 121,
+      "constraints_checked": 155,
+      "seed": 1701
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+name: Universal all-n theorem and infinite incidence barrier audit
+on:
+  push:
+    paths:
+      - 'research/universal/**'
+      - '.github/workflows/research-universal.yml'
+  pull_request:
+    paths:
+      - 'research/universal/**'
+      - '.github/workflows/research-universal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-universal-proof-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify infinite incidence profile family and existing Stage25-34 rules
+        run: python3 -B research/universal/infinite_incidence_barrier.py
+      - name: Independently enumerate original rooted trees and exact crossing transversals
+        run: python3 -B research/universal/support_transversal_audit.py
+      - name: Exact all-q recipient multiplicity and crossed-tree two-support rigidity
+        run: python3 -B research/universal/exponential_multiplicity_audit.py
+      - name: Independent all-n crossed-tree disjoint cover transfer and bound fourteen
+        run: python3 -B research/universal/crossed_cover_transfer_audit.py
+      - name: Independent all-n disjoint group cover, rooted Helly dichotomy and exponential packing bound
+        run: python3 -B research/universal/general_group_cover_audit.py
+      - name: Falsify unsafe universal n-to-n-minus-one temporal degree-two contraction
+        run: python3 -B research/universal/degree_two_descent_falsifier.py
+      - name: Independent unbounded minimal crossed-tree four-hub descent placement audit
+        run: python3 -B research/universal/four_hub_descent_audit.py
+      - name: Exhaustive small-cell hub forcing (finite falsifier only)
+        run: python3 -B research/universal/hub_forcing_audit.py
+      - name: Check original-chronology exact support locality in universal two-type descent
+        run: python3 -B research/universal/rooted_crossing_descent_audit.py
+      - name: Regression test exact crossed-tree chronological witness validator
+        run: python3 -B -m unittest discover -s research/universal -p 'test_crossed_tree_witness_validator.py'
+      - name: Falsify root-free unicyclic no-go with parameterized exact chronology
+        run: python3 -B research/universal/root_free_crossed_unicyclic_family.py
+      - name: Validate all-width root-free three-cell doubly covering original unicyclic trees
+        run: python3 -B research/universal/root_free_three_cell_unicyclic_family.py
+      - name: Crossed root-free two-cyclic three-cell q2 all-width local family (not global gossip)
+        run: python3 -B research/universal/root_free_full_local_crossed_unicyclic_family.py
+      - name: Earlier six-recipient path-support adversarial regression
+        run: python3 -B research/v4.7/double_path_rigidity.py
+      - name: Stage34 finite incidence classifier (regression only, not all-n proof)
+        run: python3 -B research/v5.1/n22_final_center_support.py
+      - name: Seven-orbit independent frozen proof-premise certification
+        run: python3 -B research/v5.1/seven_orbit_certificate.py

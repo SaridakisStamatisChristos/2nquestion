@@ -1,0 +1,11 @@
+Reproduction source: independently executed Python 3 script in ChatGPT working runtime, 2026-10-25.
+Command: python verify_1991_cd_gap.py
+Exit: 0
+PASS | ordered gossip: 8 vertices, 12 pairwise-distinct contacts
+PASS | true chronological half cycle ranks: (0,1)
+PASS | historical Cd partition: (0,0) with qualifying four-cycle
+PASS | crossing four-cycle edge IDs: [0,5,1,6]
+PASS | forest/forest (ordered orientation) partitions: 604
+Cd first: [(0, 1), (4, 5), (3, 7), (2, 6), (2, 3), (4, 6)]
+Cd second: [(1, 5), (0, 4), (1, 2), (6, 7), (3, 5), (0, 7)]
+Note: CI workflow repeats validation on branch head.

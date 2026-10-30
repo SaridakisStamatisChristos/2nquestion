@@ -1,0 +1,34 @@
+name: Stage 22 all-n conditional three-star n20 incidence exclusion
+on:
+  push:
+    paths:
+      - 'research/v3.9/**'
+      - '.github/workflows/research-v39-n20-three-star.yml'
+  pull_request:
+    paths:
+      - 'research/v3.9/**'
+      - '.github/workflows/research-v39-n20-three-star.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-three-star:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently count n20 52 to 20 necessary cell profiles and five orbits
+        run: |
+          python3 -B research/v3.9/count_n20_three_star.py
+      - name: Regress independent exact three-leaf original chronological tree obstruction and local nine-person three-collector boundary
+        run: |
+          python3 -B research/v3.7/exact_three_leaf_star.py
+          python3 -B research/v3.7/local_nine_collector_boundary.py
+      - name: Recheck Stage21 all seven-person exact chronological tree privacy minima
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.8/exact_seven_tree_privacy.cpp -o /tmp/exact_seven_tree_privacy
+          /tmp/exact_seven_tree_privacy
+      - name: Recheck Stage14 four-full-collector causal normal form
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Werror research/v3.1/exhaustive_four_collector.cpp -o /tmp/exact_four_full_collector
+          /tmp/exact_four_full_collector

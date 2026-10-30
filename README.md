@@ -1,6 +1,6 @@
 # 2n Question — Temporal Clique Research Laboratory
 
-**Research snapshot:** 25 October 2026 · **Status:** open, reproducible research (not a proof)
+**Research snapshot:** 28 October 2026 · **Status:** open, reproducible research; main temporal-clique conjecture unproved
 
 > **Main open problem.** Given a complete graph on \(n\) vertices in which each undirected edge appears at a distinct time, does there always exist a subgraph with at most **\(2n-3\)** edges preserving every ordered-pair strictly increasing temporal journey?
 
@@ -13,6 +13,44 @@ This repository records a sequence of independent algorithmic and mathematical i
 - [Research roadmap](ROADMAP.md) — highest-information next proof or falsification targets.
 - [Primary references](REFERENCES.md) — source links and conceptual boundaries.
 - [Complete checkpoint history](research/) — versioned source code, notes, logs, surveys and counterexamples.
+
+## All-width minimal-counterexample reduction — new mathematical frontier
+
+[The all-n four-hub minimal descent theorem](research/universal/FOUR_HUB_MINIMAL_DESCENT.md) reduces the existence of ANY admissibly crossed original-order TREE pair to the existence of a **smallest pair with an alternating four-corner final-collector arrangement**. A corner lacking both of its side trees' local full last-contact endpoints would itself produce a strictly smaller admissibly crossed-tree pair, so only the alternating arrangement survives minimality. [Independent exact symbolic checker](research/universal/four_hub_descent_audit.py) verifies 79 of 81 placements have a reducible corner; the other two are the symmetric alternating four-hub patterns.
+
+This is a genuinely universal **structural reduction, NOT a proof the remaining case is impossible**. Coupled with the sharp all-q receiver multiplicity bound, exact all-s disjoint-group cover theorem, and all-k exponential crossed-source packing lower bound, it makes one causal configuration the research focus. The unrestricted fixed-original-half forest and the independently open \(2n-3\) temporal clique spanner conjecture remain UNSOLVED, and historical novelty has not been refereed.
+
+## NEW: Universal theorem track — no more n-by-n expansion
+
+**Mathematical priority is now a theorem (or valid counterexample) with an unrestricted \(\forall n\) quantifier.** See [the all-n incidence barrier proof](research/universal/ALL_N_INCIDENCE_BARRIER.md), [the all-n chronological support theorem](research/universal/ROOTED_SUPPORT_TRANSVERSAL.md), [its independent falsification source](research/universal/support_transversal_audit.py), and the [universal-only roadmap](ROADMAP.md).
+
+A precise **infinite family for EVERY n≥23**,
+\[
+((1,1,2),(1,1,4),(2,4,n-16)),
+\]
+passes ALL previous Stage25–34 incidence filters. **It is not a realizable gossip schedule or a counterexample**; it proves the old matrix-filter approach cannot establish the unrestricted conjecture. Therefore **STOP making finite n=23,24,25,... incidence closure the main task**.
+
+**Newer and stronger all-n work:** [exact exponential rooted receiver multiplicity](research/universal/EXPONENTIAL_MULTIPLICITY_AND_PAIR_RIGIDITY.md), [two-disjoint-cover crossing theorem](research/universal/CROSSED_TREE_COVER_TRANSFER.md), and [independent general multi-group cover / packing theorem](research/universal/GENERAL_COVER_PACKING.md). For every multiplicity q, a full tree root outside C and q carriers per secret forces |C|≥2^q−1, attained by an explicit chronological construction. For arbitrary numbers s of disjoint groups each collectively knowing all secrets, ≥2^(s−1) designated recipients are necessary. Two crossed original-order trees with both complete last-call collectors OUTSIDE a shared doubly covering X require **|X|≥14**; more generally k disjoint source-support sets in one crossed tree require **|X|≥2^(k+1)−2**. All these hold for arbitrary n and helper vertices, but are **conditional lemmas**, not the universal no-crossing or half-forest conjecture. [Universal CI](.github/workflows/research-universal.yml) runs exact chronological falsifiers. The all-width question, full root-free cases, and the independent 2n−3 spanner remain OPEN.
+
+## Latest research and proof boundary (28 October 2026)
+
+**Two separate objectives must not be confused.** The principal **fixed-label temporal clique spanner** statement asks whether every edge-ordering of \(K_n\) has a reachability-preserving subset of at most \(2n-3\) contacts. This is **OPEN**. The *auxiliary* original chronological half-forest property concerns the structure of a minimum \(2n-4\)-contact gossip chronology **if that chronology already exists**. Proving a structural property of an existing optimum does **NOT** prove existence of an optimum or the \(2n-3\) bound for every clique.
+
+The **auxiliary fixed-ORIGINAL-midpoint half-forest theorem** now has a newly constructed **human proof for n=22**, CONDITIONAL on the earlier source-grounded Bumby 1981 fixed-order spine and original chronological tree/privacy/collector lemmas. This is a genuine fixed-instance mathematical deduction if the dependencies hold, NOT an exhaustive 40-call history enumeration or a formal proof-checker result. [Stage34 manuscript](research/v5.1/N22_ORIGINAL_FOREST_THEOREM.md) and [independent finite census](research/v5.1/n22_final_center_support.py) reduce **all 24,310** 3×3 necessary-incidence matrices to ZERO, closing the last 24 candidates by 20 five-or-fewer center privacy contradictions and 4 six-center double-path incompatibilities. [Stage34 original-current-head GitHub Actions success, run 40764166711](https://github.com/SaridakisStamatisChristos/2nquestion/actions/runs/40764166711) confirms its finite reason partition and earlier chronological regression tests. **External referee/formal theorem checker and original scholarly-priority audit are still missing.** The unrestricted fixed-half property for n≥23 is **OPEN**.
+
+**All-n auxiliary mathematical ingredients:**
+- [Stage29](research/v4.6/PRIVATE_THRESHOLD_THEOREM.md): exact private-recipient minimum for (1,1,c) chronological tree groups: p(c)=2 (c=2,3), 1 (c=4,5), 0 (c≥6), with a genuine infinite construction. Do NOT extrapolate positive privacy beyond c=5.
+- [Stage30](research/v4.7/DOUBLE_PATH_RIGIDITY.md): at sharp c=6, privacy-free two-singleton tree cover forces two disjoint three-vertex exact-support paths; two such original-order tree supports cannot be globally cross-compatible. The last unicyclic calls are outside center, permitting this tree theorem's use on their PRECEDING original-ordered spanning trees when its hypotheses hold.
+- [Stage31](research/v4.8/LAST_CONTACT_COLLECTOR_TRANSFER.md): a full two-person exterior cell passes completeness to the opposite exterior via the actual last cycle edge. A size-three counterexample prevents an invalid generalization.
+- [Stage32](research/v4.9/CENTER_ROOT_BOOTSTRAP.md): if one exterior has two full collectors and center has a full collector, the opposite exterior also has one. Combined with Stage28 yields universal center-root exclusion when exterior occupancy ≤8. All 4/5-person local histories exhaustively audited.
+- [Stage33](research/v5.0/EXACT_TWO_RECIPIENT_PRIVACY.md): for (a,b,2) designated group chronological tree covers, a zero-private two-person group exists **iff a≥2,b≥2,a+b≥6**; exact all-size constructions and helper-robust converse.
+- [Stage34](research/v5.1/N22_ORIGINAL_FOREST_THEOREM.md): all-n **conditional** root-to-tree double coverage and center-six incompatibility lemmas plus the complete n22 24,310-to-zero reason-partition. Remaining n23 necessary profiles: **396 labelled matrices / 104 tree-row/column orbits**, not realizable schedules.
+
+**No claim of a universal temporal spanner breakthrough.** Existence of a 2n−4-call shortest gossip schedule on a time-labelled clique cannot be assumed; these structural results about an existing schedule do not establish the primary 2n−3 reachability-spanner conjecture.
+
+**Contemporary reference boundary:** [Baligács 2026](https://arxiv.org/abs/2606.05156) proves a 7n reachability spanner upper bound, with an author's [September 2026 open-problem summary](https://arnaudcasteigts.net/blog/open-problems.html) describing a refinement to 6n using the same algorithm. The [September 2026 almost-linear *3-spanner*](https://arxiv.org/abs/2609.02851) concerns multiplicative temporal **hop stretch**, a different objective, and does not solve exact reachability preservation with 2n−3 edges. No claim of global novelty, formalized proof, or publishable readiness is made here.
+
+**Research governance:** [PR #1](https://github.com/SaridakisStamatisChristos/2nquestion/pull/1) remains DRAFT, OPEN, UNMERGED, manuscript submission HOLD. [Updated next steps](ROADMAP.md) prioritize the true exact-chronology information CSP and direct spanner conjecture, not indefinite finite-size enumeration.
 
 ## Research trajectory
 
