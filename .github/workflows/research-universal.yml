@@ -37,6 +37,8 @@ jobs:
         run: python3 -B research/universal/rooted_crossing_descent_audit.py
       - name: Regression test exact crossed-tree chronological witness validator
         run: python3 -B -m unittest discover -s research/universal -p 'test_crossed_tree_witness_validator.py'
+      - name: Falsify root-free unicyclic no-go with parameterized exact chronology
+        run: python3 -B research/universal/root_free_crossed_unicyclic_family.py
       - name: Earlier six-recipient path-support adversarial regression
         run: python3 -B research/v4.7/double_path_rigidity.py
       - name: Stage34 finite incidence classifier (regression only, not all-n proof)
