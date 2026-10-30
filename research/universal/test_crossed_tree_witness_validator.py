@@ -29,10 +29,11 @@ class TestWitnessValidator(unittest.TestCase):
             verify({"T":t,"U":t})
 
     def test_reject_insufficient_coverage_even_with_outside_final_roots(self):
-        t={"vertices":["a","b","c","d"],"calls":[["a","b"],["c","d"],["b","c"]]}
-        u={"vertices":["a","b","e","f"],"calls":[["a","e"],["b","f"],["e","f"]]}
-        # Both final-call endpoints are outside their intersection {a,b}.
-        with self.assertRaises(AssertionError):
+        t={"vertices":["a","b","r","s"],"calls":[["a","r"],["b","s"],["r","s"]]}
+        u={"vertices":["a","b","p","q"],"calls":[["a","p"],["b","q"],["p","q"]]}
+        # Both original last edges have endpoints OUTSIDE X={a,b}.
+        # The reason for rejection is genuinely insufficient X coverage.
+        with self.assertRaisesRegex(AssertionError, "double coverage"):
             verify({"T":t,"U":u})
 
 if __name__=="__main__":
